@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es-CO">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Salud · ANDES</title>
+    <meta
+      name="description"
+      content="Personas heridas, atención en salud y capacidad hospitalaria tras el sismo del 10 de agosto de 2026."
+    />
+    <link rel="icon" href="/assets/icono.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/vendor/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/tokens.css" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/componentes.css" />
+    <script defer src="/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script type="module" src="/js/paginas/salud.js"></script>
+  </head>
+  <body>
+    <andes-marco pagina="salud">
+      <header class="pagina-titulo">
+        <h1>Salud</h1>
+        <p>
+          Personas heridas y fallecidas, atención prestada y capacidad de los hospitales. La información
+          médica se publica solo en cifras agregadas.
+        </p>
+      </header>
+      <div id="contenido" aria-live="polite">
+        <p class="estado-carga">Cargando los datos…</p>
+      </div>
+    </andes-marco>
+    <noscript>
+      <p class="estado-error">Este portal necesita JavaScript para mostrar los indicadores.</p>
+    </noscript>
+  </body>
+</html>

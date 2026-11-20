@@ -1,0 +1,47 @@
+version: 1
+k: 20
+criterios:
+  - codigo: personas_afectadas
+    nombre: Personas afectadas
+    descripcion: Personas afectadas en el reporte municipal oficial del conjunto dane-afectaciones.
+    peso: 0.25
+    fuente:
+      tipo: variable_territorial
+      origen: OFICIAL
+      variables: [personas]
+  - codigo: personas_vulnerables
+    nombre: Personas en condición de vulnerabilidad
+    descripcion: Personas registradas con al menos una condición de vulnerabilidad, incluidas las menores de 18 años y las de 60 o más.
+    peso: 0.2
+    fuente:
+      tipo: agregado
+      origen: SIMULADO
+      destino: personas
+      dimension: vulnerable
+      categoria: SI
+  - codigo: viviendas_destruidas
+    nombre: Viviendas destruidas
+    descripcion: Viviendas destruidas en el reporte municipal oficial del conjunto dane-afectaciones.
+    peso: 0.2
+    fuente:
+      tipo: variable_territorial
+      origen: OFICIAL
+      variables: [viviendasDestruidas]
+  - codigo: infraestructura_critica
+    nombre: Infraestructura crítica afectada
+    descripcion: Centros de salud, centros educativos y acueductos afectados en el reporte municipal oficial, sumados como unidades.
+    peso: 0.15
+    fuente:
+      tipo: variable_territorial
+      origen: OFICIAL
+      variables: [centrosSalud, centrosEducativos, acueductos]
+  - codigo: suministros
+    nombre: Disponibilidad de suministros
+    descripcion: Agua, alimentos y elementos de asistencia disponibles en la zona. Entre más suministros, menor urgencia.
+    peso: 0.1
+    mas_es_mejor: true
+  - codigo: capacidad_respuesta
+    nombre: Capacidad de respuesta
+    descripcion: Personal y equipos de atención disponibles en la zona. Entre más capacidad, menor urgencia.
+    peso: 0.1
+    mas_es_mejor: true

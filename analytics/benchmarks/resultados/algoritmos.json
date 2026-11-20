@@ -1,0 +1,824 @@
+{
+  "generadoEn": "2026-11-19T17:22:45.895Z",
+  "duracionS": 101.8,
+  "equipo": {
+    "procesador": "Apple M4",
+    "nucleos": 10,
+    "memoriaGb": 16,
+    "sistema": "Darwin 24.6.0",
+    "node": "v24.15.0"
+  },
+  "metodo": {
+    "semilla": 20260810,
+    "repeticiones": 5,
+    "calentamiento": 1,
+    "estadistico": "mediana",
+    "recoleccionExplicita": true,
+    "escala": "completa"
+  },
+  "experimentos": [
+    {
+      "algoritmo": 1,
+      "nombre": "Clasificación de registros poblacionales",
+      "variante": "Tabla de acceso directo por edad y máscara de bits",
+      "complejidad": "O(n)",
+      "rangoEsperado": [
+        0.8,
+        1.25
+      ],
+      "repeticiones": 5,
+      "calentamiento": 1,
+      "puntos": [
+        {
+          "n": 31250,
+          "ms": 3.0787090000000035,
+          "minimo": 2.923249999999996,
+          "maximo": 3.224917000000005
+        },
+        {
+          "n": 62500,
+          "ms": 5.065625000000011,
+          "minimo": 4.979540999999983,
+          "maximo": 5.3002500000000055
+        },
+        {
+          "n": 125000,
+          "ms": 8.878959000000009,
+          "minimo": 8.707333000000006,
+          "maximo": 9.106083999999953
+        },
+        {
+          "n": 250000,
+          "ms": 16.06933300000003,
+          "minimo": 15.440166000000033,
+          "maximo": 16.837417000000073
+        },
+        {
+          "n": 500000,
+          "ms": 30.41733299999987,
+          "minimo": 29.536541000000057,
+          "maximo": 32.14025000000004
+        },
+        {
+          "n": 1000000,
+          "ms": 60.3572079999999,
+          "minimo": 58.42083400000001,
+          "maximo": 63.27708299999995
+        }
+      ],
+      "razones": [
+        1.6453731093130288,
+        1.752786477483033,
+        1.8098217369851592,
+        1.892880868172924,
+        1.984303094554679
+      ],
+      "exponente": 0.8594210089661724,
+      "coincide": true
+    },
+    {
+      "algoritmo": 2,
+      "nombre": "Agrupación y agregación de estadísticas",
+      "variante": "Una pasada con tabla hash, 11 dimensiones y tres niveles territoriales",
+      "complejidad": "O(n · d)",
+      "rangoEsperado": [
+        0.8,
+        1.25
+      ],
+      "repeticiones": 5,
+      "calentamiento": 1,
+      "puntos": [
+        {
+          "n": 31250,
+          "ms": 122.09762499999988,
+          "minimo": 120.90295800000013,
+          "maximo": 125.0827919999997
+        },
+        {
+          "n": 62500,
+          "ms": 224.97737499999994,
+          "minimo": 218.3526670000001,
+          "maximo": 257.53679200000033
+        },
+        {
+          "n": 125000,
+          "ms": 402.858792,
+          "minimo": 398.4718750000002,
+          "maximo": 417.400541
+        },
+        {
+          "n": 250000,
+          "ms": 766.3807090000009,
+          "minimo": 756.1135830000003,
+          "maximo": 775.9965840000004
+        },
+        {
+          "n": 500000,
+          "ms": 1494.1281659999986,
+          "minimo": 1485.7351249999992,
+          "maximo": 1501.2039579999982
+        },
+        {
+          "n": 1000000,
+          "ms": 3063.6138750000027,
+          "minimo": 3041.5654589999976,
+          "maximo": 3143.184374999997
+        }
+      ],
+      "razones": [
+        1.842602384772023,
+        1.7906635811712182,
+        1.90235567454117,
+        1.9495899994006722,
+        2.0504357957468593
+      ],
+      "exponente": 0.9247937261739688,
+      "coincide": true
+    },
+    {
+      "algoritmo": 3,
+      "nombre": "Detección de duplicados",
+      "variante": "Bloqueo por municipio, edad e inicial, y comparación dentro de cada bloque",
+      "complejidad": "O(n + Σ b²) ≈ O(n + n²/K)",
+      "rangoEsperado": [
+        0.9,
+        2
+      ],
+      "repeticiones": 5,
+      "calentamiento": 1,
+      "puntos": [
+        {
+          "n": 31250,
+          "ms": 9.574625000001106,
+          "minimo": 8.241291999998793,
+          "maximo": 9.943833000004815,
+          "comparaciones": 735,
+          "bloques": 30529
+        },
+        {
+          "n": 62500,
+          "ms": 16.458166999997047,
+          "minimo": 16.09404199999699,
+          "maximo": 18.030000000006112,
+          "comparaciones": 2697,
+          "bloques": 59894
+        },
+        {
+          "n": 125000,
+          "ms": 34.607708000003186,
+          "minimo": 34.35495799999626,
+          "maximo": 36.209249999999884,
+          "comparaciones": 10457,
+          "bloques": 115212
+        },
+        {
+          "n": 250000,
+          "ms": 96.1082499999975,
+          "minimo": 93.82337499999994,
+          "maximo": 96.44704099999944,
+          "comparaciones": 40702,
+          "bloques": 214221
+        },
+        {
+          "n": 500000,
+          "ms": 265.1670840000006,
+          "minimo": 260.598917000003,
+          "maximo": 271.46074999999837,
+          "comparaciones": 159576,
+          "bloques": 374486
+        },
+        {
+          "n": 1000000,
+          "ms": 853.8600829999996,
+          "minimo": 845.1102499999979,
+          "maximo": 871.0321669999976,
+          "comparaciones": 632827,
+          "bloques": 591936
+        }
+      ],
+      "razones": [
+        1.7189359374382962,
+        2.102768066456574,
+        2.777076424708295,
+        2.759046013219547,
+        3.2200832400449735
+      ],
+      "exponente": 1.3113384203755394,
+      "coincide": true
+    },
+    {
+      "algoritmo": 3,
+      "nombre": "Detección de duplicados",
+      "variante": "Referencia: comparar todos los pares",
+      "complejidad": "O(n²)",
+      "rangoEsperado": [
+        1.75,
+        2.25
+      ],
+      "repeticiones": 3,
+      "calentamiento": 1,
+      "puntos": [
+        {
+          "n": 125,
+          "ms": 3.537917000001471,
+          "minimo": 2.998874999997497,
+          "maximo": 4.478750000002037
+        },
+        {
+          "n": 250,
+          "ms": 13.810457999999926,
+          "minimo": 11.724750000001222,
+          "maximo": 14.821707999995851
+        },
+        {
+          "n": 500,
+          "ms": 51.445707999999286,
+          "minimo": 42.48254199999792,
+          "maximo": 57.33420800000022
+        },
+        {
+          "n": 1000,
+          "ms": 235.90620800000033,
+          "minimo": 187.5415409999987,
+          "maximo": 287.79262500000186
+        },
+        {
+          "n": 2000,
+          "ms": 1025.8499579999989,
+          "minimo": 944.2615000000005,
+          "maximo": 1040.7991249999977
+        }
+      ],
+      "razones": [
+        3.90355624509964,
+        3.7251268567631546,
+        4.58553720360897,
+        4.348550072917104
+      ],
+      "exponente": 2.0453787950755165,
+      "coincide": true
+    },
+    {
+      "algoritmo": 4,
+      "nombre": "Priorización de atención",
+      "variante": "Suma ponderada y montículo mínimo de tamaño k = 20",
+      "complejidad": "O(m · c + m log k)",
+      "rangoEsperado": [
+        0.8,
+        1.25
+      ],
+      "repeticiones": 5,
+      "calentamiento": 1,
+      "puntos": [
+        {
+          "n": 31250,
+          "ms": 10.998082999998587,
+          "minimo": 10.284125000005588,
+          "maximo": 12.835500000001048
+        },
+        {
+          "n": 62500,
+          "ms": 18.352208999996947,
+          "minimo": 15.672791999997571,
+          "maximo": 18.864957999998296
+        },
+        {
+          "n": 125000,
+          "ms": 37.17654099999345,
+          "minimo": 36.34150000000227,
+          "maximo": 38.4255420000045
+        },
+        {
+          "n": 250000,
+          "ms": 74.90683299999364,
+          "minimo": 67.98262499999691,
+          "maximo": 79.65141600000061
+        },
+        {
+          "n": 500000,
+          "ms": 141.35633299999608,
+          "minimo": 135.05895800000144,
+          "maximo": 147.03162500000326
+        },
+        {
+          "n": 1000000,
+          "ms": 281.13333299999795,
+          "minimo": 274.1024170000019,
+          "maximo": 289.9070419999989
+        }
+      ],
+      "razones": [
+        1.6686734406350001,
+        2.0257256769470984,
+        2.0148951727382824,
+        1.8870953067793974,
+        1.9888272922303787
+      ],
+      "exponente": 0.9493225748812455,
+      "coincide": true
+    },
+    {
+      "algoritmo": 4,
+      "nombre": "Priorización de atención",
+      "variante": "Referencia: ordenar todas las zonas",
+      "complejidad": "O(m · c + m log m)",
+      "rangoEsperado": [
+        0.9,
+        1.4
+      ],
+      "repeticiones": 5,
+      "calentamiento": 1,
+      "puntos": [
+        {
+          "n": 31250,
+          "ms": 23.19954200000211,
+          "minimo": 21.621791999998095,
+          "maximo": 24.527249999999185
+        },
+        {
+          "n": 62500,
+          "ms": 43.93783300000359,
+          "minimo": 41.361250000001746,
+          "maximo": 45.13195899999846
+        },
+        {
+          "n": 125000,
+          "ms": 77.72970799999894,
+          "minimo": 75.71575000000303,
+          "maximo": 81.1064170000027
+        },
+        {
+          "n": 250000,
+          "ms": 155.42195899999933,
+          "minimo": 152.98912500000006,
+          "maximo": 172.3406249999971
+        },
+        {
+          "n": 500000,
+          "ms": 330.81683399999747,
+          "minimo": 325.2609999999986,
+          "maximo": 348.45416699999623
+        },
+        {
+          "n": 1000000,
+          "ms": 726.4535000000033,
+          "minimo": 708.1038339999941,
+          "maximo": 727.4116670000076
+        }
+      ],
+      "razones": [
+        1.893909500454776,
+        1.769083787086008,
+        1.9995181121740668,
+        2.1285076840396724,
+        2.195938735088701
+      ],
+      "exponente": 0.9880187015321836,
+      "coincide": true
+    },
+    {
+      "algoritmo": 5,
+      "nombre": "Búsqueda y filtrado",
+      "variante": "Trie de nombres completos: 5000 consultas según el tamaño N del catálogo",
+      "complejidad": "O(L + r) por consulta",
+      "rangoEsperado": [
+        -0.3,
+        0.3
+      ],
+      "repeticiones": 9,
+      "calentamiento": 3,
+      "puntos": [
+        {
+          "n": 4096,
+          "ms": 8.335500000001048,
+          "minimo": 7.402457999996841,
+          "maximo": 15.009541999999783
+        },
+        {
+          "n": 8192,
+          "ms": 9.047500000000582,
+          "minimo": 8.132958999995026,
+          "maximo": 14.114166999992449
+        },
+        {
+          "n": 16384,
+          "ms": 9.39108300000953,
+          "minimo": 8.147958999994444,
+          "maximo": 11.67041700000118
+        },
+        {
+          "n": 32768,
+          "ms": 7.0414160000073025,
+          "minimo": 6.547791999997571,
+          "maximo": 7.0960420000046724
+        },
+        {
+          "n": 65536,
+          "ms": 5.8402920000080485,
+          "minimo": 5.2612910000025295,
+          "maximo": 7.639874999993481
+        },
+        {
+          "n": 131072,
+          "ms": 4.875500000009197,
+          "minimo": 4.020749999996042,
+          "maximo": 5.116708000001381
+        }
+      ],
+      "razones": [
+        1.085417791374176,
+        1.0379754628360238,
+        0.7497980797316088,
+        0.8294201052745629,
+        0.834804150203873
+      ],
+      "exponente": -0.1765272820212539,
+      "coincide": true
+    },
+    {
+      "algoritmo": 5,
+      "nombre": "Búsqueda y filtrado",
+      "variante": "Referencia: arreglo ordenado con búsqueda binaria, 5000 consultas",
+      "complejidad": "O(L · log N + r) por consulta",
+      "rangoEsperado": [
+        -0.3,
+        0.4
+      ],
+      "repeticiones": 9,
+      "calentamiento": 3,
+      "puntos": [
+        {
+          "n": 4096,
+          "ms": 2.3965840000018943,
+          "minimo": 2.095167000006768,
+          "maximo": 2.7140829999989364
+        },
+        {
+          "n": 8192,
+          "ms": 2.498915999996825,
+          "minimo": 2.1693749999976717,
+          "maximo": 2.8224999999947613
+        },
+        {
+          "n": 16384,
+          "ms": 3.104917000004207,
+          "minimo": 2.709499999997206,
+          "maximo": 6.828000000008615
+        },
+        {
+          "n": 32768,
+          "ms": 3.032791999998153,
+          "minimo": 2.628791999988607,
+          "maximo": 3.614000000001397
+        },
+        {
+          "n": 65536,
+          "ms": 3.5949580000014976,
+          "minimo": 3.48495900000853,
+          "maximo": 8.105374999999185
+        },
+        {
+          "n": 131072,
+          "ms": 4.330125000007683,
+          "minimo": 3.902249999999185,
+          "maximo": 8.679417000006652
+        }
+      ],
+      "razones": [
+        1.0426991083954704,
+        1.2425055504099183,
+        0.9767707156081931,
+        1.1853625306330557,
+        1.204499468423798
+      ],
+      "exponente": 0.16592157735214663,
+      "coincide": true
+    },
+    {
+      "algoritmo": 5,
+      "nombre": "Búsqueda y filtrado",
+      "variante": "Autocompletado de la API: trie de nombres y de palabras interiores, 5000 consultas",
+      "complejidad": "O(L + r) por consulta",
+      "rangoEsperado": [
+        -0.3,
+        0.3
+      ],
+      "repeticiones": 9,
+      "calentamiento": 3,
+      "puntos": [
+        {
+          "n": 4096,
+          "ms": 11.962666999999783,
+          "minimo": 10.685834000003524,
+          "maximo": 14.818791000012425
+        },
+        {
+          "n": 8192,
+          "ms": 12.99016699999629,
+          "minimo": 11.944207999986247,
+          "maximo": 13.747999999992317
+        },
+        {
+          "n": 16384,
+          "ms": 11.698124999995343,
+          "minimo": 10.140791000012541,
+          "maximo": 14.956500000000233
+        },
+        {
+          "n": 32768,
+          "ms": 10.968500000002678,
+          "minimo": 9.59945800001151,
+          "maximo": 12.415540999994846
+        },
+        {
+          "n": 65536,
+          "ms": 10.035584000012022,
+          "minimo": 9.023750000007567,
+          "maximo": 16.932375000003958
+        },
+        {
+          "n": 131072,
+          "ms": 8.57424999999057,
+          "minimo": 7.742708000005223,
+          "maximo": 10.691958000010345
+        }
+      ],
+      "razones": [
+        1.0858922178471178,
+        0.9005369215036791,
+        0.9376288935198627,
+        0.9149458905054996,
+        0.8543847572777328
+      ],
+      "exponente": -0.1032023047602165,
+      "coincide": true
+    },
+    {
+      "algoritmo": 5,
+      "nombre": "Búsqueda y filtrado",
+      "variante": "Índice invertido con intersección y periodo por búsqueda binaria, 50 consultas",
+      "complejidad": "O(k · |lista más corta|) por consulta",
+      "rangoEsperado": [
+        0.8,
+        1.25
+      ],
+      "repeticiones": 5,
+      "calentamiento": 1,
+      "puntos": [
+        {
+          "n": 31250,
+          "ms": 1.3784160000068368,
+          "minimo": 1.1670420000009472,
+          "maximo": 1.7484160000021802
+        },
+        {
+          "n": 62500,
+          "ms": 2.7187919999996666,
+          "minimo": 2.4858749999984866,
+          "maximo": 5.18908399999782
+        },
+        {
+          "n": 125000,
+          "ms": 4.980749999987893,
+          "minimo": 4.68445800000336,
+          "maximo": 5.5090000000054715
+        },
+        {
+          "n": 250000,
+          "ms": 12.604124999998021,
+          "minimo": 11.140958999996656,
+          "maximo": 18.161042000007
+        },
+        {
+          "n": 500000,
+          "ms": 23.769166999991285,
+          "minimo": 23.508334000012837,
+          "maximo": 26.944459000005736
+        },
+        {
+          "n": 1000000,
+          "ms": 50.6006250000064,
+          "minimo": 47.408500000005006,
+          "maximo": 61.1351250000007
+        }
+      ],
+      "razones": [
+        1.9724031061640184,
+        1.8319716991915909,
+        2.5305676855952735,
+        1.8858244423944555,
+        2.12883459483561
+      ],
+      "exponente": 1.0489709075811606,
+      "coincide": true
+    },
+    {
+      "algoritmo": 5,
+      "nombre": "Búsqueda y filtrado",
+      "variante": "Referencia: recorrido lineal de todas las filas, 50 consultas",
+      "complejidad": "O(n) por consulta",
+      "rangoEsperado": [
+        0.8,
+        1.25
+      ],
+      "repeticiones": 5,
+      "calentamiento": 1,
+      "puntos": [
+        {
+          "n": 31250,
+          "ms": 23.393875000008848,
+          "minimo": 22.05691700000898,
+          "maximo": 24.962750000006054
+        },
+        {
+          "n": 62500,
+          "ms": 34.354999999995925,
+          "minimo": 31.622042000002693,
+          "maximo": 35.14808300000732
+        },
+        {
+          "n": 125000,
+          "ms": 63.15570800000569,
+          "minimo": 60.86279100000684,
+          "maximo": 67.37908299999253
+        },
+        {
+          "n": 250000,
+          "ms": 116.3178329999937,
+          "minimo": 113.92366700001003,
+          "maximo": 117.62241599999834
+        },
+        {
+          "n": 500000,
+          "ms": 211.64687499999127,
+          "minimo": 208.8446660000045,
+          "maximo": 223.58937499999593
+        },
+        {
+          "n": 1000000,
+          "ms": 413.302749999988,
+          "minimo": 410.60141699999804,
+          "maximo": 413.63308400000096
+        }
+      ],
+      "razones": [
+        1.4685467884214536,
+        1.8383265318007038,
+        1.8417627904667495,
+        1.8195565507139626,
+        1.952794011251076
+      ],
+      "exponente": 0.8418648539739376,
+      "coincide": true
+    },
+    {
+      "algoritmo": 6,
+      "nombre": "Análisis de tendencias",
+      "variante": "Deltas, medias móviles con cola circular, mínimos cuadrados y anomalías",
+      "complejidad": "O(n)",
+      "rangoEsperado": [
+        0.8,
+        1.25
+      ],
+      "repeticiones": 5,
+      "calentamiento": 1,
+      "puntos": [
+        {
+          "n": 16384,
+          "ms": 17.571291999993264,
+          "minimo": 11.008958000005805,
+          "maximo": 19.20524999999907
+        },
+        {
+          "n": 32768,
+          "ms": 28.949416999996174,
+          "minimo": 26.42929100000765,
+          "maximo": 30.23216699999466
+        },
+        {
+          "n": 65536,
+          "ms": 52.15450000000419,
+          "minimo": 48.99837500001013,
+          "maximo": 57.575708999997005
+        },
+        {
+          "n": 131072,
+          "ms": 93.32783400001063,
+          "minimo": 89.39762499999779,
+          "maximo": 96.8592079999944
+        },
+        {
+          "n": 262144,
+          "ms": 170.27287500000966,
+          "minimo": 168.10120900000038,
+          "maximo": 175.41562499999418
+        },
+        {
+          "n": 524288,
+          "ms": 324.47579099998984,
+          "minimo": 322.42504099999496,
+          "maximo": 329.5977920000005
+        }
+      ],
+      "razones": [
+        1.6475406020233043,
+        1.8015734133786212,
+        1.789449309263882,
+        1.8244597319165285,
+        1.9056223194679214
+      ],
+      "exponente": 0.8440667507058692,
+      "coincide": true
+    },
+    {
+      "algoritmo": 7,
+      "nombre": "Análisis del aseguramiento de viviendas",
+      "variante": "Cubo en un arreglo plano de 72 celdas y análisis sobre el cubo",
+      "complejidad": "O(n + e · a · f)",
+      "rangoEsperado": [
+        0.8,
+        1.25
+      ],
+      "repeticiones": 5,
+      "calentamiento": 1,
+      "puntos": [
+        {
+          "n": 62500,
+          "ms": 4.534040999991703,
+          "minimo": 3.56554199999664,
+          "maximo": 8.00700000001234
+        },
+        {
+          "n": 125000,
+          "ms": 6.452667000005022,
+          "minimo": 5.997624999989057,
+          "maximo": 10.698540999990655
+        },
+        {
+          "n": 250000,
+          "ms": 16.23925000001327,
+          "minimo": 13.439500000007683,
+          "maximo": 18.9070839999913
+        },
+        {
+          "n": 500000,
+          "ms": 26.797166000003926,
+          "minimo": 26.49162499999511,
+          "maximo": 28.282374999995227
+        },
+        {
+          "n": 1000000,
+          "ms": 53.47295799999847,
+          "minimo": 52.321833000009065,
+          "maximo": 57.79391599999508
+        },
+        {
+          "n": 2000000,
+          "ms": 99.50362499999756,
+          "minimo": 95.90687500000058,
+          "maximo": 102.59579200000735
+        }
+      ],
+      "razones": [
+        1.423160266970861,
+        2.5166725634533185,
+        1.6501480056026003,
+        1.9954706404397629,
+        1.8608214080844452
+      ],
+      "exponente": 0.9187005760250955,
+      "coincide": true
+    }
+  ],
+  "duplicados": [
+    {
+      "tamano": 2000,
+      "duplicadosInyectados": 7,
+      "conBloques": {
+        "comparaciones": 8,
+        "marcados": 7,
+        "aciertos": 7,
+        "exhaustividad": 1,
+        "precision": 1
+      },
+      "todosLosPares": {
+        "comparaciones": 1999000,
+        "marcados": 203,
+        "aciertos": 7,
+        "exhaustividad": 1,
+        "precision": 0.034482758620689655
+      }
+    },
+    {
+      "tamano": 1000000,
+      "duplicadosInyectados": 4975,
+      "conBloques": {
+        "comparaciones": 632827,
+        "marcados": 5674,
+        "aciertos": 4975,
+        "exhaustividad": 1,
+        "precision": 0.8768064857243567
+      }
+    }
+  ]
+}

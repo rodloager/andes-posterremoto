@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es-CO">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Panorama nacional · ANDES</title>
+    <meta
+      name="description"
+      content="Indicadores nacionales sobre las consecuencias del sismo del 10 de agosto de 2026 en Colombia, con su fuente y su fecha de corte."
+    />
+    <link rel="icon" href="/assets/icono.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/vendor/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/vendor/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="/css/tokens.css" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/componentes.css" />
+    <script defer src="/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script type="module" src="/js/paginas/inicio.js"></script>
+  </head>
+  <body>
+    <andes-marco pagina="inicio">
+      <header class="pagina-titulo">
+        <h1>Panorama nacional</h1>
+        <p>
+          Qué dejó el sismo del 10 de agosto de 2026 y cómo avanza la recuperación. Cada cifra indica quién la
+          reporta y con qué fecha de corte.
+        </p>
+      </header>
+      <div id="contenido" aria-live="polite">
+        <p class="estado-carga">Cargando los datos…</p>
+      </div>
+    </andes-marco>
+    <noscript>
+      <p class="estado-error">Este portal necesita JavaScript para mostrar los indicadores.</p>
+    </noscript>
+  </body>
+</html>

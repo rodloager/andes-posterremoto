@@ -1,0 +1,52 @@
+{
+  "meta": { "actualizadoEn": "2026-11-11" },
+  "codigo": "sismo-2026-08-10",
+  "nombre": "Sismo del 10 de agosto de 2026",
+  "fecha": "2026-08-10",
+  "epicentro": { "municipio": "San José del Palmar", "departamento": "Chocó", "codigoMunicipio": "27660" },
+  "parametros": [
+    {
+      "nombre": "Hora",
+      "valores": [
+        { "fuente": "sgc-nota-sismo", "valor": "07:34 hora local" },
+        { "fuente": "usgs-evento", "valor": "12:34:28 UTC" }
+      ]
+    },
+    {
+      "nombre": "Magnitud",
+      "valores": [
+        { "fuente": "sgc-nota-sismo", "valor": "7,4" },
+        { "fuente": "usgs-evento", "valor": "7,4 Mww" }
+      ]
+    },
+    {
+      "nombre": "Profundidad",
+      "valores": [
+        { "fuente": "sgc-nota-sismo", "valor": "103 km" },
+        { "fuente": "usgs-evento", "valor": "116,1 km" }
+      ]
+    },
+    {
+      "nombre": "Epicentro",
+      "valores": [
+        { "fuente": "sgc-nota-sismo", "valor": "San José del Palmar, Chocó" },
+        { "fuente": "usgs-evento", "valor": "4,8601 N y 76,2558 O" }
+      ]
+    }
+  ],
+  "coordenadas": { "latitud": 4.8601, "longitud": -76.2558, "fuente": "usgs-evento" },
+  "normas": [
+    {
+      "nombre": "Decreto 1171 del 11 de agosto de 2026",
+      "contenido": "Declara la situación de desastre de carácter nacional."
+    },
+    {
+      "nombre": "Decreto 1261 del 19 de agosto de 2026",
+      "contenido": "Declara el estado de emergencia económica, social y ecológica por treinta días."
+    },
+    {
+      "nombre": "Resolución UNGRD 0765 del 26 de agosto de 2026",
+      "contenido": "Regula el apoyo económico temporal de vivienda y el Registro Único de Damnificados."
+    }
+  ]
+}

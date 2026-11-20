@@ -1,0 +1,7214 @@
+{
+  "meta": {
+    "origen": "OFICIAL",
+    "nivel": "A",
+    "fuente": "dane-afectaciones",
+    "consultadoEn": "2026-11-11",
+    "periodoReportes": {
+      "desde": "2026-08-11",
+      "hasta": "2026-08-22"
+    },
+    "municipiosEnLaCapa": 1122,
+    "municipiosConReporte": 498,
+    "departamentosConReporte": 16,
+    "alertasDeCalidad": {
+      "FECHA_REPORTE_INVALIDA": 27,
+      "PERSONAS_MENOR_QUE_FAMILIAS": 13
+    }
+  },
+  "variables": [
+    {
+      "codigo": "familias",
+      "nombre": "Familias afectadas",
+      "unidad": "familias"
+    },
+    {
+      "codigo": "personas",
+      "nombre": "Personas afectadas",
+      "unidad": "personas"
+    },
+    {
+      "codigo": "fallecidos",
+      "nombre": "Personas fallecidas",
+      "unidad": "personas"
+    },
+    {
+      "codigo": "heridos",
+      "nombre": "Personas heridas",
+      "unidad": "personas"
+    },
+    {
+      "codigo": "desaparecidos",
+      "nombre": "Personas desaparecidas",
+      "unidad": "personas"
+    },
+    {
+      "codigo": "rescatados",
+      "nombre": "Personas rescatadas",
+      "unidad": "personas"
+    },
+    {
+      "codigo": "viviendasAveriadas",
+      "nombre": "Viviendas averiadas",
+      "unidad": "viviendas"
+    },
+    {
+      "codigo": "viviendasDestruidas",
+      "nombre": "Viviendas destruidas",
+      "unidad": "viviendas"
+    },
+    {
+      "codigo": "edificiosAveriados",
+      "nombre": "Edificios averiados",
+      "unidad": "edificios"
+    },
+    {
+      "codigo": "edificiosColapsados",
+      "nombre": "Edificios colapsados",
+      "unidad": "edificios"
+    },
+    {
+      "codigo": "centrosSalud",
+      "nombre": "Centros de salud",
+      "unidad": "centros"
+    },
+    {
+      "codigo": "centrosEducativos",
+      "nombre": "Centros educativos",
+      "unidad": "centros"
+    },
+    {
+      "codigo": "centrosComunitarios",
+      "nombre": "Centros comunitarios",
+      "unidad": "centros"
+    },
+    {
+      "codigo": "vias",
+      "nombre": "Vías",
+      "unidad": "vías"
+    },
+    {
+      "codigo": "aeropuertos",
+      "nombre": "Aeropuertos",
+      "unidad": "aeropuertos"
+    },
+    {
+      "codigo": "acueductos",
+      "nombre": "Acueductos",
+      "unidad": "acueductos"
+    },
+    {
+      "codigo": "puentesVehiculares",
+      "nombre": "Puentes vehiculares",
+      "unidad": "puentes"
+    },
+    {
+      "codigo": "puentesPeatonales",
+      "nombre": "Puentes peatonales",
+      "unidad": "puentes"
+    }
+  ],
+  "nacional": {
+    "personas": 128818,
+    "centrosSalud": 372,
+    "familias": 89421,
+    "viviendasAveriadas": 69843,
+    "centrosEducativos": 3726,
+    "centrosComunitarios": 4211,
+    "acueductos": 115,
+    "vias": 430,
+    "viviendasDestruidas": 18127,
+    "puentesVehiculares": 70,
+    "heridos": 2945,
+    "desaparecidos": 215,
+    "puentesPeatonales": 15,
+    "fallecidos": 329,
+    "aeropuertos": 5,
+    "rescatados": 364,
+    "edificiosColapsados": 574,
+    "edificiosAveriados": 5884
+  },
+  "departamentos": [
+    {
+      "codigo": "05",
+      "nombre": "Antioquia",
+      "municipiosConReporte": 106,
+      "valores": {
+        "personas": 17436,
+        "centrosSalud": 31,
+        "familias": 4359,
+        "viviendasAveriadas": 4320,
+        "centrosEducativos": 526,
+        "centrosComunitarios": 247,
+        "acueductos": 9,
+        "vias": 7,
+        "viviendasDestruidas": 39,
+        "puentesVehiculares": 9,
+        "heridos": 24,
+        "desaparecidos": 1,
+        "puentesPeatonales": 1,
+        "fallecidos": 1
+      },
+      "ultimoReporte": "2026-08-21"
+    },
+    {
+      "codigo": "13",
+      "nombre": "Bolívar",
+      "municipiosConReporte": 8,
+      "valores": {
+        "personas": 451,
+        "centrosEducativos": 8,
+        "familias": 11,
+        "viviendasAveriadas": 15,
+        "centrosComunitarios": 2,
+        "vias": 1,
+        "acueductos": 1,
+        "centrosSalud": 2
+      },
+      "ultimoReporte": null
+    },
+    {
+      "codigo": "17",
+      "nombre": "Caldas",
+      "municipiosConReporte": 27,
+      "valores": {
+        "familias": 11725,
+        "personas": 9221,
+        "fallecidos": 6,
+        "heridos": 329,
+        "viviendasAveriadas": 17143,
+        "viviendasDestruidas": 2347,
+        "centrosSalud": 25,
+        "centrosEducativos": 474,
+        "centrosComunitarios": 49,
+        "vias": 16,
+        "aeropuertos": 1,
+        "acueductos": 25,
+        "puentesVehiculares": 1
+      },
+      "ultimoReporte": null
+    },
+    {
+      "codigo": "18",
+      "nombre": "Caquetá",
+      "municipiosConReporte": 14,
+      "valores": {
+        "centrosSalud": 13,
+        "centrosEducativos": 39,
+        "viviendasAveriadas": 18
+      },
+      "ultimoReporte": null
+    },
+    {
+      "codigo": "19",
+      "nombre": "Cauca",
+      "municipiosConReporte": 42,
+      "valores": {
+        "familias": 7003,
+        "personas": 22038,
+        "viviendasAveriadas": 6753,
+        "centrosSalud": 20,
+        "centrosEducativos": 325,
+        "vias": 7,
+        "acueductos": 13,
+        "viviendasDestruidas": 318,
+        "centrosComunitarios": 93,
+        "heridos": 1,
+        "puentesVehiculares": 7,
+        "puentesPeatonales": 2,
+        "fallecidos": 1,
+        "desaparecidos": 1
+      },
+      "ultimoReporte": "2026-08-19"
+    },
+    {
+      "codigo": "25",
+      "nombre": "Cundinamarca",
+      "municipiosConReporte": 68,
+      "valores": {
+        "centrosEducativos": 80,
+        "viviendasAveriadas": 89,
+        "centrosComunitarios": 26,
+        "centrosSalud": 5,
+        "vias": 1,
+        "acueductos": 2
+      },
+      "ultimoReporte": "2026-08-11"
+    },
+    {
+      "codigo": "27",
+      "nombre": "Chocó",
+      "municipiosConReporte": 30,
+      "valores": {
+        "familias": 40977,
+        "fallecidos": 12,
+        "heridos": 347,
+        "desaparecidos": 3,
+        "rescatados": 1,
+        "viviendasAveriadas": 19412,
+        "viviendasDestruidas": 3521,
+        "centrosSalud": 92,
+        "centrosEducativos": 272,
+        "centrosComunitarios": 175,
+        "personas": 72317,
+        "acueductos": 27,
+        "vias": 16,
+        "puentesVehiculares": 12,
+        "puentesPeatonales": 7
+      },
+      "ultimoReporte": "2026-08-18"
+    },
+    {
+      "codigo": "41",
+      "nombre": "Huila",
+      "municipiosConReporte": 33,
+      "valores": {
+        "familias": 417,
+        "personas": 2085,
+        "viviendasAveriadas": 417,
+        "centrosSalud": 16,
+        "centrosEducativos": 103,
+        "vias": 19,
+        "centrosComunitarios": 18,
+        "puentesVehiculares": 18,
+        "puentesPeatonales": 2
+      },
+      "ultimoReporte": "2026-08-19"
+    },
+    {
+      "codigo": "52",
+      "nombre": "Nariño",
+      "municipiosConReporte": 17,
+      "valores": {
+        "viviendasAveriadas": 122,
+        "centrosEducativos": 32,
+        "familias": 46,
+        "personas": 102,
+        "vias": 5,
+        "centrosSalud": 2,
+        "viviendasDestruidas": 2,
+        "centrosComunitarios": 2,
+        "puentesPeatonales": 1
+      },
+      "ultimoReporte": "2026-08-21"
+    },
+    {
+      "codigo": "54",
+      "nombre": "Norte de Santander",
+      "municipiosConReporte": 20,
+      "valores": {
+        "familias": 82,
+        "personas": 328,
+        "viviendasAveriadas": 81,
+        "centrosComunitarios": 3,
+        "centrosEducativos": 18,
+        "heridos": 1
+      },
+      "ultimoReporte": "2026-08-22"
+    },
+    {
+      "codigo": "63",
+      "nombre": "Quindío",
+      "municipiosConReporte": 12,
+      "valores": {
+        "familias": 8388,
+        "personas": 4449,
+        "fallecidos": 3,
+        "heridos": 315,
+        "desaparecidos": 49,
+        "rescatados": 1,
+        "viviendasAveriadas": 3875,
+        "viviendasDestruidas": 1879,
+        "edificiosColapsados": 115,
+        "centrosSalud": 17,
+        "centrosEducativos": 182,
+        "centrosComunitarios": 1508,
+        "vias": 53,
+        "aeropuertos": 1,
+        "acueductos": 5,
+        "puentesPeatonales": 2,
+        "puentesVehiculares": 9,
+        "edificiosAveriados": 4
+      },
+      "ultimoReporte": "2026-08-21"
+    },
+    {
+      "codigo": "66",
+      "nombre": "Risaralda",
+      "municipiosConReporte": 14,
+      "valores": {
+        "familias": 6879,
+        "fallecidos": 109,
+        "heridos": 588,
+        "desaparecidos": 121,
+        "rescatados": 274,
+        "viviendasAveriadas": 5925,
+        "viviendasDestruidas": 937,
+        "edificiosAveriados": 5305,
+        "edificiosColapsados": 109,
+        "centrosSalud": 44,
+        "centrosEducativos": 389,
+        "aeropuertos": 1,
+        "puentesVehiculares": 14,
+        "centrosComunitarios": 40,
+        "vias": 133,
+        "acueductos": 29
+      },
+      "ultimoReporte": "2026-08-19"
+    },
+    {
+      "codigo": "68",
+      "nombre": "Santander",
+      "municipiosConReporte": 20,
+      "valores": {
+        "centrosSalud": 1,
+        "viviendasAveriadas": 4,
+        "centrosEducativos": 19,
+        "centrosComunitarios": 2
+      },
+      "ultimoReporte": null
+    },
+    {
+      "codigo": "70",
+      "nombre": "Sucre",
+      "municipiosConReporte": 2,
+      "valores": {
+        "familias": 65,
+        "viviendasAveriadas": 71,
+        "centrosComunitarios": 1
+      },
+      "ultimoReporte": "2026-08-19"
+    },
+    {
+      "codigo": "73",
+      "nombre": "Tolima",
+      "municipiosConReporte": 43,
+      "valores": {
+        "viviendasAveriadas": 1072,
+        "centrosSalud": 12,
+        "centrosEducativos": 196,
+        "centrosComunitarios": 57,
+        "acueductos": 4,
+        "vias": 19,
+        "viviendasDestruidas": 30
+      },
+      "ultimoReporte": "2026-08-16"
+    },
+    {
+      "codigo": "76",
+      "nombre": "Valle del Cauca",
+      "municipiosConReporte": 42,
+      "valores": {
+        "fallecidos": 197,
+        "heridos": 1340,
+        "desaparecidos": 40,
+        "rescatados": 88,
+        "edificiosAveriados": 575,
+        "edificiosColapsados": 350,
+        "centrosSalud": 92,
+        "centrosEducativos": 1063,
+        "personas": 391,
+        "viviendasAveriadas": 10526,
+        "viviendasDestruidas": 9054,
+        "centrosComunitarios": 1988,
+        "vias": 153,
+        "familias": 9469,
+        "aeropuertos": 2
+      },
+      "ultimoReporte": "2026-08-22"
+    }
+  ],
+  "municipios": [
+    {
+      "codigo": "05001",
+      "nombre": "Medellín",
+      "departamento": "05",
+      "valores": {
+        "personas": 0,
+        "centrosSalud": 2
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05002",
+      "nombre": "Abejorral",
+      "departamento": "05",
+      "valores": {
+        "familias": 270,
+        "personas": 1080,
+        "viviendasAveriadas": 270,
+        "centrosEducativos": 21,
+        "centrosComunitarios": 8,
+        "acueductos": 2
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05021",
+      "nombre": "Alejandría",
+      "departamento": "05",
+      "valores": {
+        "familias": 29,
+        "personas": 116,
+        "viviendasAveriadas": 29,
+        "centrosEducativos": 8,
+        "centrosComunitarios": 3
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05030",
+      "nombre": "Amagá",
+      "departamento": "05",
+      "valores": {
+        "familias": 1,
+        "personas": 4,
+        "viviendasAveriadas": 1,
+        "centrosEducativos": 5,
+        "centrosComunitarios": 5,
+        "acueductos": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05031",
+      "nombre": "Amalfi",
+      "departamento": "05",
+      "valores": {
+        "familias": 12,
+        "personas": 48,
+        "viviendasAveriadas": 12,
+        "centrosEducativos": 4
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05034",
+      "nombre": "Andes",
+      "departamento": "05",
+      "valores": {
+        "familias": 180,
+        "personas": 720,
+        "viviendasAveriadas": 180,
+        "centrosSalud": 1,
+        "centrosEducativos": 36,
+        "centrosComunitarios": 3
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05036",
+      "nombre": "Angelópolis",
+      "departamento": "05",
+      "valores": {
+        "familias": 9,
+        "personas": 36,
+        "viviendasAveriadas": 9,
+        "centrosSalud": 1,
+        "centrosEducativos": 2,
+        "vias": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05038",
+      "nombre": "Angostura",
+      "departamento": "05",
+      "valores": {
+        "familias": 3,
+        "personas": 12,
+        "viviendasAveriadas": 3,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05040",
+      "nombre": "Anorí",
+      "departamento": "05",
+      "valores": {
+        "familias": 1,
+        "personas": 4,
+        "viviendasAveriadas": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05042",
+      "nombre": "Santa Fé de Antioquia",
+      "departamento": "05",
+      "valores": {
+        "familias": 38,
+        "personas": 152,
+        "viviendasAveriadas": 36,
+        "viviendasDestruidas": 2,
+        "centrosEducativos": 10,
+        "centrosComunitarios": 3
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05044",
+      "nombre": "Anzá",
+      "departamento": "05",
+      "valores": {
+        "familias": 18,
+        "personas": 72,
+        "viviendasAveriadas": 18,
+        "centrosEducativos": 5,
+        "centrosComunitarios": 3
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05045",
+      "nombre": "Apartadó",
+      "departamento": "05",
+      "valores": {
+        "familias": 3,
+        "personas": 12,
+        "viviendasAveriadas": 3
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05055",
+      "nombre": "Argelia",
+      "departamento": "05",
+      "valores": {
+        "familias": 124,
+        "personas": 496,
+        "viviendasAveriadas": 124,
+        "centrosEducativos": 11,
+        "centrosComunitarios": 2
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05059",
+      "nombre": "Armenia",
+      "departamento": "05",
+      "valores": {
+        "familias": 18,
+        "personas": 72,
+        "viviendasAveriadas": 18,
+        "centrosEducativos": 2,
+        "centrosComunitarios": 5
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05079",
+      "nombre": "Barbosa",
+      "departamento": "05",
+      "valores": {
+        "familias": 42,
+        "personas": 168,
+        "viviendasAveriadas": 42,
+        "centrosEducativos": 8,
+        "centrosComunitarios": 3
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05088",
+      "nombre": "Bello",
+      "departamento": "05",
+      "valores": {
+        "familias": 2,
+        "personas": 8,
+        "viviendasAveriadas": 2,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05091",
+      "nombre": "Betania",
+      "departamento": "05",
+      "valores": {
+        "familias": 189,
+        "personas": 756,
+        "viviendasAveriadas": 189,
+        "centrosSalud": 1,
+        "centrosEducativos": 9,
+        "centrosComunitarios": 5
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05093",
+      "nombre": "Betulia",
+      "departamento": "05",
+      "valores": {
+        "familias": 113,
+        "personas": 452,
+        "viviendasAveriadas": 113,
+        "centrosSalud": 1,
+        "centrosComunitarios": 5,
+        "vias": 1,
+        "puentesVehiculares": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05101",
+      "nombre": "Ciudad Bolívar",
+      "departamento": "05",
+      "valores": {
+        "familias": 273,
+        "personas": 1092,
+        "viviendasAveriadas": 261,
+        "viviendasDestruidas": 12,
+        "centrosEducativos": 17,
+        "centrosComunitarios": 5,
+        "vias": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05113",
+      "nombre": "Buriticá",
+      "departamento": "05",
+      "valores": {
+        "familias": 8,
+        "personas": 32,
+        "viviendasAveriadas": 8,
+        "centrosEducativos": 2,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05125",
+      "nombre": "Caicedo",
+      "departamento": "05",
+      "valores": {
+        "familias": 37,
+        "personas": 148,
+        "heridos": 1,
+        "viviendasAveriadas": 37,
+        "centrosEducativos": 5,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05129",
+      "nombre": "Caldas",
+      "departamento": "05",
+      "valores": {
+        "personas": 0,
+        "centrosSalud": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05134",
+      "nombre": "Campamento",
+      "departamento": "05",
+      "valores": {
+        "familias": 5,
+        "personas": 20,
+        "viviendasAveriadas": 5,
+        "centrosEducativos": 7
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05138",
+      "nombre": "Cañasgordas",
+      "departamento": "05",
+      "valores": {
+        "personas": 0,
+        "centrosSalud": 1,
+        "centrosEducativos": 3
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05142",
+      "nombre": "Caracolí",
+      "departamento": "05",
+      "valores": {
+        "familias": 2,
+        "personas": 8,
+        "viviendasAveriadas": 2,
+        "centrosEducativos": 4,
+        "centrosComunitarios": 1,
+        "puentesVehiculares": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05145",
+      "nombre": "Caramanta",
+      "departamento": "05",
+      "valores": {
+        "familias": 62,
+        "personas": 248,
+        "viviendasAveriadas": 62,
+        "centrosEducativos": 6,
+        "centrosComunitarios": 6,
+        "acueductos": 1,
+        "puentesVehiculares": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05147",
+      "nombre": "Carepa",
+      "departamento": "05",
+      "valores": {
+        "familias": 2,
+        "personas": 8,
+        "viviendasAveriadas": 2,
+        "centrosEducativos": 3
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05148",
+      "nombre": "El Carmen de Viboral",
+      "departamento": "05",
+      "valores": {
+        "familias": 15,
+        "personas": 60,
+        "heridos": 2,
+        "viviendasAveriadas": 15,
+        "centrosSalud": 1,
+        "centrosEducativos": 9,
+        "centrosComunitarios": 4
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05150",
+      "nombre": "Carolina",
+      "departamento": "05",
+      "valores": {
+        "personas": 0,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05172",
+      "nombre": "Chigorodó",
+      "departamento": "05",
+      "valores": {
+        "familias": 2,
+        "personas": 8,
+        "viviendasAveriadas": 2,
+        "centrosEducativos": 2
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05190",
+      "nombre": "Cisneros",
+      "departamento": "05",
+      "valores": {
+        "familias": 3,
+        "personas": 12,
+        "heridos": 1,
+        "viviendasAveriadas": 3,
+        "centrosEducativos": 1,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05197",
+      "nombre": "Cocorná",
+      "departamento": "05",
+      "valores": {
+        "familias": 71,
+        "personas": 284,
+        "viviendasAveriadas": 70,
+        "viviendasDestruidas": 1,
+        "centrosEducativos": 2,
+        "centrosComunitarios": 4,
+        "puentesVehiculares": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05206",
+      "nombre": "Concepción",
+      "departamento": "05",
+      "valores": {
+        "familias": 16,
+        "personas": 64,
+        "viviendasAveriadas": 16
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05209",
+      "nombre": "Concordia",
+      "departamento": "05",
+      "valores": {
+        "familias": 53,
+        "personas": 212,
+        "viviendasAveriadas": 53,
+        "centrosEducativos": 16,
+        "centrosComunitarios": 4
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05212",
+      "nombre": "Copacabana",
+      "departamento": "05",
+      "valores": {
+        "familias": 12,
+        "personas": 48,
+        "viviendasAveriadas": 12,
+        "centrosSalud": 1,
+        "centrosEducativos": 1,
+        "centrosComunitarios": 2
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05237",
+      "nombre": "Donmatías",
+      "departamento": "05",
+      "valores": {
+        "personas": 0,
+        "centrosEducativos": 3,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05240",
+      "nombre": "Ebéjico",
+      "departamento": "05",
+      "valores": {
+        "familias": 28,
+        "personas": 112,
+        "viviendasAveriadas": 26,
+        "viviendasDestruidas": 2,
+        "centrosEducativos": 7,
+        "centrosComunitarios": 3
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05250",
+      "nombre": "El Bagre",
+      "departamento": "05",
+      "valores": {
+        "personas": 0,
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05264",
+      "nombre": "Entrerríos",
+      "departamento": "05",
+      "valores": {
+        "familias": 8,
+        "personas": 32,
+        "viviendasAveriadas": 8,
+        "centrosEducativos": 1,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05266",
+      "nombre": "Envigado",
+      "departamento": "05",
+      "valores": {
+        "familias": 351,
+        "personas": 1404,
+        "viviendasAveriadas": 351,
+        "centrosEducativos": 1,
+        "centrosComunitarios": 2,
+        "acueductos": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05282",
+      "nombre": "Fredonia",
+      "departamento": "05",
+      "valores": {
+        "familias": 19,
+        "personas": 76,
+        "viviendasAveriadas": 19,
+        "centrosSalud": 1,
+        "centrosEducativos": 13,
+        "centrosComunitarios": 9
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05284",
+      "nombre": "Frontino",
+      "departamento": "05",
+      "valores": {
+        "familias": 19,
+        "personas": 76,
+        "viviendasAveriadas": 19,
+        "centrosEducativos": 8,
+        "centrosComunitarios": 10,
+        "acueductos": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05306",
+      "nombre": "Giraldo",
+      "departamento": "05",
+      "valores": {
+        "familias": 18,
+        "personas": 72,
+        "viviendasAveriadas": 18,
+        "centrosEducativos": 2,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05308",
+      "nombre": "Girardota",
+      "departamento": "05",
+      "valores": {
+        "familias": 37,
+        "personas": 148,
+        "desaparecidos": 1,
+        "viviendasAveriadas": 37,
+        "centrosSalud": 1,
+        "centrosEducativos": 39,
+        "centrosComunitarios": 4
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05310",
+      "nombre": "Gómez Plata",
+      "departamento": "05",
+      "valores": {
+        "familias": 7,
+        "personas": 28,
+        "viviendasAveriadas": 7,
+        "centrosEducativos": 2,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05313",
+      "nombre": "Granada",
+      "departamento": "05",
+      "valores": {
+        "familias": 21,
+        "personas": 84,
+        "viviendasAveriadas": 21,
+        "centrosEducativos": 9,
+        "centrosComunitarios": 2
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05315",
+      "nombre": "Guadalupe",
+      "departamento": "05",
+      "valores": {
+        "familias": 1,
+        "personas": 4,
+        "viviendasAveriadas": 1,
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05318",
+      "nombre": "Guarne",
+      "departamento": "05",
+      "valores": {
+        "familias": 2,
+        "personas": 8,
+        "viviendasAveriadas": 2,
+        "centrosEducativos": 2
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05321",
+      "nombre": "Guatapé",
+      "departamento": "05",
+      "valores": {
+        "personas": 0,
+        "centrosEducativos": 3
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05347",
+      "nombre": "Heliconia",
+      "departamento": "05",
+      "valores": {
+        "familias": 11,
+        "personas": 44,
+        "viviendasAveriadas": 11,
+        "centrosEducativos": 4,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05353",
+      "nombre": "Hispania",
+      "departamento": "05",
+      "valores": {
+        "familias": 123,
+        "personas": 492,
+        "viviendasAveriadas": 123,
+        "centrosSalud": 1,
+        "centrosEducativos": 1,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05360",
+      "nombre": "Itagüí",
+      "departamento": "05",
+      "valores": {
+        "familias": 272,
+        "personas": 1088,
+        "viviendasAveriadas": 272,
+        "centrosEducativos": 5,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05361",
+      "nombre": "Ituango",
+      "departamento": "05",
+      "valores": {
+        "familias": 7,
+        "personas": 28,
+        "viviendasAveriadas": 7,
+        "centrosSalud": 1,
+        "centrosEducativos": 5,
+        "centrosComunitarios": 2,
+        "puentesVehiculares": 2
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05364",
+      "nombre": "Jardín",
+      "departamento": "05",
+      "valores": {
+        "familias": 136,
+        "personas": 544,
+        "viviendasAveriadas": 136,
+        "centrosSalud": 1,
+        "centrosEducativos": 6,
+        "vias": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05368",
+      "nombre": "Jericó",
+      "departamento": "05",
+      "valores": {
+        "familias": 21,
+        "personas": 84,
+        "viviendasAveriadas": 21,
+        "centrosEducativos": 1,
+        "centrosComunitarios": 15,
+        "acueductos": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05376",
+      "nombre": "La Ceja",
+      "departamento": "05",
+      "valores": {
+        "familias": 109,
+        "personas": 436,
+        "heridos": 5,
+        "viviendasAveriadas": 109,
+        "centrosComunitarios": 3
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05380",
+      "nombre": "La Estrella",
+      "departamento": "05",
+      "valores": {
+        "personas": 0,
+        "centrosSalud": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05390",
+      "nombre": "La Pintada",
+      "departamento": "05",
+      "valores": {
+        "familias": 40,
+        "personas": 160,
+        "viviendasAveriadas": 40,
+        "centrosEducativos": 4,
+        "centrosComunitarios": 1,
+        "vias": 1,
+        "puentesPeatonales": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05400",
+      "nombre": "La Unión",
+      "departamento": "05",
+      "valores": {
+        "familias": 55,
+        "personas": 220,
+        "heridos": 1,
+        "viviendasAveriadas": 55,
+        "centrosSalud": 1,
+        "centrosEducativos": 2,
+        "centrosComunitarios": 4
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05411",
+      "nombre": "Liborina",
+      "departamento": "05",
+      "valores": {
+        "familias": 9,
+        "personas": 36,
+        "viviendasAveriadas": 9,
+        "centrosEducativos": 4
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05425",
+      "nombre": "Maceo",
+      "departamento": "05",
+      "valores": {
+        "familias": 7,
+        "personas": 28,
+        "viviendasAveriadas": 7,
+        "centrosEducativos": 4,
+        "centrosComunitarios": 2,
+        "acueductos": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05440",
+      "nombre": "Marinilla",
+      "departamento": "05",
+      "valores": {
+        "personas": 0,
+        "heridos": 6
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05467",
+      "nombre": "Montebello",
+      "departamento": "05",
+      "valores": {
+        "familias": 18,
+        "personas": 72,
+        "viviendasAveriadas": 18,
+        "centrosSalud": 1,
+        "centrosEducativos": 6,
+        "centrosComunitarios": 6
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05483",
+      "nombre": "Nariño",
+      "departamento": "05",
+      "valores": {
+        "familias": 55,
+        "personas": 220,
+        "viviendasAveriadas": 54,
+        "viviendasDestruidas": 1,
+        "centrosSalud": 1,
+        "centrosEducativos": 7,
+        "centrosComunitarios": 3
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05490",
+      "nombre": "Necoclí",
+      "departamento": "05",
+      "valores": {
+        "familias": 1,
+        "personas": 4,
+        "viviendasAveriadas": 1,
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05541",
+      "nombre": "Peñol",
+      "departamento": "05",
+      "valores": {
+        "familias": 35,
+        "personas": 140,
+        "viviendasAveriadas": 35,
+        "centrosEducativos": 9,
+        "centrosComunitarios": 9
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05543",
+      "nombre": "Peque",
+      "departamento": "05",
+      "valores": {
+        "familias": 4,
+        "personas": 16,
+        "viviendasAveriadas": 4,
+        "centrosEducativos": 1,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05576",
+      "nombre": "Pueblorrico",
+      "departamento": "05",
+      "valores": {
+        "familias": 36,
+        "personas": 144,
+        "viviendasAveriadas": 36,
+        "centrosSalud": 1,
+        "centrosEducativos": 3,
+        "centrosComunitarios": 8
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05585",
+      "nombre": "Puerto Nare",
+      "departamento": "05",
+      "valores": {
+        "familias": 32,
+        "personas": 128,
+        "viviendasAveriadas": 32,
+        "centrosSalud": 1,
+        "centrosEducativos": 3,
+        "centrosComunitarios": 2
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05591",
+      "nombre": "Puerto Triunfo",
+      "departamento": "05",
+      "valores": {
+        "familias": 26,
+        "personas": 104,
+        "viviendasAveriadas": 26,
+        "centrosEducativos": 4
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05604",
+      "nombre": "Remedios",
+      "departamento": "05",
+      "valores": {
+        "familias": 3,
+        "personas": 12,
+        "viviendasAveriadas": 3
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05607",
+      "nombre": "Retiro",
+      "departamento": "05",
+      "valores": {
+        "familias": 60,
+        "personas": 240,
+        "viviendasAveriadas": 60,
+        "centrosComunitarios": 3
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05615",
+      "nombre": "Rionegro",
+      "departamento": "05",
+      "valores": {
+        "personas": 0,
+        "centrosSalud": 1,
+        "centrosEducativos": 18
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05628",
+      "nombre": "Sabanalarga",
+      "departamento": "05",
+      "valores": {
+        "familias": 10,
+        "personas": 40,
+        "viviendasAveriadas": 10,
+        "centrosEducativos": 1,
+        "centrosComunitarios": 3
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05631",
+      "nombre": "Sabaneta",
+      "departamento": "05",
+      "valores": {
+        "familias": 155,
+        "personas": 620,
+        "viviendasAveriadas": 155
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05642",
+      "nombre": "Salgar",
+      "departamento": "05",
+      "valores": {
+        "familias": 14,
+        "personas": 56,
+        "heridos": 4,
+        "viviendasAveriadas": 11,
+        "viviendasDestruidas": 3,
+        "centrosSalud": 1,
+        "centrosEducativos": 13,
+        "centrosComunitarios": 3
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05649",
+      "nombre": "San Carlos",
+      "departamento": "05",
+      "valores": {
+        "familias": 43,
+        "personas": 172,
+        "viviendasAveriadas": 43,
+        "centrosEducativos": 7,
+        "centrosComunitarios": 3
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05652",
+      "nombre": "San Francisco",
+      "departamento": "05",
+      "valores": {
+        "familias": 4,
+        "personas": 16,
+        "viviendasAveriadas": 4,
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05658",
+      "nombre": "San José de la Montaña",
+      "departamento": "05",
+      "valores": {
+        "familias": 3,
+        "personas": 12,
+        "viviendasAveriadas": 3
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05660",
+      "nombre": "San Luis",
+      "departamento": "05",
+      "valores": {
+        "familias": 37,
+        "personas": 148,
+        "viviendasAveriadas": 37,
+        "centrosSalud": 1,
+        "centrosEducativos": 8,
+        "centrosComunitarios": 2
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05665",
+      "nombre": "San Pedro de Urabá",
+      "departamento": "05",
+      "valores": {
+        "personas": 0,
+        "centrosSalud": 1,
+        "centrosEducativos": 4,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05667",
+      "nombre": "San Rafael",
+      "departamento": "05",
+      "valores": {
+        "familias": 29,
+        "personas": 116,
+        "viviendasAveriadas": 29,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05670",
+      "nombre": "San Roque",
+      "departamento": "05",
+      "valores": {
+        "familias": 2,
+        "personas": 8,
+        "viviendasAveriadas": 2,
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05674",
+      "nombre": "San Vicente Ferrer",
+      "departamento": "05",
+      "valores": {
+        "familias": 65,
+        "personas": 260,
+        "viviendasAveriadas": 65,
+        "centrosEducativos": 5,
+        "centrosComunitarios": 5
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05679",
+      "nombre": "Santa Bárbara",
+      "departamento": "05",
+      "valores": {
+        "familias": 90,
+        "personas": 360,
+        "heridos": 3,
+        "viviendasAveriadas": 89,
+        "viviendasDestruidas": 1,
+        "centrosSalud": 1,
+        "centrosEducativos": 7,
+        "centrosComunitarios": 17
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05686",
+      "nombre": "Santa Rosa de Osos",
+      "departamento": "05",
+      "valores": {
+        "familias": 38,
+        "personas": 152,
+        "viviendasAveriadas": 38,
+        "centrosEducativos": 7
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05690",
+      "nombre": "Santo Domingo",
+      "departamento": "05",
+      "valores": {
+        "familias": 20,
+        "personas": 80,
+        "viviendasAveriadas": 20,
+        "centrosEducativos": 11,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05697",
+      "nombre": "El Santuario",
+      "departamento": "05",
+      "valores": {
+        "familias": 40,
+        "personas": 160,
+        "viviendasAveriadas": 40,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05756",
+      "nombre": "Sonsón",
+      "departamento": "05",
+      "valores": {
+        "familias": 220,
+        "personas": 880,
+        "viviendasAveriadas": 212,
+        "viviendasDestruidas": 8,
+        "centrosEducativos": 9,
+        "centrosComunitarios": 7
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05761",
+      "nombre": "Sopetrán",
+      "departamento": "05",
+      "valores": {
+        "familias": 5,
+        "personas": 20,
+        "viviendasAveriadas": 5,
+        "centrosSalud": 1,
+        "centrosEducativos": 8,
+        "centrosComunitarios": 2
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05789",
+      "nombre": "Támesis",
+      "departamento": "05",
+      "valores": {
+        "familias": 150,
+        "personas": 600,
+        "fallecidos": 1,
+        "viviendasAveriadas": 150,
+        "centrosSalud": 1,
+        "centrosEducativos": 9,
+        "centrosComunitarios": 3
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05792",
+      "nombre": "Tarso",
+      "departamento": "05",
+      "valores": {
+        "familias": 42,
+        "personas": 168,
+        "viviendasAveriadas": 42,
+        "centrosSalud": 1,
+        "centrosEducativos": 5,
+        "centrosComunitarios": 4,
+        "vias": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05809",
+      "nombre": "Titiribí",
+      "departamento": "05",
+      "valores": {
+        "familias": 38,
+        "personas": 152,
+        "viviendasAveriadas": 38,
+        "centrosEducativos": 1,
+        "centrosComunitarios": 3
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05819",
+      "nombre": "Toledo",
+      "departamento": "05",
+      "valores": {
+        "familias": 4,
+        "personas": 16,
+        "viviendasAveriadas": 4,
+        "centrosEducativos": 2
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05842",
+      "nombre": "Uramita",
+      "departamento": "05",
+      "valores": {
+        "familias": 5,
+        "personas": 20,
+        "viviendasAveriadas": 4,
+        "viviendasDestruidas": 1,
+        "centrosEducativos": 4,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05847",
+      "nombre": "Urrao",
+      "departamento": "05",
+      "valores": {
+        "familias": 3,
+        "personas": 12,
+        "viviendasAveriadas": 3,
+        "centrosEducativos": 7,
+        "centrosComunitarios": 3
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05854",
+      "nombre": "Valdivia",
+      "departamento": "05",
+      "valores": {
+        "familias": 5,
+        "personas": 20,
+        "viviendasAveriadas": 5,
+        "centrosEducativos": 2,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05856",
+      "nombre": "Valparaíso",
+      "departamento": "05",
+      "valores": {
+        "familias": 15,
+        "personas": 60,
+        "viviendasAveriadas": 15,
+        "centrosSalud": 1,
+        "centrosEducativos": 5,
+        "centrosComunitarios": 2,
+        "puentesVehiculares": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05858",
+      "nombre": "Vegachí",
+      "departamento": "05",
+      "valores": {
+        "familias": 19,
+        "personas": 76,
+        "viviendasAveriadas": 19,
+        "centrosEducativos": 1,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05861",
+      "nombre": "Venecia",
+      "departamento": "05",
+      "valores": {
+        "familias": 35,
+        "personas": 140,
+        "viviendasAveriadas": 34,
+        "viviendasDestruidas": 1,
+        "centrosSalud": 1,
+        "centrosEducativos": 4,
+        "centrosComunitarios": 3,
+        "puentesVehiculares": 2
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05873",
+      "nombre": "Vigía del Fuerte",
+      "departamento": "05",
+      "valores": {
+        "familias": 31,
+        "personas": 124,
+        "heridos": 1,
+        "viviendasAveriadas": 24,
+        "viviendasDestruidas": 7,
+        "centrosEducativos": 10,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05885",
+      "nombre": "Yalí",
+      "departamento": "05",
+      "valores": {
+        "familias": 1,
+        "personas": 4,
+        "viviendasAveriadas": 1,
+        "centrosComunitarios": 2,
+        "acueductos": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05887",
+      "nombre": "Yarumal",
+      "departamento": "05",
+      "valores": {
+        "personas": 0,
+        "centrosEducativos": 3,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05890",
+      "nombre": "Yolombó",
+      "departamento": "05",
+      "valores": {
+        "familias": 16,
+        "personas": 64,
+        "viviendasAveriadas": 16,
+        "centrosEducativos": 7,
+        "centrosComunitarios": 1,
+        "vias": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05893",
+      "nombre": "Yondó",
+      "departamento": "05",
+      "valores": {
+        "familias": 36,
+        "personas": 144,
+        "viviendasAveriadas": 36,
+        "centrosEducativos": 5,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "05895",
+      "nombre": "Zaragoza",
+      "departamento": "05",
+      "valores": {
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "13160",
+      "nombre": "Cantagallo",
+      "departamento": "13",
+      "valores": {
+        "personas": 103
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "13440",
+      "nombre": "Margarita",
+      "departamento": "13",
+      "valores": {
+        "centrosEducativos": 2
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "13580",
+      "nombre": "Regidor",
+      "departamento": "13",
+      "valores": {
+        "familias": 7,
+        "personas": 35,
+        "viviendasAveriadas": 7,
+        "centrosEducativos": 1,
+        "centrosComunitarios": 2,
+        "vias": 1,
+        "acueductos": 1
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "13620",
+      "nombre": "San Cristóbal",
+      "departamento": "13",
+      "valores": {
+        "centrosEducativos": 1
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "13650",
+      "nombre": "San Fernando",
+      "departamento": "13",
+      "valores": {
+        "centrosSalud": 2
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "13670",
+      "nombre": "San Pablo",
+      "departamento": "13",
+      "valores": {
+        "familias": 4,
+        "personas": 14,
+        "viviendasAveriadas": 4,
+        "centrosEducativos": 4
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "13688",
+      "nombre": "Santa Rosa del Sur",
+      "departamento": "13",
+      "valores": {
+        "viviendasAveriadas": 4
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "13744",
+      "nombre": "Simití",
+      "departamento": "13",
+      "valores": {
+        "personas": 299
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "17001",
+      "nombre": "Manizales",
+      "departamento": "17",
+      "valores": {
+        "familias": 4000,
+        "personas": 8240,
+        "fallecidos": 5,
+        "heridos": 211,
+        "viviendasAveriadas": 10000,
+        "viviendasDestruidas": 1500,
+        "centrosSalud": 10,
+        "centrosEducativos": 33,
+        "centrosComunitarios": 4,
+        "vias": 2,
+        "aeropuertos": 1,
+        "acueductos": 1
+      },
+      "fechaReporte": null,
+      "alertas": ["FECHA_REPORTE_INVALIDA"]
+    },
+    {
+      "codigo": "17013",
+      "nombre": "Aguadas",
+      "departamento": "17",
+      "valores": {
+        "familias": 472,
+        "viviendasAveriadas": 472,
+        "viviendasDestruidas": 78,
+        "centrosEducativos": 26,
+        "centrosComunitarios": 2,
+        "vias": 0,
+        "acueductos": 4,
+        "puentesVehiculares": 1
+      },
+      "fechaReporte": null,
+      "alertas": ["FECHA_REPORTE_INVALIDA"]
+    },
+    {
+      "codigo": "17042",
+      "nombre": "Anserma",
+      "departamento": "17",
+      "valores": {
+        "familias": 1053,
+        "fallecidos": 1,
+        "viviendasAveriadas": 943,
+        "viviendasDestruidas": 110,
+        "centrosSalud": 1,
+        "centrosEducativos": 28,
+        "centrosComunitarios": 4,
+        "vias": 5,
+        "acueductos": 3
+      },
+      "fechaReporte": null,
+      "alertas": ["FECHA_REPORTE_INVALIDA"]
+    },
+    {
+      "codigo": "17050",
+      "nombre": "Aranzazu",
+      "departamento": "17",
+      "valores": {
+        "familias": 414,
+        "heridos": 6,
+        "viviendasAveriadas": 400,
+        "viviendasDestruidas": 14,
+        "centrosEducativos": 20,
+        "centrosComunitarios": 2,
+        "acueductos": 1
+      },
+      "fechaReporte": null,
+      "alertas": ["FECHA_REPORTE_INVALIDA"]
+    },
+    {
+      "codigo": "17088",
+      "nombre": "Belalcázar",
+      "departamento": "17",
+      "valores": {
+        "familias": 648,
+        "heridos": 6,
+        "viviendasAveriadas": 563,
+        "viviendasDestruidas": 112,
+        "centrosEducativos": 12,
+        "centrosComunitarios": 1,
+        "acueductos": 1
+      },
+      "fechaReporte": null,
+      "alertas": ["FECHA_REPORTE_INVALIDA"]
+    },
+    {
+      "codigo": "17174",
+      "nombre": "Chinchiná",
+      "departamento": "17",
+      "valores": {
+        "familias": 540,
+        "heridos": 28,
+        "viviendasAveriadas": 471,
+        "viviendasDestruidas": 69,
+        "centrosSalud": 1,
+        "centrosEducativos": 4,
+        "centrosComunitarios": 3,
+        "vias": 1
+      },
+      "fechaReporte": null,
+      "alertas": ["FECHA_REPORTE_INVALIDA"]
+    },
+    {
+      "codigo": "17272",
+      "nombre": "Filadelfia",
+      "departamento": "17",
+      "valores": {
+        "familias": 132,
+        "viviendasAveriadas": 127,
+        "viviendasDestruidas": 5,
+        "centrosSalud": 1,
+        "centrosEducativos": 14,
+        "centrosComunitarios": 1,
+        "vias": 3,
+        "acueductos": 1
+      },
+      "fechaReporte": null,
+      "alertas": ["FECHA_REPORTE_INVALIDA"]
+    },
+    {
+      "codigo": "17380",
+      "nombre": "La Dorada",
+      "departamento": "17",
+      "valores": {
+        "familias": 80,
+        "viviendasAveriadas": 80,
+        "viviendasDestruidas": 3,
+        "centrosSalud": 1,
+        "centrosEducativos": 1,
+        "acueductos": 1
+      },
+      "fechaReporte": null,
+      "alertas": ["FECHA_REPORTE_INVALIDA"]
+    },
+    {
+      "codigo": "17388",
+      "nombre": "La Merced",
+      "departamento": "17",
+      "valores": {
+        "familias": 63,
+        "viviendasAveriadas": 60,
+        "viviendasDestruidas": 3,
+        "centrosSalud": 1,
+        "centrosEducativos": 10
+      },
+      "fechaReporte": null,
+      "alertas": ["FECHA_REPORTE_INVALIDA"]
+    },
+    {
+      "codigo": "17433",
+      "nombre": "Manzanares",
+      "departamento": "17",
+      "valores": {
+        "familias": 88,
+        "personas": 252,
+        "viviendasAveriadas": 88,
+        "viviendasDestruidas": 1,
+        "centrosEducativos": 4,
+        "centrosComunitarios": 1,
+        "vias": 1
+      },
+      "fechaReporte": null,
+      "alertas": ["FECHA_REPORTE_INVALIDA"]
+    },
+    {
+      "codigo": "17442",
+      "nombre": "Marmato",
+      "departamento": "17",
+      "valores": {
+        "familias": 61,
+        "viviendasAveriadas": 52,
+        "viviendasDestruidas": 9,
+        "centrosSalud": 1,
+        "centrosEducativos": 3,
+        "centrosComunitarios": 3,
+        "acueductos": 1
+      },
+      "fechaReporte": null,
+      "alertas": ["FECHA_REPORTE_INVALIDA"]
+    },
+    {
+      "codigo": "17444",
+      "nombre": "Marquetalia",
+      "departamento": "17",
+      "valores": {
+        "familias": 15,
+        "viviendasAveriadas": 12,
+        "viviendasDestruidas": 3,
+        "centrosEducativos": 18,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": null,
+      "alertas": ["FECHA_REPORTE_INVALIDA"]
+    },
+    {
+      "codigo": "17446",
+      "nombre": "Marulanda",
+      "departamento": "17",
+      "valores": {
+        "familias": 88,
+        "viviendasAveriadas": 88,
+        "centrosEducativos": 6,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": null,
+      "alertas": ["FECHA_REPORTE_INVALIDA"]
+    },
+    {
+      "codigo": "17486",
+      "nombre": "Neira",
+      "departamento": "17",
+      "valores": {
+        "familias": 72,
+        "viviendasAveriadas": 72,
+        "centrosSalud": 1,
+        "centrosEducativos": 12,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": null,
+      "alertas": ["FECHA_REPORTE_INVALIDA"]
+    },
+    {
+      "codigo": "17495",
+      "nombre": "Norcasia",
+      "departamento": "17",
+      "valores": {
+        "familias": 21,
+        "viviendasAveriadas": 20,
+        "centrosEducativos": 16
+      },
+      "fechaReporte": null,
+      "alertas": ["FECHA_REPORTE_INVALIDA"]
+    },
+    {
+      "codigo": "17513",
+      "nombre": "Pácora",
+      "departamento": "17",
+      "valores": {
+        "familias": 156,
+        "viviendasAveriadas": 150,
+        "viviendasDestruidas": 6,
+        "centrosEducativos": 12,
+        "centrosComunitarios": 2,
+        "acueductos": 5
+      },
+      "fechaReporte": null,
+      "alertas": ["FECHA_REPORTE_INVALIDA"]
+    },
+    {
+      "codigo": "17524",
+      "nombre": "Palestina",
+      "departamento": "17",
+      "valores": {
+        "familias": 250,
+        "heridos": 2,
+        "viviendasAveriadas": 250,
+        "viviendasDestruidas": 25,
+        "centrosEducativos": 9,
+        "centrosComunitarios": 1,
+        "vias": 1
+      },
+      "fechaReporte": null,
+      "alertas": ["FECHA_REPORTE_INVALIDA"]
+    },
+    {
+      "codigo": "17541",
+      "nombre": "Pensilvania",
+      "departamento": "17",
+      "valores": {
+        "familias": 179,
+        "personas": 310,
+        "viviendasAveriadas": 179,
+        "viviendasDestruidas": 14,
+        "centrosSalud": 3,
+        "centrosEducativos": 48,
+        "centrosComunitarios": 3,
+        "acueductos": 2
+      },
+      "fechaReporte": null,
+      "alertas": ["FECHA_REPORTE_INVALIDA"]
+    },
+    {
+      "codigo": "17614",
+      "nombre": "Riosucio",
+      "departamento": "17",
+      "valores": {
+        "familias": 1140,
+        "heridos": 5,
+        "viviendasAveriadas": 1140,
+        "viviendasDestruidas": 45,
+        "centrosSalud": 1,
+        "centrosEducativos": 82,
+        "centrosComunitarios": 6
+      },
+      "fechaReporte": null,
+      "alertas": ["FECHA_REPORTE_INVALIDA"]
+    },
+    {
+      "codigo": "17616",
+      "nombre": "Risaralda",
+      "departamento": "17",
+      "valores": {
+        "familias": 328,
+        "viviendasAveriadas": 328,
+        "viviendasDestruidas": 13,
+        "centrosEducativos": 29
+      },
+      "fechaReporte": null,
+      "alertas": ["FECHA_REPORTE_INVALIDA"]
+    },
+    {
+      "codigo": "17653",
+      "nombre": "Salamina",
+      "departamento": "17",
+      "valores": {
+        "familias": 358,
+        "viviendasAveriadas": 319,
+        "viviendasDestruidas": 39,
+        "centrosEducativos": 26,
+        "centrosComunitarios": 3,
+        "acueductos": 1
+      },
+      "fechaReporte": null,
+      "alertas": ["FECHA_REPORTE_INVALIDA"]
+    },
+    {
+      "codigo": "17662",
+      "nombre": "Samaná",
+      "departamento": "17",
+      "valores": {
+        "familias": 154,
+        "heridos": 1,
+        "viviendasAveriadas": 149,
+        "viviendasDestruidas": 6,
+        "centrosSalud": 1,
+        "centrosEducativos": 38,
+        "acueductos": 1
+      },
+      "fechaReporte": null,
+      "alertas": ["FECHA_REPORTE_INVALIDA"]
+    },
+    {
+      "codigo": "17665",
+      "nombre": "San José",
+      "departamento": "17",
+      "valores": {
+        "familias": 440,
+        "viviendasAveriadas": 440,
+        "viviendasDestruidas": 50,
+        "centrosSalud": 1,
+        "centrosEducativos": 4,
+        "centrosComunitarios": 2,
+        "acueductos": 1
+      },
+      "fechaReporte": null,
+      "alertas": ["FECHA_REPORTE_INVALIDA"]
+    },
+    {
+      "codigo": "17777",
+      "nombre": "Supía",
+      "departamento": "17",
+      "valores": {
+        "familias": 216,
+        "personas": 419,
+        "viviendasAveriadas": 216,
+        "viviendasDestruidas": 6,
+        "centrosEducativos": 4,
+        "centrosComunitarios": 3
+      },
+      "fechaReporte": null,
+      "alertas": ["FECHA_REPORTE_INVALIDA"]
+    },
+    {
+      "codigo": "17867",
+      "nombre": "Victoria",
+      "departamento": "17",
+      "valores": {
+        "familias": 85,
+        "viviendasAveriadas": 86,
+        "viviendasDestruidas": 2,
+        "centrosSalud": 1,
+        "centrosEducativos": 5,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": null,
+      "alertas": ["FECHA_REPORTE_INVALIDA"]
+    },
+    {
+      "codigo": "17873",
+      "nombre": "Villamaría",
+      "departamento": "17",
+      "valores": {
+        "familias": 285,
+        "heridos": 48,
+        "viviendasAveriadas": 158,
+        "viviendasDestruidas": 127,
+        "centrosEducativos": 5,
+        "centrosComunitarios": 2,
+        "vias": 3,
+        "acueductos": 1
+      },
+      "fechaReporte": null,
+      "alertas": ["FECHA_REPORTE_INVALIDA"]
+    },
+    {
+      "codigo": "17877",
+      "nombre": "Viterbo",
+      "departamento": "17",
+      "valores": {
+        "familias": 387,
+        "heridos": 22,
+        "viviendasAveriadas": 280,
+        "viviendasDestruidas": 107,
+        "centrosSalud": 1,
+        "centrosEducativos": 5,
+        "centrosComunitarios": 2,
+        "acueductos": 1
+      },
+      "fechaReporte": null,
+      "alertas": ["FECHA_REPORTE_INVALIDA"]
+    },
+    {
+      "codigo": "18001",
+      "nombre": "Florencia",
+      "departamento": "18",
+      "valores": {
+        "centrosSalud": 1
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "18029",
+      "nombre": "Albania",
+      "departamento": "18",
+      "valores": {
+        "centrosEducativos": 3
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "18094",
+      "nombre": "Belén de los Andaquíes",
+      "departamento": "18",
+      "valores": {
+        "centrosSalud": 1
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "18150",
+      "nombre": "Cartagena del Chairá",
+      "departamento": "18",
+      "valores": {
+        "centrosSalud": 1,
+        "centrosEducativos": 1
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "18205",
+      "nombre": "Curillo",
+      "departamento": "18",
+      "valores": {
+        "centrosSalud": 1
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "18247",
+      "nombre": "El Doncello",
+      "departamento": "18",
+      "valores": {
+        "centrosSalud": 1,
+        "centrosEducativos": 3
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "18256",
+      "nombre": "El Paujíl",
+      "departamento": "18",
+      "valores": {
+        "centrosSalud": 1,
+        "centrosEducativos": 6
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "18410",
+      "nombre": "La Montañita",
+      "departamento": "18",
+      "valores": {
+        "centrosEducativos": 3
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "18460",
+      "nombre": "Milán",
+      "departamento": "18",
+      "valores": {
+        "centrosSalud": 1,
+        "centrosEducativos": 2
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "18592",
+      "nombre": "Puerto Rico",
+      "departamento": "18",
+      "valores": {
+        "centrosSalud": 1,
+        "centrosEducativos": 5
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "18753",
+      "nombre": "San Vicente del Caguán",
+      "departamento": "18",
+      "valores": {
+        "viviendasAveriadas": 18,
+        "centrosSalud": 1,
+        "centrosEducativos": 8
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "18756",
+      "nombre": "Solano",
+      "departamento": "18",
+      "valores": {
+        "centrosSalud": 1,
+        "centrosEducativos": 2
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "18785",
+      "nombre": "Solita",
+      "departamento": "18",
+      "valores": {
+        "centrosSalud": 1,
+        "centrosEducativos": 4
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "18860",
+      "nombre": "Valparaíso",
+      "departamento": "18",
+      "valores": {
+        "centrosSalud": 2,
+        "centrosEducativos": 2
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "19001",
+      "nombre": "Popayán",
+      "departamento": "19",
+      "valores": {
+        "familias": 91,
+        "personas": 364,
+        "viviendasAveriadas": 79,
+        "centrosSalud": 4,
+        "centrosEducativos": 6,
+        "vias": 1
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "19022",
+      "nombre": "Almaguer",
+      "departamento": "19",
+      "valores": {
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "19050",
+      "nombre": "Argelia",
+      "departamento": "19",
+      "valores": {
+        "familias": 40,
+        "personas": 160,
+        "viviendasAveriadas": 40,
+        "centrosEducativos": 2,
+        "acueductos": 1
+      },
+      "fechaReporte": "2026-08-12",
+      "alertas": []
+    },
+    {
+      "codigo": "19075",
+      "nombre": "Balboa",
+      "departamento": "19",
+      "valores": {
+        "familias": 172,
+        "personas": 516,
+        "viviendasAveriadas": 169,
+        "viviendasDestruidas": 3,
+        "centrosEducativos": 8,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-12",
+      "alertas": []
+    },
+    {
+      "codigo": "19100",
+      "nombre": "Bolívar",
+      "departamento": "19",
+      "valores": {
+        "familias": 34,
+        "personas": 84,
+        "viviendasAveriadas": 34,
+        "centrosEducativos": 12
+      },
+      "fechaReporte": "2026-08-12",
+      "alertas": []
+    },
+    {
+      "codigo": "19110",
+      "nombre": "Buenos Aires",
+      "departamento": "19",
+      "valores": {
+        "familias": 399,
+        "personas": 1237,
+        "viviendasAveriadas": 392,
+        "viviendasDestruidas": 7,
+        "centrosSalud": 1,
+        "centrosEducativos": 20,
+        "centrosComunitarios": 2,
+        "vias": 1
+      },
+      "fechaReporte": "2026-08-12",
+      "alertas": []
+    },
+    {
+      "codigo": "19130",
+      "nombre": "Cajibío",
+      "departamento": "19",
+      "valores": {
+        "familias": 775,
+        "personas": 1390,
+        "viviendasAveriadas": 745,
+        "viviendasDestruidas": 30,
+        "centrosEducativos": 14,
+        "centrosComunitarios": 5,
+        "acueductos": 1
+      },
+      "fechaReporte": "2026-08-12",
+      "alertas": []
+    },
+    {
+      "codigo": "19137",
+      "nombre": "Caldono",
+      "departamento": "19",
+      "valores": {
+        "familias": 662,
+        "personas": 1331,
+        "viviendasAveriadas": 601,
+        "viviendasDestruidas": 61,
+        "centrosSalud": 1,
+        "centrosEducativos": 40,
+        "centrosComunitarios": 10
+      },
+      "fechaReporte": "2026-08-12",
+      "alertas": []
+    },
+    {
+      "codigo": "19142",
+      "nombre": "Caloto",
+      "departamento": "19",
+      "valores": {
+        "familias": 322,
+        "personas": 700,
+        "viviendasAveriadas": 317,
+        "viviendasDestruidas": 5,
+        "centrosEducativos": 11,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-12",
+      "alertas": []
+    },
+    {
+      "codigo": "19212",
+      "nombre": "Corinto",
+      "departamento": "19",
+      "valores": {
+        "centrosEducativos": 5
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "19256",
+      "nombre": "El Tambo",
+      "departamento": "19",
+      "valores": {
+        "familias": 318,
+        "personas": 1272,
+        "viviendasAveriadas": 303,
+        "viviendasDestruidas": 15,
+        "centrosEducativos": 7,
+        "centrosComunitarios": 10
+      },
+      "fechaReporte": "2026-08-12",
+      "alertas": []
+    },
+    {
+      "codigo": "19290",
+      "nombre": "Florencia",
+      "departamento": "19",
+      "valores": {
+        "familias": 6,
+        "personas": 25,
+        "viviendasAveriadas": 6,
+        "centrosEducativos": 1,
+        "centrosComunitarios": 2
+      },
+      "fechaReporte": "2026-08-12",
+      "alertas": []
+    },
+    {
+      "codigo": "19300",
+      "nombre": "Guachené",
+      "departamento": "19",
+      "valores": {
+        "familias": 261,
+        "personas": 1305,
+        "heridos": 1,
+        "viviendasAveriadas": 250,
+        "viviendasDestruidas": 11,
+        "centrosEducativos": 1,
+        "centrosComunitarios": 3
+      },
+      "fechaReporte": "2026-08-12",
+      "alertas": []
+    },
+    {
+      "codigo": "19318",
+      "nombre": "Guapi",
+      "departamento": "19",
+      "valores": {
+        "familias": 111,
+        "personas": 444,
+        "viviendasAveriadas": 111,
+        "centrosEducativos": 6
+      },
+      "fechaReporte": "2026-08-12",
+      "alertas": []
+    },
+    {
+      "codigo": "19355",
+      "nombre": "Inzá",
+      "departamento": "19",
+      "valores": {
+        "familias": 7,
+        "personas": 27,
+        "viviendasAveriadas": 7,
+        "centrosEducativos": 23,
+        "centrosComunitarios": 4
+      },
+      "fechaReporte": "2026-08-12",
+      "alertas": []
+    },
+    {
+      "codigo": "19364",
+      "nombre": "Jambaló",
+      "departamento": "19",
+      "valores": {
+        "familias": 234,
+        "personas": 936,
+        "viviendasAveriadas": 232,
+        "viviendasDestruidas": 2,
+        "centrosSalud": 2,
+        "centrosEducativos": 7,
+        "centrosComunitarios": 4,
+        "acueductos": 1,
+        "puentesVehiculares": 1
+      },
+      "fechaReporte": "2026-08-12",
+      "alertas": []
+    },
+    {
+      "codigo": "19392",
+      "nombre": "La Sierra",
+      "departamento": "19",
+      "valores": {
+        "familias": 4,
+        "personas": 16,
+        "viviendasAveriadas": 4,
+        "centrosEducativos": 2
+      },
+      "fechaReporte": "2026-08-12",
+      "alertas": []
+    },
+    {
+      "codigo": "19397",
+      "nombre": "La Vega",
+      "departamento": "19",
+      "valores": {
+        "centrosEducativos": 3
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "19418",
+      "nombre": "López de Micay",
+      "departamento": "19",
+      "valores": {
+        "familias": 526,
+        "personas": 928,
+        "viviendasAveriadas": 521,
+        "viviendasDestruidas": 4,
+        "centrosEducativos": 3,
+        "centrosComunitarios": 3
+      },
+      "fechaReporte": "2026-08-12",
+      "alertas": []
+    },
+    {
+      "codigo": "19450",
+      "nombre": "Mercaderes",
+      "departamento": "19",
+      "valores": {
+        "familias": 74,
+        "personas": 162,
+        "viviendasAveriadas": 72,
+        "viviendasDestruidas": 2,
+        "centrosSalud": 1,
+        "centrosEducativos": 10,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-12",
+      "alertas": []
+    },
+    {
+      "codigo": "19455",
+      "nombre": "Miranda",
+      "departamento": "19",
+      "valores": {
+        "familias": 182,
+        "personas": 696,
+        "viviendasAveriadas": 174,
+        "viviendasDestruidas": 8,
+        "centrosEducativos": 6,
+        "centrosComunitarios": 3,
+        "acueductos": 1,
+        "puentesVehiculares": 4,
+        "puentesPeatonales": 1
+      },
+      "fechaReporte": "2026-08-12",
+      "alertas": []
+    },
+    {
+      "codigo": "19473",
+      "nombre": "Morales",
+      "departamento": "19",
+      "valores": {
+        "familias": 183,
+        "personas": 641,
+        "viviendasAveriadas": 170,
+        "viviendasDestruidas": 13,
+        "centrosEducativos": 13,
+        "centrosComunitarios": 17
+      },
+      "fechaReporte": "2026-08-12",
+      "alertas": []
+    },
+    {
+      "codigo": "19513",
+      "nombre": "Padilla",
+      "departamento": "19",
+      "valores": {
+        "familias": 10,
+        "personas": 25,
+        "viviendasAveriadas": 10,
+        "centrosEducativos": 1
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "19517",
+      "nombre": "Páez",
+      "departamento": "19",
+      "valores": {
+        "familias": 4,
+        "personas": 15,
+        "viviendasAveriadas": 4,
+        "centrosSalud": 1,
+        "centrosEducativos": 2
+      },
+      "fechaReporte": "2026-08-12",
+      "alertas": []
+    },
+    {
+      "codigo": "19532",
+      "nombre": "Patía",
+      "departamento": "19",
+      "valores": {
+        "familias": 66,
+        "personas": 172,
+        "viviendasAveriadas": 66,
+        "centrosSalud": 1,
+        "centrosEducativos": 7,
+        "centrosComunitarios": 1,
+        "vias": 1
+      },
+      "fechaReporte": "2026-08-12",
+      "alertas": []
+    },
+    {
+      "codigo": "19533",
+      "nombre": "Piamonte",
+      "departamento": "19",
+      "valores": {
+        "familias": 1,
+        "viviendasAveriadas": 1,
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-12",
+      "alertas": []
+    },
+    {
+      "codigo": "19548",
+      "nombre": "Piendamó - Tunía",
+      "departamento": "19",
+      "valores": {
+        "familias": 73,
+        "personas": 291,
+        "viviendasAveriadas": 62,
+        "viviendasDestruidas": 11,
+        "centrosEducativos": 15,
+        "centrosComunitarios": 1,
+        "vias": 1,
+        "acueductos": 2
+      },
+      "fechaReporte": "2026-08-12",
+      "alertas": []
+    },
+    {
+      "codigo": "19573",
+      "nombre": "Puerto Tejada",
+      "departamento": "19",
+      "valores": {
+        "familias": 119,
+        "personas": 476,
+        "viviendasAveriadas": 104,
+        "viviendasDestruidas": 15,
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-12",
+      "alertas": []
+    },
+    {
+      "codigo": "19585",
+      "nombre": "Puracé",
+      "departamento": "19",
+      "valores": {
+        "familias": 3,
+        "personas": 13,
+        "viviendasAveriadas": 3,
+        "centrosEducativos": 2,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-12",
+      "alertas": []
+    },
+    {
+      "codigo": "19622",
+      "nombre": "Rosas",
+      "departamento": "19",
+      "valores": {
+        "familias": 65,
+        "personas": 195,
+        "viviendasAveriadas": 65,
+        "centrosEducativos": 3,
+        "centrosComunitarios": 1,
+        "vias": 1,
+        "acueductos": 2,
+        "puentesVehiculares": 1,
+        "puentesPeatonales": 1
+      },
+      "fechaReporte": "2026-08-12",
+      "alertas": []
+    },
+    {
+      "codigo": "19693",
+      "nombre": "San Sebastián",
+      "departamento": "19",
+      "valores": {
+        "familias": 65,
+        "personas": 318,
+        "viviendasAveriadas": 65,
+        "centrosEducativos": 2,
+        "centrosComunitarios": 2
+      },
+      "fechaReporte": "2026-08-12",
+      "alertas": []
+    },
+    {
+      "codigo": "19698",
+      "nombre": "Santander de Quilichao",
+      "departamento": "19",
+      "valores": {
+        "familias": 286,
+        "personas": 1200,
+        "fallecidos": 1,
+        "viviendasAveriadas": 282,
+        "viviendasDestruidas": 84,
+        "centrosSalud": 2,
+        "centrosEducativos": 17,
+        "centrosComunitarios": 4,
+        "vias": 1,
+        "acueductos": 1,
+        "puentesVehiculares": 1
+      },
+      "fechaReporte": "2026-08-12",
+      "alertas": []
+    },
+    {
+      "codigo": "19701",
+      "nombre": "Santa Rosa",
+      "departamento": "19",
+      "valores": {
+        "familias": 4,
+        "personas": 15,
+        "viviendasAveriadas": 4,
+        "centrosSalud": 1,
+        "centrosEducativos": 1,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-12",
+      "alertas": []
+    },
+    {
+      "codigo": "19743",
+      "nombre": "Silvia",
+      "departamento": "19",
+      "valores": {
+        "familias": 481,
+        "personas": 1924,
+        "viviendasAveriadas": 481,
+        "centrosSalud": 5,
+        "centrosEducativos": 10,
+        "centrosComunitarios": 2
+      },
+      "fechaReporte": "2026-08-12",
+      "alertas": []
+    },
+    {
+      "codigo": "19760",
+      "nombre": "Sotará Paispamba",
+      "departamento": "19",
+      "valores": {
+        "familias": 72,
+        "personas": 658,
+        "viviendasAveriadas": 70,
+        "viviendasDestruidas": 2,
+        "centrosSalud": 1,
+        "centrosEducativos": 12,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-12",
+      "alertas": []
+    },
+    {
+      "codigo": "19780",
+      "nombre": "Suárez",
+      "departamento": "19",
+      "valores": {
+        "familias": 141,
+        "personas": 380,
+        "viviendasAveriadas": 192,
+        "viviendasDestruidas": 17,
+        "centrosEducativos": 13,
+        "centrosComunitarios": 1,
+        "acueductos": 1
+      },
+      "fechaReporte": "2026-08-12",
+      "alertas": []
+    },
+    {
+      "codigo": "19785",
+      "nombre": "Sucre",
+      "departamento": "19",
+      "valores": {
+        "familias": 3,
+        "personas": 11,
+        "viviendasAveriadas": 3,
+        "centrosEducativos": 3
+      },
+      "fechaReporte": "2026-08-12",
+      "alertas": []
+    },
+    {
+      "codigo": "19807",
+      "nombre": "Timbío",
+      "departamento": "19",
+      "valores": {
+        "familias": 297,
+        "personas": 1485,
+        "desaparecidos": 1,
+        "viviendasAveriadas": 291,
+        "viviendasDestruidas": 6,
+        "centrosEducativos": 10,
+        "centrosComunitarios": 7,
+        "vias": 1
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "19809",
+      "nombre": "Timbiquí",
+      "departamento": "19",
+      "valores": {
+        "familias": 498,
+        "personas": 1194,
+        "viviendasAveriadas": 417,
+        "viviendasDestruidas": 14,
+        "centrosEducativos": 1,
+        "centrosComunitarios": 1,
+        "acueductos": 1
+      },
+      "fechaReporte": "2026-08-12",
+      "alertas": []
+    },
+    {
+      "codigo": "19821",
+      "nombre": "Toribío",
+      "departamento": "19",
+      "valores": {
+        "familias": 160,
+        "personas": 640,
+        "viviendasAveriadas": 160,
+        "centrosEducativos": 13,
+        "acueductos": 1
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "19824",
+      "nombre": "Totoró",
+      "departamento": "19",
+      "valores": {
+        "familias": 31,
+        "personas": 123,
+        "viviendasAveriadas": 31,
+        "centrosEducativos": 6,
+        "centrosComunitarios": 3
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "19845",
+      "nombre": "Villa Rica",
+      "departamento": "19",
+      "valores": {
+        "familias": 223,
+        "personas": 669,
+        "viviendasAveriadas": 215,
+        "viviendasDestruidas": 8,
+        "centrosEducativos": 4,
+        "centrosComunitarios": 1,
+        "acueductos": 1
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "25001",
+      "nombre": "Agua de Dios",
+      "departamento": "25",
+      "valores": {
+        "centrosEducativos": 2
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25019",
+      "nombre": "Albán",
+      "departamento": "25",
+      "valores": {
+        "viviendasAveriadas": 1,
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25035",
+      "nombre": "Anapoima",
+      "departamento": "25",
+      "valores": {
+        "centrosEducativos": 2
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25095",
+      "nombre": "Bituima",
+      "departamento": "25",
+      "valores": {
+        "viviendasAveriadas": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25099",
+      "nombre": "Bojacá",
+      "departamento": "25",
+      "valores": {
+        "viviendasAveriadas": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25120",
+      "nombre": "Cabrera",
+      "departamento": "25",
+      "valores": {
+        "centrosEducativos": 3
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25126",
+      "nombre": "Cajicá",
+      "departamento": "25",
+      "valores": {
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25148",
+      "nombre": "Caparrapí",
+      "departamento": "25",
+      "valores": {
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25151",
+      "nombre": "Cáqueza",
+      "departamento": "25",
+      "valores": {
+        "viviendasAveriadas": 7,
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25175",
+      "nombre": "Chía",
+      "departamento": "25",
+      "valores": {
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25181",
+      "nombre": "Choachí",
+      "departamento": "25",
+      "valores": {
+        "centrosEducativos": 3
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25200",
+      "nombre": "Cogua",
+      "departamento": "25",
+      "valores": {
+        "viviendasAveriadas": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25214",
+      "nombre": "Cota",
+      "departamento": "25",
+      "valores": {
+        "viviendasAveriadas": 2,
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25224",
+      "nombre": "Cucunubá",
+      "departamento": "25",
+      "valores": {
+        "viviendasAveriadas": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25260",
+      "nombre": "El Rosal",
+      "departamento": "25",
+      "valores": {
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25286",
+      "nombre": "Funza",
+      "departamento": "25",
+      "valores": {
+        "viviendasAveriadas": 1,
+        "centrosComunitarios": 3
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25288",
+      "nombre": "Fúquene",
+      "departamento": "25",
+      "valores": {
+        "viviendasAveriadas": 37,
+        "centrosSalud": 1,
+        "centrosEducativos": 5
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25290",
+      "nombre": "Fusagasugá",
+      "departamento": "25",
+      "valores": {
+        "centrosEducativos": 3
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25307",
+      "nombre": "Girardot",
+      "departamento": "25",
+      "valores": {
+        "viviendasAveriadas": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25312",
+      "nombre": "Granada",
+      "departamento": "25",
+      "valores": {
+        "viviendasAveriadas": 1,
+        "centrosEducativos": 2
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25317",
+      "nombre": "Guachetá",
+      "departamento": "25",
+      "valores": {
+        "centrosSalud": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25320",
+      "nombre": "Guaduas",
+      "departamento": "25",
+      "valores": {
+        "viviendasAveriadas": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25324",
+      "nombre": "Guataquí",
+      "departamento": "25",
+      "valores": {
+        "centrosSalud": 1,
+        "centrosEducativos": 2,
+        "centrosComunitarios": 2
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25326",
+      "nombre": "Guatavita",
+      "departamento": "25",
+      "valores": {
+        "viviendasAveriadas": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25328",
+      "nombre": "Guayabal de Síquima",
+      "departamento": "25",
+      "valores": {
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25335",
+      "nombre": "Guayabetal",
+      "departamento": "25",
+      "valores": {
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25339",
+      "nombre": "Gutiérrez",
+      "departamento": "25",
+      "valores": {
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25377",
+      "nombre": "La Calera",
+      "departamento": "25",
+      "valores": {
+        "centrosEducativos": 2,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25398",
+      "nombre": "La Peña",
+      "departamento": "25",
+      "valores": {
+        "viviendasAveriadas": 5
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25430",
+      "nombre": "Madrid",
+      "departamento": "25",
+      "valores": {
+        "viviendasAveriadas": 4,
+        "centrosEducativos": 7,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25438",
+      "nombre": "Medina",
+      "departamento": "25",
+      "valores": {
+        "viviendasAveriadas": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25473",
+      "nombre": "Mosquera",
+      "departamento": "25",
+      "valores": {
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25488",
+      "nombre": "Nilo",
+      "departamento": "25",
+      "valores": {
+        "viviendasAveriadas": 1,
+        "centrosEducativos": 2
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25489",
+      "nombre": "Nimaima",
+      "departamento": "25",
+      "valores": {
+        "viviendasAveriadas": 1,
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25491",
+      "nombre": "Nocaima",
+      "departamento": "25",
+      "valores": {
+        "viviendasAveriadas": 3,
+        "centrosEducativos": 2
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25513",
+      "nombre": "Pacho",
+      "departamento": "25",
+      "valores": {
+        "centrosEducativos": 2
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25524",
+      "nombre": "Pandi",
+      "departamento": "25",
+      "valores": {
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25530",
+      "nombre": "Paratebueno",
+      "departamento": "25",
+      "valores": {
+        "centrosEducativos": 2
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25535",
+      "nombre": "Pasca",
+      "departamento": "25",
+      "valores": {
+        "viviendasAveriadas": 1,
+        "centrosEducativos": 1,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25572",
+      "nombre": "Puerto Salgar",
+      "departamento": "25",
+      "valores": {
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25580",
+      "nombre": "Pulí",
+      "departamento": "25",
+      "valores": {
+        "viviendasAveriadas": 1,
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25592",
+      "nombre": "Quebradanegra",
+      "departamento": "25",
+      "valores": {
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25599",
+      "nombre": "Apulo",
+      "departamento": "25",
+      "valores": {
+        "viviendasAveriadas": 2,
+        "centrosEducativos": 2
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25612",
+      "nombre": "Ricaurte",
+      "departamento": "25",
+      "valores": {
+        "centrosSalud": 1,
+        "vias": 1,
+        "acueductos": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25645",
+      "nombre": "San Antonio del Tequendama",
+      "departamento": "25",
+      "valores": {
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25658",
+      "nombre": "San Francisco",
+      "departamento": "25",
+      "valores": {
+        "centrosEducativos": 2
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25662",
+      "nombre": "San Juan de Rioseco",
+      "departamento": "25",
+      "valores": {
+        "centrosEducativos": 1,
+        "centrosComunitarios": 2
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25718",
+      "nombre": "Sasaima",
+      "departamento": "25",
+      "valores": {
+        "centrosSalud": 1,
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25740",
+      "nombre": "Sibaté",
+      "departamento": "25",
+      "valores": {
+        "centrosEducativos": 1,
+        "centrosComunitarios": 4
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25743",
+      "nombre": "Silvania",
+      "departamento": "25",
+      "valores": {
+        "centrosEducativos": 3,
+        "centrosComunitarios": 1,
+        "acueductos": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25754",
+      "nombre": "Soacha",
+      "departamento": "25",
+      "valores": {
+        "viviendasAveriadas": 1,
+        "centrosComunitarios": 2
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25758",
+      "nombre": "Sopó",
+      "departamento": "25",
+      "valores": {
+        "viviendasAveriadas": 4
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25769",
+      "nombre": "Subachoque",
+      "departamento": "25",
+      "valores": {
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25772",
+      "nombre": "Suesca",
+      "departamento": "25",
+      "valores": {
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25777",
+      "nombre": "Supatá",
+      "departamento": "25",
+      "valores": {
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25781",
+      "nombre": "Sutatausa",
+      "departamento": "25",
+      "valores": {
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25785",
+      "nombre": "Tabio",
+      "departamento": "25",
+      "valores": {
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25797",
+      "nombre": "Tena",
+      "departamento": "25",
+      "valores": {
+        "centrosComunitarios": 2
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25805",
+      "nombre": "Tibacuy",
+      "departamento": "25",
+      "valores": {
+        "viviendasAveriadas": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25815",
+      "nombre": "Tocaima",
+      "departamento": "25",
+      "valores": {
+        "viviendasAveriadas": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25839",
+      "nombre": "Ubalá",
+      "departamento": "25",
+      "valores": {
+        "viviendasAveriadas": 1,
+        "centrosEducativos": 2
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25841",
+      "nombre": "Ubaque",
+      "departamento": "25",
+      "valores": {
+        "centrosEducativos": 1,
+        "centrosComunitarios": 2
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25851",
+      "nombre": "Útica",
+      "departamento": "25",
+      "valores": {
+        "centrosEducativos": 2,
+        "centrosComunitarios": 2
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25862",
+      "nombre": "Vergara",
+      "departamento": "25",
+      "valores": {
+        "viviendasAveriadas": 1,
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25871",
+      "nombre": "Villagómez",
+      "departamento": "25",
+      "valores": {
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25875",
+      "nombre": "Villeta",
+      "departamento": "25",
+      "valores": {
+        "viviendasAveriadas": 2,
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25885",
+      "nombre": "Yacopí",
+      "departamento": "25",
+      "valores": {
+        "viviendasAveriadas": 2,
+        "centrosEducativos": 2
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "25898",
+      "nombre": "Zipacón",
+      "departamento": "25",
+      "valores": {
+        "viviendasAveriadas": 1,
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "27001",
+      "nombre": "Quibdó",
+      "departamento": "27",
+      "valores": {
+        "familias": 16261,
+        "fallecidos": 8,
+        "heridos": 155,
+        "desaparecidos": 1,
+        "rescatados": 1,
+        "viviendasAveriadas": 2723,
+        "viviendasDestruidas": 1337,
+        "centrosSalud": 27,
+        "centrosEducativos": 81,
+        "centrosComunitarios": 11
+      },
+      "fechaReporte": "2026-08-18",
+      "alertas": []
+    },
+    {
+      "codigo": "27006",
+      "nombre": "Acandí",
+      "departamento": "27",
+      "valores": {
+        "familias": 107,
+        "personas": 265,
+        "viviendasAveriadas": 70,
+        "viviendasDestruidas": 10,
+        "centrosSalud": 6,
+        "centrosEducativos": 4,
+        "acueductos": 2
+      },
+      "fechaReporte": "2026-08-18",
+      "alertas": []
+    },
+    {
+      "codigo": "27025",
+      "nombre": "Alto Baudó",
+      "departamento": "27",
+      "valores": {
+        "familias": 2394,
+        "personas": 5656,
+        "viviendasAveriadas": 920,
+        "viviendasDestruidas": 36,
+        "centrosSalud": 4,
+        "centrosEducativos": 75,
+        "centrosComunitarios": 4
+      },
+      "fechaReporte": "2026-08-18",
+      "alertas": []
+    },
+    {
+      "codigo": "27050",
+      "nombre": "Atrato",
+      "departamento": "27",
+      "valores": {
+        "familias": 843,
+        "fallecidos": 1,
+        "heridos": 3,
+        "viviendasAveriadas": 685,
+        "viviendasDestruidas": 56,
+        "centrosSalud": 9,
+        "centrosEducativos": 8,
+        "centrosComunitarios": 7,
+        "vias": 6,
+        "acueductos": 4
+      },
+      "fechaReporte": "2026-08-18",
+      "alertas": []
+    },
+    {
+      "codigo": "27073",
+      "nombre": "Bagadó",
+      "departamento": "27",
+      "valores": {
+        "familias": 2005,
+        "personas": 8055,
+        "heridos": 51,
+        "viviendasAveriadas": 1962,
+        "viviendasDestruidas": 43,
+        "centrosSalud": 3,
+        "centrosEducativos": 6,
+        "centrosComunitarios": 25
+      },
+      "fechaReporte": "2026-08-18",
+      "alertas": []
+    },
+    {
+      "codigo": "27075",
+      "nombre": "Bahía Solano",
+      "departamento": "27",
+      "valores": {
+        "familias": 15,
+        "personas": 250,
+        "heridos": 12,
+        "viviendasAveriadas": 70,
+        "viviendasDestruidas": 1,
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-18",
+      "alertas": []
+    },
+    {
+      "codigo": "27077",
+      "nombre": "Bajo Baudó",
+      "departamento": "27",
+      "valores": {
+        "familias": 1363,
+        "personas": 5448,
+        "heridos": 8,
+        "viviendasAveriadas": 1272,
+        "viviendasDestruidas": 91,
+        "centrosSalud": 1,
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-18",
+      "alertas": []
+    },
+    {
+      "codigo": "27099",
+      "nombre": "Bojayá",
+      "departamento": "27",
+      "valores": {
+        "familias": 4,
+        "personas": 16,
+        "viviendasAveriadas": 4
+      },
+      "fechaReporte": "2026-08-18",
+      "alertas": []
+    },
+    {
+      "codigo": "27135",
+      "nombre": "El Cantón del San Pablo",
+      "departamento": "27",
+      "valores": {
+        "familias": 442,
+        "personas": 1722,
+        "viviendasAveriadas": 248,
+        "viviendasDestruidas": 4,
+        "centrosSalud": 1,
+        "centrosEducativos": 3,
+        "centrosComunitarios": 10,
+        "acueductos": 2
+      },
+      "fechaReporte": "2026-08-18",
+      "alertas": []
+    },
+    {
+      "codigo": "27150",
+      "nombre": "Carmen del Darién",
+      "departamento": "27",
+      "valores": {
+        "familias": 1393,
+        "personas": 450,
+        "viviendasAveriadas": 193,
+        "centrosComunitarios": 5,
+        "acueductos": 8,
+        "puentesVehiculares": 2
+      },
+      "fechaReporte": "2026-08-18",
+      "alertas": ["PERSONAS_MENOR_QUE_FAMILIAS"]
+    },
+    {
+      "codigo": "27160",
+      "nombre": "Cértegui",
+      "departamento": "27",
+      "valores": {
+        "familias": 169,
+        "personas": 507,
+        "viviendasAveriadas": 155,
+        "viviendasDestruidas": 1,
+        "centrosEducativos": 1,
+        "centrosComunitarios": 4
+      },
+      "fechaReporte": "2026-08-18",
+      "alertas": []
+    },
+    {
+      "codigo": "27205",
+      "nombre": "Condoto",
+      "departamento": "27",
+      "valores": {
+        "familias": 615,
+        "personas": 1838,
+        "heridos": 1,
+        "viviendasAveriadas": 600,
+        "centrosSalud": 1,
+        "centrosEducativos": 6,
+        "centrosComunitarios": 4,
+        "vias": 1
+      },
+      "fechaReporte": "2026-08-18",
+      "alertas": []
+    },
+    {
+      "codigo": "27245",
+      "nombre": "El Carmen de Atrato",
+      "departamento": "27",
+      "valores": {
+        "familias": 1000,
+        "personas": 5000,
+        "viviendasAveriadas": 245,
+        "viviendasDestruidas": 5,
+        "centrosSalud": 1,
+        "centrosEducativos": 5,
+        "centrosComunitarios": 22
+      },
+      "fechaReporte": "2026-08-18",
+      "alertas": []
+    },
+    {
+      "codigo": "27250",
+      "nombre": "El Litoral del San Juan",
+      "departamento": "27",
+      "valores": {
+        "familias": 1415,
+        "personas": 4832,
+        "heridos": 14,
+        "viviendasAveriadas": 673,
+        "viviendasDestruidas": 231,
+        "centrosSalud": 4,
+        "puentesVehiculares": 6,
+        "puentesPeatonales": 6
+      },
+      "fechaReporte": "2026-08-18",
+      "alertas": []
+    },
+    {
+      "codigo": "27361",
+      "nombre": "Istmina",
+      "departamento": "27",
+      "valores": {
+        "familias": 815,
+        "personas": 4728,
+        "heridos": 70,
+        "desaparecidos": 1,
+        "viviendasAveriadas": 816,
+        "viviendasDestruidas": 24,
+        "centrosSalud": 1,
+        "centrosEducativos": 7,
+        "vias": 2
+      },
+      "fechaReporte": "2026-08-18",
+      "alertas": []
+    },
+    {
+      "codigo": "27413",
+      "nombre": "Lloró",
+      "departamento": "27",
+      "valores": {
+        "familias": 140,
+        "personas": 420,
+        "heridos": 4,
+        "viviendasAveriadas": 140,
+        "centrosSalud": 1,
+        "centrosEducativos": 4
+      },
+      "fechaReporte": "2026-08-18",
+      "alertas": []
+    },
+    {
+      "codigo": "27425",
+      "nombre": "Medio Atrato",
+      "departamento": "27",
+      "valores": {
+        "familias": 240,
+        "personas": 720,
+        "viviendasAveriadas": 9,
+        "viviendasDestruidas": 5
+      },
+      "fechaReporte": "2026-08-18",
+      "alertas": []
+    },
+    {
+      "codigo": "27430",
+      "nombre": "Medio Baudó",
+      "departamento": "27",
+      "valores": {
+        "familias": 3181,
+        "heridos": 1,
+        "viviendasAveriadas": 1710,
+        "viviendasDestruidas": 471,
+        "centrosSalud": 4,
+        "centrosEducativos": 8,
+        "centrosComunitarios": 21
+      },
+      "fechaReporte": "2026-08-18",
+      "alertas": []
+    },
+    {
+      "codigo": "27450",
+      "nombre": "Medio San Juan",
+      "departamento": "27",
+      "valores": {
+        "familias": 1184,
+        "personas": 5920,
+        "heridos": 2,
+        "viviendasAveriadas": 90,
+        "viviendasDestruidas": 65,
+        "centrosSalud": 3,
+        "centrosEducativos": 9,
+        "centrosComunitarios": 11,
+        "acueductos": 4
+      },
+      "fechaReporte": "2026-08-18",
+      "alertas": []
+    },
+    {
+      "codigo": "27491",
+      "nombre": "Nóvita",
+      "departamento": "27",
+      "valores": {
+        "familias": 1800,
+        "personas": 9000,
+        "heridos": 2,
+        "viviendasAveriadas": 1690,
+        "viviendasDestruidas": 10,
+        "centrosSalud": 1,
+        "centrosEducativos": 5,
+        "centrosComunitarios": 10,
+        "vias": 3
+      },
+      "fechaReporte": "2026-08-18",
+      "alertas": []
+    },
+    {
+      "codigo": "27493",
+      "nombre": "Nuevo Belén de Bajirá",
+      "departamento": "27",
+      "valores": {
+        "familias": 67,
+        "personas": 568,
+        "viviendasDestruidas": 11,
+        "centrosSalud": 6
+      },
+      "fechaReporte": "2026-08-18",
+      "alertas": []
+    },
+    {
+      "codigo": "27495",
+      "nombre": "Nuquí",
+      "departamento": "27",
+      "valores": {
+        "viviendasAveriadas": 15,
+        "viviendasDestruidas": 1,
+        "centrosSalud": 4,
+        "centrosEducativos": 1,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-18",
+      "alertas": []
+    },
+    {
+      "codigo": "27580",
+      "nombre": "Río Iró",
+      "departamento": "27",
+      "valores": {
+        "familias": 500,
+        "personas": 3000,
+        "centrosEducativos": 5,
+        "centrosComunitarios": 6,
+        "vias": 1
+      },
+      "fechaReporte": "2026-08-18",
+      "alertas": []
+    },
+    {
+      "codigo": "27600",
+      "nombre": "Río Quito",
+      "departamento": "27",
+      "valores": {
+        "familias": 360,
+        "personas": 834,
+        "viviendasAveriadas": 346,
+        "viviendasDestruidas": 14,
+        "centrosSalud": 5,
+        "centrosEducativos": 9,
+        "centrosComunitarios": 2,
+        "acueductos": 3
+      },
+      "fechaReporte": "2026-08-18",
+      "alertas": []
+    },
+    {
+      "codigo": "27615",
+      "nombre": "Riosucio",
+      "departamento": "27",
+      "valores": {
+        "familias": 47,
+        "personas": 95,
+        "viviendasAveriadas": 41,
+        "viviendasDestruidas": 6,
+        "centrosSalud": 1,
+        "centrosComunitarios": 2,
+        "acueductos": 2
+      },
+      "fechaReporte": "2026-08-18",
+      "alertas": []
+    },
+    {
+      "codigo": "27660",
+      "nombre": "San José del Palmar",
+      "departamento": "27",
+      "valores": {
+        "familias": 1050,
+        "personas": 2625,
+        "heridos": 2,
+        "desaparecidos": 1,
+        "viviendasAveriadas": 485,
+        "viviendasDestruidas": 40,
+        "centrosSalud": 1,
+        "centrosComunitarios": 3,
+        "vias": 2,
+        "acueductos": 2
+      },
+      "fechaReporte": "2026-08-18",
+      "alertas": []
+    },
+    {
+      "codigo": "27745",
+      "nombre": "Sipí",
+      "departamento": "27",
+      "valores": {
+        "familias": 600,
+        "personas": 1870,
+        "viviendasAveriadas": 370,
+        "viviendasDestruidas": 160,
+        "centrosSalud": 2,
+        "centrosEducativos": 13,
+        "centrosComunitarios": 14
+      },
+      "fechaReporte": "2026-08-18",
+      "alertas": []
+    },
+    {
+      "codigo": "27787",
+      "nombre": "Tadó",
+      "departamento": "27",
+      "valores": {
+        "familias": 1637,
+        "personas": 4016,
+        "heridos": 17,
+        "viviendasAveriadas": 3624,
+        "viviendasDestruidas": 392,
+        "centrosSalud": 5,
+        "centrosEducativos": 12,
+        "vias": 1
+      },
+      "fechaReporte": "2026-08-18",
+      "alertas": []
+    },
+    {
+      "codigo": "27800",
+      "nombre": "Unguía",
+      "departamento": "27",
+      "valores": {
+        "familias": 121,
+        "personas": 484,
+        "viviendasAveriadas": 95,
+        "centrosEducativos": 4
+      },
+      "fechaReporte": "2026-08-18",
+      "alertas": []
+    },
+    {
+      "codigo": "27810",
+      "nombre": "Unión Panamericana",
+      "departamento": "27",
+      "valores": {
+        "familias": 1209,
+        "personas": 3998,
+        "fallecidos": 3,
+        "heridos": 5,
+        "viviendasAveriadas": 161,
+        "viviendasDestruidas": 507,
+        "centrosSalud": 1,
+        "centrosEducativos": 4,
+        "centrosComunitarios": 13,
+        "puentesVehiculares": 4,
+        "puentesPeatonales": 1
+      },
+      "fechaReporte": "2026-08-18",
+      "alertas": []
+    },
+    {
+      "codigo": "41001",
+      "nombre": "Neiva",
+      "departamento": "41",
+      "valores": {
+        "familias": 1,
+        "personas": 5,
+        "viviendasAveriadas": 1,
+        "centrosSalud": 1
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "41006",
+      "nombre": "Acevedo",
+      "departamento": "41",
+      "valores": {
+        "familias": 1,
+        "personas": 5,
+        "viviendasAveriadas": 1,
+        "centrosEducativos": 3
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "41013",
+      "nombre": "Agrado",
+      "departamento": "41",
+      "valores": {
+        "familias": 6,
+        "personas": 30,
+        "viviendasAveriadas": 6,
+        "centrosSalud": 1,
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "41016",
+      "nombre": "Aipe",
+      "departamento": "41",
+      "valores": {
+        "familias": 24,
+        "personas": 120,
+        "viviendasAveriadas": 24,
+        "centrosEducativos": 6,
+        "vias": 2
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "41020",
+      "nombre": "Algeciras",
+      "departamento": "41",
+      "valores": {
+        "familias": 26,
+        "personas": 130,
+        "viviendasAveriadas": 26,
+        "centrosSalud": 1,
+        "centrosEducativos": 13,
+        "centrosComunitarios": 4,
+        "vias": 12,
+        "puentesVehiculares": 1
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "41078",
+      "nombre": "Baraya",
+      "departamento": "41",
+      "valores": {
+        "familias": 74,
+        "personas": 370,
+        "viviendasAveriadas": 74,
+        "centrosSalud": 1,
+        "centrosEducativos": 3,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "41132",
+      "nombre": "Campoalegre",
+      "departamento": "41",
+      "valores": {
+        "familias": 8,
+        "personas": 40,
+        "viviendasAveriadas": 8,
+        "centrosEducativos": 2,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "41206",
+      "nombre": "Colombia",
+      "departamento": "41",
+      "valores": {
+        "familias": 53,
+        "personas": 265,
+        "viviendasAveriadas": 53,
+        "centrosSalud": 1,
+        "centrosEducativos": 6,
+        "centrosComunitarios": 1,
+        "vias": 3,
+        "puentesVehiculares": 5,
+        "puentesPeatonales": 2
+      },
+      "fechaReporte": "2026-08-11",
+      "alertas": []
+    },
+    {
+      "codigo": "41244",
+      "nombre": "Elías",
+      "departamento": "41",
+      "valores": {
+        "familias": 22,
+        "personas": 110,
+        "viviendasAveriadas": 22,
+        "centrosSalud": 1,
+        "centrosEducativos": 3,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "41298",
+      "nombre": "Garzón",
+      "departamento": "41",
+      "valores": {
+        "familias": 4,
+        "personas": 20,
+        "viviendasAveriadas": 4,
+        "centrosSalud": 1,
+        "centrosEducativos": 5,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "41306",
+      "nombre": "Gigante",
+      "departamento": "41",
+      "valores": {
+        "centrosSalud": 1,
+        "centrosEducativos": 5,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "41319",
+      "nombre": "Guadalupe",
+      "departamento": "41",
+      "valores": {
+        "centrosSalud": 1
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "41349",
+      "nombre": "Hobo",
+      "departamento": "41",
+      "valores": {
+        "familias": 23,
+        "personas": 115,
+        "viviendasAveriadas": 23,
+        "centrosEducativos": 3,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "41357",
+      "nombre": "Íquira",
+      "departamento": "41",
+      "valores": {
+        "familias": 15,
+        "personas": 75,
+        "viviendasAveriadas": 15,
+        "centrosEducativos": 4,
+        "centrosComunitarios": 3,
+        "puentesVehiculares": 1
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "41359",
+      "nombre": "Isnos",
+      "departamento": "41",
+      "valores": {
+        "familias": 4,
+        "personas": 20,
+        "viviendasAveriadas": 4,
+        "centrosEducativos": 3
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "41396",
+      "nombre": "La Plata",
+      "departamento": "41",
+      "valores": {
+        "familias": 5,
+        "personas": 25,
+        "viviendasAveriadas": 5,
+        "centrosEducativos": 7,
+        "puentesVehiculares": 4
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "41483",
+      "nombre": "Nátaga",
+      "departamento": "41",
+      "valores": {
+        "centrosEducativos": 5,
+        "puentesVehiculares": 2
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "41518",
+      "nombre": "Paicol",
+      "departamento": "41",
+      "valores": {
+        "familias": 8,
+        "personas": 40,
+        "viviendasAveriadas": 8,
+        "centrosSalud": 1,
+        "centrosEducativos": 3
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "41524",
+      "nombre": "Palermo",
+      "departamento": "41",
+      "valores": {
+        "familias": 13,
+        "personas": 65,
+        "viviendasAveriadas": 13,
+        "centrosSalud": 1,
+        "centrosEducativos": 1,
+        "puentesVehiculares": 1
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "41530",
+      "nombre": "Palestina",
+      "departamento": "41",
+      "valores": {
+        "centrosEducativos": 2
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "41548",
+      "nombre": "Pital",
+      "departamento": "41",
+      "valores": {
+        "familias": 2,
+        "personas": 10,
+        "viviendasAveriadas": 2,
+        "centrosEducativos": 4,
+        "puentesVehiculares": 1
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "41551",
+      "nombre": "Pitalito",
+      "departamento": "41",
+      "valores": {
+        "familias": 1,
+        "personas": 5,
+        "viviendasAveriadas": 1,
+        "centrosSalud": 1
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "41615",
+      "nombre": "Rivera",
+      "departamento": "41",
+      "valores": {
+        "centrosSalud": 1,
+        "centrosEducativos": 2
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "41660",
+      "nombre": "Saladoblanco",
+      "departamento": "41",
+      "valores": {
+        "vias": 1
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "41668",
+      "nombre": "San Agustín",
+      "departamento": "41",
+      "valores": {
+        "centrosEducativos": 1,
+        "centrosComunitarios": 1,
+        "puentesVehiculares": 3
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "41676",
+      "nombre": "Santa María",
+      "departamento": "41",
+      "valores": {
+        "familias": 46,
+        "personas": 230,
+        "viviendasAveriadas": 46,
+        "centrosEducativos": 6
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "41770",
+      "nombre": "Suaza",
+      "departamento": "41",
+      "valores": {
+        "familias": 1,
+        "personas": 5,
+        "viviendasAveriadas": 1,
+        "centrosEducativos": 4
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "41797",
+      "nombre": "Tesalia",
+      "departamento": "41",
+      "valores": {
+        "centrosSalud": 1
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "41799",
+      "nombre": "Tello",
+      "departamento": "41",
+      "valores": {
+        "familias": 8,
+        "personas": 40,
+        "viviendasAveriadas": 8,
+        "centrosSalud": 1,
+        "centrosEducativos": 4,
+        "vias": 1
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "41801",
+      "nombre": "Teruel",
+      "departamento": "41",
+      "valores": {
+        "familias": 18,
+        "personas": 90,
+        "viviendasAveriadas": 18,
+        "centrosEducativos": 4
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "41807",
+      "nombre": "Timaná",
+      "departamento": "41",
+      "valores": {
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "41872",
+      "nombre": "Villavieja",
+      "departamento": "41",
+      "valores": {
+        "familias": 39,
+        "personas": 195,
+        "viviendasAveriadas": 39,
+        "centrosEducativos": 2,
+        "centrosComunitarios": 3
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "41885",
+      "nombre": "Yaguará",
+      "departamento": "41",
+      "valores": {
+        "familias": 15,
+        "personas": 75,
+        "viviendasAveriadas": 15,
+        "centrosSalud": 1
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "52001",
+      "nombre": "Pasto",
+      "departamento": "52",
+      "valores": {
+        "viviendasAveriadas": 15
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "52079",
+      "nombre": "Barbacoas",
+      "departamento": "52",
+      "valores": {
+        "viviendasAveriadas": 6,
+        "centrosEducativos": 4
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "52083",
+      "nombre": "Belén",
+      "departamento": "52",
+      "valores": {
+        "familias": 1,
+        "personas": 7,
+        "viviendasAveriadas": 2
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "52207",
+      "nombre": "Consacá",
+      "departamento": "52",
+      "valores": {
+        "viviendasAveriadas": 6,
+        "centrosEducativos": 1,
+        "vias": 2
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "52215",
+      "nombre": "Córdoba",
+      "departamento": "52",
+      "valores": {
+        "centrosEducativos": 3
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "52224",
+      "nombre": "Cuaspud Carlosama",
+      "departamento": "52",
+      "valores": {
+        "centrosEducativos": 3
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "52240",
+      "nombre": "Chachagüí",
+      "departamento": "52",
+      "valores": {
+        "familias": 15,
+        "viviendasAveriadas": 15
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "52254",
+      "nombre": "El Peñol",
+      "departamento": "52",
+      "valores": {
+        "viviendasAveriadas": 5,
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "52260",
+      "nombre": "El Tambo",
+      "departamento": "52",
+      "valores": {
+        "familias": 2,
+        "viviendasAveriadas": 2
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "52287",
+      "nombre": "Funes",
+      "departamento": "52",
+      "valores": {
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "52317",
+      "nombre": "Guachucal",
+      "departamento": "52",
+      "valores": {
+        "familias": 6,
+        "personas": 17,
+        "viviendasAveriadas": 6
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "52378",
+      "nombre": "La Cruz",
+      "departamento": "52",
+      "valores": {
+        "viviendasAveriadas": 15,
+        "centrosSalud": 2,
+        "centrosEducativos": 8
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "52418",
+      "nombre": "Los Andes",
+      "departamento": "52",
+      "valores": {
+        "viviendasAveriadas": 7,
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "52520",
+      "nombre": "Francisco Pizarro",
+      "departamento": "52",
+      "valores": {
+        "familias": 22,
+        "personas": 78,
+        "viviendasAveriadas": 17,
+        "viviendasDestruidas": 2,
+        "centrosEducativos": 3,
+        "centrosComunitarios": 2,
+        "vias": 3,
+        "puentesPeatonales": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "52585",
+      "nombre": "Pupiales",
+      "departamento": "52",
+      "valores": {
+        "centrosEducativos": 3
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "52612",
+      "nombre": "Ricaurte",
+      "departamento": "52",
+      "valores": {
+        "viviendasAveriadas": 20,
+        "centrosEducativos": 4
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "52678",
+      "nombre": "Samaniego",
+      "departamento": "52",
+      "valores": {
+        "viviendasAveriadas": 6
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "54001",
+      "nombre": "San José de Cúcuta",
+      "departamento": "54",
+      "valores": {
+        "familias": 28,
+        "personas": 112,
+        "viviendasAveriadas": 28,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "54003",
+      "nombre": "Ábrego",
+      "departamento": "54",
+      "valores": {
+        "familias": 4,
+        "personas": 16,
+        "viviendasAveriadas": 4
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "54128",
+      "nombre": "Cáchira",
+      "departamento": "54",
+      "valores": {
+        "familias": 4,
+        "personas": 16,
+        "viviendasAveriadas": 4
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "54172",
+      "nombre": "Chinácota",
+      "departamento": "54",
+      "valores": {
+        "familias": 1,
+        "personas": 4,
+        "viviendasAveriadas": 1,
+        "centrosEducativos": 2
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "54223",
+      "nombre": "Cucutilla",
+      "departamento": "54",
+      "valores": {
+        "familias": 3,
+        "personas": 12,
+        "viviendasAveriadas": 2,
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "54250",
+      "nombre": "El Tarra",
+      "departamento": "54",
+      "valores": {
+        "familias": 2,
+        "personas": 8,
+        "viviendasAveriadas": 2
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "54261",
+      "nombre": "El Zulia",
+      "departamento": "54",
+      "valores": {
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "54405",
+      "nombre": "Los Patios",
+      "departamento": "54",
+      "valores": {
+        "familias": 6,
+        "personas": 24,
+        "viviendasAveriadas": 6
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "54418",
+      "nombre": "Lourdes",
+      "departamento": "54",
+      "valores": {
+        "familias": 4,
+        "personas": 16,
+        "viviendasAveriadas": 4,
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "54498",
+      "nombre": "Ocaña",
+      "departamento": "54",
+      "valores": {
+        "familias": 1,
+        "personas": 4,
+        "viviendasAveriadas": 1
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "54518",
+      "nombre": "Pamplona",
+      "departamento": "54",
+      "valores": {
+        "familias": 2,
+        "personas": 8,
+        "viviendasAveriadas": 2,
+        "centrosEducativos": 8
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "54520",
+      "nombre": "Pamplonita",
+      "departamento": "54",
+      "valores": {
+        "familias": 1,
+        "personas": 4,
+        "viviendasAveriadas": 1
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "54660",
+      "nombre": "Salazar",
+      "departamento": "54",
+      "valores": {
+        "familias": 6,
+        "personas": 24,
+        "viviendasAveriadas": 6,
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "54673",
+      "nombre": "San Cayetano",
+      "departamento": "54",
+      "valores": {
+        "familias": 2,
+        "personas": 8,
+        "viviendasAveriadas": 2
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "54743",
+      "nombre": "Silos",
+      "departamento": "54",
+      "valores": {
+        "familias": 4,
+        "personas": 16,
+        "viviendasAveriadas": 4,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "54800",
+      "nombre": "Teorama",
+      "departamento": "54",
+      "valores": {
+        "familias": 1,
+        "personas": 4,
+        "viviendasAveriadas": 1,
+        "centrosEducativos": 1,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "54810",
+      "nombre": "Tibú",
+      "departamento": "54",
+      "valores": {
+        "centrosEducativos": 2
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "54820",
+      "nombre": "Toledo",
+      "departamento": "54",
+      "valores": {
+        "familias": 1,
+        "personas": 4,
+        "viviendasAveriadas": 1
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "54871",
+      "nombre": "Villa Caro",
+      "departamento": "54",
+      "valores": {
+        "familias": 1,
+        "personas": 4,
+        "viviendasAveriadas": 1
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "54874",
+      "nombre": "Villa del Rosario",
+      "departamento": "54",
+      "valores": {
+        "familias": 11,
+        "personas": 44,
+        "heridos": 1,
+        "viviendasAveriadas": 11,
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "63001",
+      "nombre": "Armenia",
+      "departamento": "63",
+      "valores": {
+        "familias": 3,
+        "personas": 7,
+        "fallecidos": 1,
+        "heridos": 161,
+        "desaparecidos": 28,
+        "rescatados": 1,
+        "viviendasAveriadas": 16,
+        "viviendasDestruidas": 410,
+        "edificiosColapsados": 115,
+        "centrosSalud": 5,
+        "centrosEducativos": 48,
+        "centrosComunitarios": 444,
+        "vias": 1,
+        "aeropuertos": 1,
+        "acueductos": 1,
+        "puentesPeatonales": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "63111",
+      "nombre": "Buenavista",
+      "departamento": "63",
+      "valores": {
+        "familias": 199,
+        "personas": 529,
+        "viviendasAveriadas": 195,
+        "viviendasDestruidas": 22,
+        "centrosEducativos": 12,
+        "centrosComunitarios": 20
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "63130",
+      "nombre": "Calarcá",
+      "departamento": "63",
+      "valores": {
+        "familias": 2,
+        "personas": 7,
+        "heridos": 14,
+        "desaparecidos": 1,
+        "viviendasAveriadas": 2,
+        "viviendasDestruidas": 281,
+        "centrosSalud": 3,
+        "centrosEducativos": 10,
+        "centrosComunitarios": 148,
+        "vias": 1,
+        "acueductos": 1,
+        "puentesVehiculares": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "63190",
+      "nombre": "Circasia",
+      "departamento": "63",
+      "valores": {
+        "familias": 972,
+        "personas": 3,
+        "fallecidos": 1,
+        "heridos": 25,
+        "viviendasAveriadas": 628,
+        "viviendasDestruidas": 235,
+        "centrosSalud": 1,
+        "centrosEducativos": 7,
+        "centrosComunitarios": 95,
+        "vias": 2,
+        "puentesVehiculares": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": ["PERSONAS_MENOR_QUE_FAMILIAS"]
+    },
+    {
+      "codigo": "63212",
+      "nombre": "Córdoba",
+      "departamento": "63",
+      "valores": {
+        "familias": 415,
+        "personas": 1200,
+        "viviendasAveriadas": 384,
+        "viviendasDestruidas": 31,
+        "centrosSalud": 1,
+        "centrosEducativos": 5,
+        "centrosComunitarios": 21,
+        "vias": 9,
+        "acueductos": 2
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "63272",
+      "nombre": "Filandia",
+      "departamento": "63",
+      "valores": {
+        "familias": 481,
+        "personas": 2,
+        "heridos": 1,
+        "viviendasAveriadas": 402,
+        "viviendasDestruidas": 31,
+        "centrosSalud": 1,
+        "centrosEducativos": 4,
+        "centrosComunitarios": 100,
+        "vias": 26
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": ["PERSONAS_MENOR_QUE_FAMILIAS"]
+    },
+    {
+      "codigo": "63302",
+      "nombre": "Génova",
+      "departamento": "63",
+      "valores": {
+        "familias": 963,
+        "personas": 4,
+        "heridos": 2,
+        "viviendasAveriadas": 946,
+        "viviendasDestruidas": 6,
+        "centrosEducativos": 17,
+        "centrosComunitarios": 24,
+        "vias": 1,
+        "puentesVehiculares": 5
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": ["PERSONAS_MENOR_QUE_FAMILIAS"]
+    },
+    {
+      "codigo": "63401",
+      "nombre": "La Tebaida",
+      "departamento": "63",
+      "valores": {
+        "familias": 592,
+        "personas": 2,
+        "heridos": 25,
+        "desaparecidos": 4,
+        "viviendasAveriadas": 592,
+        "viviendasDestruidas": 27,
+        "edificiosAveriados": 1,
+        "centrosSalud": 1,
+        "centrosEducativos": 14,
+        "centrosComunitarios": 35,
+        "vias": 1,
+        "puentesVehiculares": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": ["PERSONAS_MENOR_QUE_FAMILIAS"]
+    },
+    {
+      "codigo": "63470",
+      "nombre": "Montenegro",
+      "departamento": "63",
+      "valores": {
+        "familias": 3969,
+        "personas": 14,
+        "heridos": 25,
+        "desaparecidos": 1,
+        "viviendasAveriadas": 3,
+        "viviendasDestruidas": 300,
+        "edificiosAveriados": 3,
+        "centrosSalud": 3,
+        "centrosEducativos": 26,
+        "centrosComunitarios": 210,
+        "vias": 4,
+        "acueductos": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": ["PERSONAS_MENOR_QUE_FAMILIAS"]
+    },
+    {
+      "codigo": "63548",
+      "nombre": "Pijao",
+      "departamento": "63",
+      "valores": {
+        "familias": 378,
+        "personas": 1400,
+        "viviendasAveriadas": 378,
+        "viviendasDestruidas": 19,
+        "centrosEducativos": 4,
+        "centrosComunitarios": 3,
+        "vias": 3
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "63594",
+      "nombre": "Quimbaya",
+      "departamento": "63",
+      "valores": {
+        "familias": 2,
+        "personas": 8,
+        "fallecidos": 1,
+        "heridos": 59,
+        "desaparecidos": 15,
+        "viviendasAveriadas": 2,
+        "viviendasDestruidas": 432,
+        "centrosSalud": 1,
+        "centrosEducativos": 25,
+        "centrosComunitarios": 285,
+        "vias": 4,
+        "puentesVehiculares": 1,
+        "puentesPeatonales": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "63690",
+      "nombre": "Salento",
+      "departamento": "63",
+      "valores": {
+        "familias": 412,
+        "personas": 1273,
+        "heridos": 3,
+        "viviendasAveriadas": 327,
+        "viviendasDestruidas": 85,
+        "centrosSalud": 1,
+        "centrosEducativos": 10,
+        "centrosComunitarios": 123,
+        "vias": 1
+      },
+      "fechaReporte": "2026-08-21",
+      "alertas": []
+    },
+    {
+      "codigo": "66001",
+      "nombre": "Pereira",
+      "departamento": "66",
+      "valores": {
+        "familias": 42,
+        "fallecidos": 97,
+        "heridos": 259,
+        "desaparecidos": 115,
+        "rescatados": 260,
+        "viviendasAveriadas": 30,
+        "viviendasDestruidas": 9,
+        "edificiosAveriados": 5289,
+        "edificiosColapsados": 66,
+        "centrosSalud": 34,
+        "centrosEducativos": 165,
+        "aeropuertos": 1,
+        "puentesVehiculares": 14
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "66045",
+      "nombre": "Apía",
+      "departamento": "66",
+      "valores": {
+        "familias": 798,
+        "viviendasAveriadas": 720,
+        "viviendasDestruidas": 78,
+        "centrosEducativos": 9,
+        "centrosComunitarios": 3,
+        "vias": 1,
+        "acueductos": 1
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "66075",
+      "nombre": "Balboa",
+      "departamento": "66",
+      "valores": {
+        "familias": 671,
+        "heridos": 5,
+        "rescatados": 5,
+        "viviendasAveriadas": 669,
+        "viviendasDestruidas": 66,
+        "edificiosAveriados": 2,
+        "centrosSalud": 1,
+        "centrosEducativos": 5,
+        "centrosComunitarios": 2,
+        "vias": 7,
+        "acueductos": 1
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "66088",
+      "nombre": "Belén de Umbría",
+      "departamento": "66",
+      "valores": {
+        "familias": 2,
+        "heridos": 6,
+        "desaparecidos": 1,
+        "viviendasAveriadas": 855,
+        "viviendasDestruidas": 230,
+        "centrosSalud": 1,
+        "centrosEducativos": 14,
+        "centrosComunitarios": 14,
+        "vias": 3,
+        "acueductos": 3
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "66170",
+      "nombre": "Dosquebradas",
+      "departamento": "66",
+      "valores": {
+        "familias": 1600,
+        "fallecidos": 10,
+        "heridos": 230,
+        "desaparecidos": 3,
+        "rescatados": 5,
+        "viviendasAveriadas": 15,
+        "viviendasDestruidas": 2,
+        "edificiosColapsados": 43,
+        "centrosEducativos": 54,
+        "centrosComunitarios": 2,
+        "vias": 90,
+        "acueductos": 2
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "66318",
+      "nombre": "Guática",
+      "departamento": "66",
+      "valores": {
+        "familias": 570,
+        "viviendasAveriadas": 460,
+        "viviendasDestruidas": 50,
+        "centrosSalud": 1,
+        "centrosEducativos": 11,
+        "centrosComunitarios": 2,
+        "vias": 1
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "66383",
+      "nombre": "La Celia",
+      "departamento": "66",
+      "valores": {
+        "familias": 352,
+        "viviendasAveriadas": 160,
+        "viviendasDestruidas": 21,
+        "centrosEducativos": 5,
+        "centrosComunitarios": 2,
+        "vias": 6,
+        "acueductos": 4
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "66400",
+      "nombre": "La Virginia",
+      "departamento": "66",
+      "valores": {
+        "familias": 1,
+        "fallecidos": 1,
+        "heridos": 54,
+        "rescatados": 3,
+        "viviendasAveriadas": 645,
+        "viviendasDestruidas": 60,
+        "edificiosAveriados": 6,
+        "centrosSalud": 1,
+        "centrosEducativos": 5,
+        "centrosComunitarios": 1,
+        "acueductos": 1
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "66440",
+      "nombre": "Marsella",
+      "departamento": "66",
+      "valores": {
+        "familias": 1,
+        "heridos": 24,
+        "desaparecidos": 1,
+        "viviendasAveriadas": 1,
+        "viviendasDestruidas": 22,
+        "centrosSalud": 1,
+        "centrosEducativos": 9,
+        "centrosComunitarios": 2,
+        "vias": 7,
+        "acueductos": 9
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "66456",
+      "nombre": "Mistrató",
+      "departamento": "66",
+      "valores": {
+        "familias": 437,
+        "viviendasAveriadas": 231,
+        "viviendasDestruidas": 61,
+        "edificiosAveriados": 5,
+        "centrosSalud": 3,
+        "centrosEducativos": 15,
+        "centrosComunitarios": 1,
+        "acueductos": 2
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "66572",
+      "nombre": "Pueblo Rico",
+      "departamento": "66",
+      "valores": {
+        "familias": 783,
+        "viviendasAveriadas": 879,
+        "viviendasDestruidas": 80,
+        "edificiosAveriados": 1,
+        "centrosEducativos": 49,
+        "centrosComunitarios": 1,
+        "vias": 1
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "66594",
+      "nombre": "Quinchía",
+      "departamento": "66",
+      "valores": {
+        "familias": 890,
+        "viviendasAveriadas": 766,
+        "viviendasDestruidas": 51,
+        "centrosEducativos": 43,
+        "centrosComunitarios": 3,
+        "vias": 9,
+        "acueductos": 3
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "66682",
+      "nombre": "Santa Rosa de Cabal",
+      "departamento": "66",
+      "valores": {
+        "familias": 5,
+        "heridos": 4,
+        "desaparecidos": 1,
+        "rescatados": 1,
+        "viviendasAveriadas": 4,
+        "viviendasDestruidas": 65,
+        "edificiosAveriados": 2,
+        "centrosSalud": 1,
+        "centrosComunitarios": 2,
+        "vias": 6,
+        "acueductos": 3
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "66687",
+      "nombre": "Santuario",
+      "departamento": "66",
+      "valores": {
+        "familias": 727,
+        "fallecidos": 1,
+        "heridos": 6,
+        "viviendasAveriadas": 490,
+        "viviendasDestruidas": 142,
+        "centrosSalud": 1,
+        "centrosEducativos": 5,
+        "centrosComunitarios": 5,
+        "vias": 2
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "68079",
+      "nombre": "Barichara",
+      "departamento": "68",
+      "valores": {
+        "centrosSalud": 1
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "68092",
+      "nombre": "Betulia",
+      "departamento": "68",
+      "valores": {
+        "viviendasAveriadas": 2
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "68176",
+      "nombre": "Chima",
+      "departamento": "68",
+      "valores": {
+        "centrosEducativos": 1
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "68190",
+      "nombre": "Cimitarra",
+      "departamento": "68",
+      "valores": {
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "68209",
+      "nombre": "Confines",
+      "departamento": "68",
+      "valores": {
+        "centrosEducativos": 1,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "68322",
+      "nombre": "Guapotá",
+      "departamento": "68",
+      "valores": {
+        "viviendasAveriadas": 2
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "68397",
+      "nombre": "La Paz",
+      "departamento": "68",
+      "valores": {
+        "centrosEducativos": 1
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "68406",
+      "nombre": "Lebrija",
+      "departamento": "68",
+      "valores": {
+        "centrosEducativos": 1
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "68418",
+      "nombre": "Los Santos",
+      "departamento": "68",
+      "valores": {
+        "centrosEducativos": 1
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "68425",
+      "nombre": "Macaravita",
+      "departamento": "68",
+      "valores": {
+        "centrosEducativos": 1
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "68444",
+      "nombre": "Matanza",
+      "departamento": "68",
+      "valores": {
+        "centrosEducativos": 2
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "68500",
+      "nombre": "Oiba",
+      "departamento": "68",
+      "valores": {
+        "centrosEducativos": 1
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "68522",
+      "nombre": "Palmar",
+      "departamento": "68",
+      "valores": {
+        "centrosEducativos": 1
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "68549",
+      "nombre": "Pinchote",
+      "departamento": "68",
+      "valores": {
+        "centrosEducativos": 1
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "68615",
+      "nombre": "Rionegro",
+      "departamento": "68",
+      "valores": {
+        "centrosEducativos": 3
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "68689",
+      "nombre": "San Vicente de Chucurí",
+      "departamento": "68",
+      "valores": {
+        "centrosEducativos": 1
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "68705",
+      "nombre": "Santa Bárbara",
+      "departamento": "68",
+      "valores": {
+        "centrosEducativos": 1
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "68720",
+      "nombre": "Santa Helena del Opón",
+      "departamento": "68",
+      "valores": {
+        "centrosEducativos": 1
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "68780",
+      "nombre": "Suratá",
+      "departamento": "68",
+      "valores": {
+        "centrosEducativos": 1
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "68895",
+      "nombre": "Zapatoca",
+      "departamento": "68",
+      "valores": {
+        "centrosEducativos": 1
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "70001",
+      "nombre": "Sincelejo",
+      "departamento": "70",
+      "valores": {
+        "familias": 65,
+        "viviendasAveriadas": 65,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-19",
+      "alertas": []
+    },
+    {
+      "codigo": "70221",
+      "nombre": "Coveñas",
+      "departamento": "70",
+      "valores": {
+        "viviendasAveriadas": 6
+      },
+      "fechaReporte": null,
+      "alertas": []
+    },
+    {
+      "codigo": "73024",
+      "nombre": "Alpujarra",
+      "departamento": "73",
+      "valores": {
+        "viviendasAveriadas": 19,
+        "centrosSalud": 1,
+        "centrosEducativos": 3,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73026",
+      "nombre": "Alvarado",
+      "departamento": "73",
+      "valores": {
+        "viviendasAveriadas": 8,
+        "centrosEducativos": 8,
+        "centrosComunitarios": 1,
+        "acueductos": 1
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73030",
+      "nombre": "Ambalema",
+      "departamento": "73",
+      "valores": {
+        "centrosSalud": 1
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73055",
+      "nombre": "Armero",
+      "departamento": "73",
+      "valores": {
+        "viviendasAveriadas": 6,
+        "centrosSalud": 1,
+        "centrosEducativos": 4,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73067",
+      "nombre": "Ataco",
+      "departamento": "73",
+      "valores": {
+        "viviendasAveriadas": 152,
+        "centrosSalud": 1,
+        "centrosEducativos": 5,
+        "vias": 1
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73124",
+      "nombre": "Cajamarca",
+      "departamento": "73",
+      "valores": {
+        "viviendasAveriadas": 25,
+        "viviendasDestruidas": 3,
+        "centrosEducativos": 4,
+        "vias": 4
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73148",
+      "nombre": "Carmen de Apicalá",
+      "departamento": "73",
+      "valores": {
+        "viviendasAveriadas": 18,
+        "centrosSalud": 1,
+        "centrosEducativos": 3,
+        "centrosComunitarios": 4
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73152",
+      "nombre": "Casabianca",
+      "departamento": "73",
+      "valores": {
+        "viviendasAveriadas": 2,
+        "centrosEducativos": 2
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73168",
+      "nombre": "Chaparral",
+      "departamento": "73",
+      "valores": {
+        "viviendasAveriadas": 100,
+        "viviendasDestruidas": 10,
+        "centrosEducativos": 7,
+        "centrosComunitarios": 9
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73200",
+      "nombre": "Coello",
+      "departamento": "73",
+      "valores": {
+        "centrosEducativos": 3,
+        "centrosComunitarios": 5
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73217",
+      "nombre": "Coyaima",
+      "departamento": "73",
+      "valores": {
+        "centrosEducativos": 6
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73226",
+      "nombre": "Cunday",
+      "departamento": "73",
+      "valores": {
+        "viviendasAveriadas": 15,
+        "centrosSalud": 1,
+        "centrosEducativos": 2
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73236",
+      "nombre": "Dolores",
+      "departamento": "73",
+      "valores": {
+        "viviendasAveriadas": 40,
+        "centrosEducativos": 7,
+        "centrosComunitarios": 3,
+        "acueductos": 2
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73268",
+      "nombre": "Espinal",
+      "departamento": "73",
+      "valores": {
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73270",
+      "nombre": "Falan",
+      "departamento": "73",
+      "valores": {
+        "viviendasAveriadas": 11,
+        "centrosEducativos": 7
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73275",
+      "nombre": "Flandes",
+      "departamento": "73",
+      "valores": {
+        "viviendasAveriadas": 7,
+        "centrosEducativos": 7
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73283",
+      "nombre": "Fresno",
+      "departamento": "73",
+      "valores": {
+        "viviendasAveriadas": 10,
+        "viviendasDestruidas": 3,
+        "centrosEducativos": 19,
+        "centrosComunitarios": 2
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73319",
+      "nombre": "Guamo",
+      "departamento": "73",
+      "valores": {
+        "viviendasAveriadas": 27,
+        "viviendasDestruidas": 1,
+        "centrosSalud": 1,
+        "centrosEducativos": 17,
+        "centrosComunitarios": 5,
+        "vias": 4
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73347",
+      "nombre": "Herveo",
+      "departamento": "73",
+      "valores": {
+        "viviendasAveriadas": 85,
+        "viviendasDestruidas": 6,
+        "centrosSalud": 1,
+        "centrosComunitarios": 2,
+        "vias": 2
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73349",
+      "nombre": "Honda",
+      "departamento": "73",
+      "valores": {
+        "centrosEducativos": 1,
+        "centrosComunitarios": 6
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73352",
+      "nombre": "Icononzo",
+      "departamento": "73",
+      "valores": {
+        "viviendasAveriadas": 2,
+        "centrosEducativos": 4
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73408",
+      "nombre": "Lérida",
+      "departamento": "73",
+      "valores": {
+        "viviendasAveriadas": 2,
+        "centrosEducativos": 6
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73411",
+      "nombre": "Líbano",
+      "departamento": "73",
+      "valores": {
+        "viviendasAveriadas": 12,
+        "centrosEducativos": 2,
+        "centrosComunitarios": 2
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73443",
+      "nombre": "San Sebastián de Mariquita",
+      "departamento": "73",
+      "valores": {
+        "viviendasAveriadas": 1,
+        "centrosEducativos": 7,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73449",
+      "nombre": "Melgar",
+      "departamento": "73",
+      "valores": {
+        "viviendasAveriadas": 3
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73461",
+      "nombre": "Murillo",
+      "departamento": "73",
+      "valores": {
+        "viviendasAveriadas": 2,
+        "centrosEducativos": 7
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73483",
+      "nombre": "Natagaima",
+      "departamento": "73",
+      "valores": {
+        "viviendasAveriadas": 23,
+        "centrosEducativos": 3,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73504",
+      "nombre": "Ortega",
+      "departamento": "73",
+      "valores": {
+        "viviendasAveriadas": 144,
+        "viviendasDestruidas": 4,
+        "centrosEducativos": 19,
+        "centrosComunitarios": 1,
+        "vias": 3
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73520",
+      "nombre": "Palocabildo",
+      "departamento": "73",
+      "valores": {
+        "viviendasAveriadas": 1,
+        "centrosSalud": 1,
+        "centrosEducativos": 2,
+        "centrosComunitarios": 2,
+        "vias": 2
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73547",
+      "nombre": "Piedras",
+      "departamento": "73",
+      "valores": {
+        "viviendasAveriadas": 6,
+        "centrosEducativos": 5
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73555",
+      "nombre": "Planadas",
+      "departamento": "73",
+      "valores": {
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73563",
+      "nombre": "Prado",
+      "departamento": "73",
+      "valores": {
+        "viviendasAveriadas": 40,
+        "centrosSalud": 1,
+        "centrosEducativos": 6,
+        "centrosComunitarios": 2,
+        "vias": 2,
+        "acueductos": 1
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73585",
+      "nombre": "Purificación",
+      "departamento": "73",
+      "valores": {
+        "viviendasAveriadas": 37,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73616",
+      "nombre": "Rioblanco",
+      "departamento": "73",
+      "valores": {
+        "centrosEducativos": 2
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73622",
+      "nombre": "Roncesvalles",
+      "departamento": "73",
+      "valores": {
+        "viviendasAveriadas": 13,
+        "viviendasDestruidas": 2,
+        "centrosComunitarios": 2
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73624",
+      "nombre": "Rovira",
+      "departamento": "73",
+      "valores": {
+        "viviendasAveriadas": 202,
+        "viviendasDestruidas": 1,
+        "centrosEducativos": 5
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73671",
+      "nombre": "Saldaña",
+      "departamento": "73",
+      "valores": {
+        "viviendasAveriadas": 3
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73675",
+      "nombre": "San Antonio",
+      "departamento": "73",
+      "valores": {
+        "viviendasAveriadas": 45,
+        "centrosEducativos": 2,
+        "centrosComunitarios": 2,
+        "vias": 1
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73686",
+      "nombre": "Santa Isabel",
+      "departamento": "73",
+      "valores": {
+        "viviendasAveriadas": 1,
+        "centrosEducativos": 6,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73770",
+      "nombre": "Suárez",
+      "departamento": "73",
+      "valores": {
+        "viviendasAveriadas": 2,
+        "centrosEducativos": 3,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73861",
+      "nombre": "Venadillo",
+      "departamento": "73",
+      "valores": {
+        "viviendasAveriadas": 6,
+        "centrosEducativos": 1
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73870",
+      "nombre": "Villahermosa",
+      "departamento": "73",
+      "valores": {
+        "centrosSalud": 1,
+        "centrosEducativos": 5,
+        "centrosComunitarios": 1
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "73873",
+      "nombre": "Villarrica",
+      "departamento": "73",
+      "valores": {
+        "viviendasAveriadas": 2,
+        "centrosSalud": 1,
+        "centrosEducativos": 5
+      },
+      "fechaReporte": "2026-08-16",
+      "alertas": []
+    },
+    {
+      "codigo": "76001",
+      "nombre": "Santiago de Cali",
+      "departamento": "76",
+      "valores": {
+        "fallecidos": 154,
+        "heridos": 2,
+        "desaparecidos": 40,
+        "rescatados": 88,
+        "edificiosAveriados": 370,
+        "edificiosColapsados": 308,
+        "centrosSalud": 10,
+        "centrosEducativos": 214
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "76020",
+      "nombre": "Alcalá",
+      "departamento": "76",
+      "valores": {
+        "personas": 1,
+        "heridos": 20,
+        "viviendasAveriadas": 1,
+        "viviendasDestruidas": 110,
+        "edificiosAveriados": 3,
+        "edificiosColapsados": 1,
+        "centrosEducativos": 25,
+        "centrosComunitarios": 62,
+        "vias": 2
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "76036",
+      "nombre": "Andalucía",
+      "departamento": "76",
+      "valores": {
+        "personas": 2,
+        "viviendasAveriadas": 800,
+        "viviendasDestruidas": 18,
+        "edificiosAveriados": 1,
+        "centrosSalud": 1,
+        "centrosEducativos": 21,
+        "centrosComunitarios": 60,
+        "vias": 1
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "76041",
+      "nombre": "Ansermanuevo",
+      "departamento": "76",
+      "valores": {
+        "personas": 1,
+        "viviendasAveriadas": 1,
+        "viviendasDestruidas": 171,
+        "centrosSalud": 1,
+        "centrosEducativos": 18,
+        "centrosComunitarios": 45,
+        "vias": 6
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "76054",
+      "nombre": "Argelia",
+      "departamento": "76",
+      "valores": {
+        "heridos": 3,
+        "viviendasAveriadas": 900,
+        "viviendasDestruidas": 200,
+        "edificiosAveriados": 1,
+        "centrosSalud": 3,
+        "centrosEducativos": 2,
+        "centrosComunitarios": 16
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "76100",
+      "nombre": "Bolívar",
+      "departamento": "76",
+      "valores": {
+        "personas": 10,
+        "heridos": 7,
+        "viviendasAveriadas": 1,
+        "viviendasDestruidas": 5,
+        "edificiosAveriados": 2,
+        "centrosSalud": 2,
+        "centrosEducativos": 5,
+        "centrosComunitarios": 2,
+        "vias": 8
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "76109",
+      "nombre": "Buenaventura",
+      "departamento": "76",
+      "valores": {
+        "familias": 10,
+        "personas": 51,
+        "fallecidos": 11,
+        "heridos": 476,
+        "viviendasAveriadas": 9,
+        "viviendasDestruidas": 954,
+        "edificiosAveriados": 6,
+        "edificiosColapsados": 41,
+        "centrosSalud": 5,
+        "centrosEducativos": 35,
+        "centrosComunitarios": 36,
+        "vias": 5,
+        "aeropuertos": 1
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "76111",
+      "nombre": "Guadalajara de Buga",
+      "departamento": "76",
+      "valores": {
+        "familias": 1600,
+        "personas": 2,
+        "fallecidos": 1,
+        "heridos": 38,
+        "viviendasAveriadas": 570,
+        "viviendasDestruidas": 42,
+        "edificiosAveriados": 5,
+        "centrosSalud": 5,
+        "centrosEducativos": 10,
+        "centrosComunitarios": 33,
+        "vias": 2
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": ["PERSONAS_MENOR_QUE_FAMILIAS"]
+    },
+    {
+      "codigo": "76113",
+      "nombre": "Bugalagrande",
+      "departamento": "76",
+      "valores": {
+        "personas": 2,
+        "heridos": 30,
+        "viviendasAveriadas": 877,
+        "viviendasDestruidas": 125,
+        "centrosSalud": 1,
+        "centrosEducativos": 7
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "76122",
+      "nombre": "Caicedonia",
+      "departamento": "76",
+      "valores": {
+        "familias": 1100,
+        "personas": 6,
+        "heridos": 8,
+        "viviendasAveriadas": 1,
+        "viviendasDestruidas": 130,
+        "edificiosAveriados": 14,
+        "centrosSalud": 2,
+        "centrosEducativos": 26,
+        "centrosComunitarios": 134,
+        "vias": 4
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": ["PERSONAS_MENOR_QUE_FAMILIAS"]
+    },
+    {
+      "codigo": "76126",
+      "nombre": "Calima",
+      "departamento": "76",
+      "valores": {
+        "personas": 2,
+        "fallecidos": 4,
+        "heridos": 74,
+        "viviendasAveriadas": 505,
+        "viviendasDestruidas": 653,
+        "edificiosAveriados": 2,
+        "centrosSalud": 1,
+        "centrosEducativos": 20,
+        "centrosComunitarios": 14,
+        "vias": 12
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "76130",
+      "nombre": "Candelaria",
+      "departamento": "76",
+      "valores": {
+        "heridos": 16,
+        "viviendasAveriadas": 143,
+        "edificiosAveriados": 1,
+        "centrosSalud": 4,
+        "centrosEducativos": 5,
+        "centrosComunitarios": 29
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "76147",
+      "nombre": "Cartago",
+      "departamento": "76",
+      "valores": {
+        "personas": 1,
+        "heridos": 30,
+        "viviendasAveriadas": 582,
+        "viviendasDestruidas": 26,
+        "edificiosAveriados": 17,
+        "centrosSalud": 3,
+        "centrosEducativos": 21,
+        "centrosComunitarios": 73,
+        "vias": 1,
+        "aeropuertos": 1
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "76233",
+      "nombre": "Dagua",
+      "departamento": "76",
+      "valores": {
+        "personas": 5,
+        "fallecidos": 5,
+        "heridos": 58,
+        "viviendasAveriadas": 666,
+        "viviendasDestruidas": 544,
+        "centrosSalud": 1,
+        "centrosEducativos": 13,
+        "centrosComunitarios": 28,
+        "vias": 30
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "76243",
+      "nombre": "El Águila",
+      "departamento": "76",
+      "valores": {
+        "heridos": 25,
+        "viviendasAveriadas": 309,
+        "viviendasDestruidas": 614,
+        "edificiosAveriados": 4,
+        "centrosSalud": 1,
+        "centrosEducativos": 18,
+        "centrosComunitarios": 7,
+        "vias": 13
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "76246",
+      "nombre": "El Cairo",
+      "departamento": "76",
+      "valores": {
+        "personas": 3,
+        "fallecidos": 3,
+        "heridos": 5,
+        "viviendasAveriadas": 1,
+        "viviendasDestruidas": 90,
+        "edificiosAveriados": 1,
+        "centrosEducativos": 2,
+        "vias": 1
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "76248",
+      "nombre": "El Cerrito",
+      "departamento": "76",
+      "valores": {
+        "heridos": 7,
+        "viviendasAveriadas": 146,
+        "viviendasDestruidas": 3,
+        "edificiosAveriados": 1,
+        "centrosSalud": 2,
+        "centrosEducativos": 9,
+        "centrosComunitarios": 21
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "76250",
+      "nombre": "El Dovio",
+      "departamento": "76",
+      "valores": {
+        "personas": 2,
+        "heridos": 3,
+        "viviendasAveriadas": 673,
+        "viviendasDestruidas": 284,
+        "edificiosAveriados": 6,
+        "centrosSalud": 1,
+        "centrosEducativos": 12,
+        "centrosComunitarios": 45,
+        "vias": 18
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "76275",
+      "nombre": "Florida",
+      "departamento": "76",
+      "valores": {
+        "heridos": 2,
+        "viviendasAveriadas": 161,
+        "viviendasDestruidas": 4,
+        "centrosEducativos": 43,
+        "centrosComunitarios": 16,
+        "vias": 5
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "76306",
+      "nombre": "Ginebra",
+      "departamento": "76",
+      "valores": {
+        "heridos": 2,
+        "viviendasAveriadas": 22,
+        "viviendasDestruidas": 2,
+        "centrosSalud": 1,
+        "centrosEducativos": 7
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "76318",
+      "nombre": "Guacarí",
+      "departamento": "76",
+      "valores": {
+        "personas": 252,
+        "heridos": 4,
+        "viviendasAveriadas": 191,
+        "viviendasDestruidas": 31,
+        "centrosSalud": 2,
+        "centrosEducativos": 4,
+        "centrosComunitarios": 33,
+        "vias": 1
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "76364",
+      "nombre": "Jamundí",
+      "departamento": "76",
+      "valores": {
+        "personas": 8,
+        "heridos": 47,
+        "viviendasAveriadas": 2,
+        "viviendasDestruidas": 15,
+        "centrosSalud": 1,
+        "centrosEducativos": 75,
+        "centrosComunitarios": 31,
+        "vias": 2
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "76377",
+      "nombre": "La Cumbre",
+      "departamento": "76",
+      "valores": {
+        "familias": 1171,
+        "heridos": 7,
+        "viviendasAveriadas": 1,
+        "viviendasDestruidas": 150,
+        "edificiosAveriados": 2,
+        "centrosSalud": 4,
+        "centrosEducativos": 23,
+        "centrosComunitarios": 22,
+        "vias": 3
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "76400",
+      "nombre": "La Unión",
+      "departamento": "76",
+      "valores": {
+        "personas": 4,
+        "fallecidos": 1,
+        "heridos": 28,
+        "viviendasAveriadas": 2,
+        "viviendasDestruidas": 478,
+        "edificiosAveriados": 34,
+        "centrosSalud": 1,
+        "centrosEducativos": 13,
+        "centrosComunitarios": 198,
+        "vias": 2
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "76403",
+      "nombre": "La Victoria",
+      "departamento": "76",
+      "valores": {
+        "heridos": 3,
+        "viviendasAveriadas": 1,
+        "viviendasDestruidas": 73,
+        "centrosSalud": 1,
+        "centrosEducativos": 6,
+        "vias": 1
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "76497",
+      "nombre": "Obando",
+      "departamento": "76",
+      "valores": {
+        "familias": 670,
+        "personas": 2,
+        "heridos": 57,
+        "viviendasAveriadas": 383,
+        "viviendasDestruidas": 209,
+        "centrosSalud": 4,
+        "centrosEducativos": 13,
+        "centrosComunitarios": 35,
+        "vias": 1
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": ["PERSONAS_MENOR_QUE_FAMILIAS"]
+    },
+    {
+      "codigo": "76520",
+      "nombre": "Palmira",
+      "departamento": "76",
+      "valores": {
+        "familias": 230,
+        "viviendasAveriadas": 401,
+        "viviendasDestruidas": 1,
+        "edificiosAveriados": 49,
+        "centrosSalud": 2,
+        "centrosEducativos": 130,
+        "centrosComunitarios": 14
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "76563",
+      "nombre": "Pradera",
+      "departamento": "76",
+      "valores": {
+        "heridos": 1,
+        "viviendasAveriadas": 88,
+        "viviendasDestruidas": 4,
+        "centrosSalud": 1,
+        "centrosEducativos": 5,
+        "centrosComunitarios": 17
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "76606",
+      "nombre": "Restrepo",
+      "departamento": "76",
+      "valores": {
+        "personas": 3,
+        "heridos": 60,
+        "viviendasAveriadas": 1,
+        "viviendasDestruidas": 480,
+        "edificiosAveriados": 8,
+        "centrosSalud": 2,
+        "centrosEducativos": 31,
+        "centrosComunitarios": 100,
+        "vias": 3
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "76616",
+      "nombre": "Riofrío",
+      "departamento": "76",
+      "valores": {
+        "familias": 500,
+        "heridos": 3,
+        "viviendasAveriadas": 600,
+        "viviendasDestruidas": 480,
+        "edificiosAveriados": 1,
+        "centrosSalud": 1,
+        "centrosEducativos": 7,
+        "vias": 2
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "76622",
+      "nombre": "Roldanillo",
+      "departamento": "76",
+      "valores": {
+        "personas": 4,
+        "fallecidos": 3,
+        "heridos": 14,
+        "viviendasAveriadas": 2,
+        "viviendasDestruidas": 2,
+        "edificiosAveriados": 19,
+        "centrosSalud": 3,
+        "centrosEducativos": 22,
+        "centrosComunitarios": 165,
+        "vias": 2
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "76670",
+      "nombre": "San Pedro",
+      "departamento": "76",
+      "valores": {
+        "familias": 1252,
+        "viviendasAveriadas": 200,
+        "centrosEducativos": 1,
+        "centrosComunitarios": 8
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "76736",
+      "nombre": "Sevilla",
+      "departamento": "76",
+      "valores": {
+        "familias": 250,
+        "personas": 11,
+        "fallecidos": 3,
+        "heridos": 58,
+        "viviendasAveriadas": 2,
+        "viviendasDestruidas": 551,
+        "centrosSalud": 2,
+        "centrosEducativos": 10,
+        "centrosComunitarios": 404,
+        "vias": 7
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": ["PERSONAS_MENOR_QUE_FAMILIAS"]
+    },
+    {
+      "codigo": "76823",
+      "nombre": "Toro",
+      "departamento": "76",
+      "valores": {
+        "personas": 5,
+        "fallecidos": 1,
+        "heridos": 31,
+        "viviendasAveriadas": 1,
+        "viviendasDestruidas": 505,
+        "centrosSalud": 1,
+        "centrosEducativos": 9,
+        "centrosComunitarios": 27,
+        "vias": 3
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "76828",
+      "nombre": "Trujillo",
+      "departamento": "76",
+      "valores": {
+        "familias": 536,
+        "personas": 5,
+        "fallecidos": 1,
+        "heridos": 32,
+        "viviendasAveriadas": 1,
+        "viviendasDestruidas": 890,
+        "centrosSalud": 16,
+        "centrosEducativos": 30,
+        "centrosComunitarios": 64,
+        "vias": 4
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": ["PERSONAS_MENOR_QUE_FAMILIAS"]
+    },
+    {
+      "codigo": "76834",
+      "nombre": "Tuluá",
+      "departamento": "76",
+      "valores": {
+        "fallecidos": 2,
+        "heridos": 40,
+        "viviendasAveriadas": 4,
+        "viviendasDestruidas": 20,
+        "edificiosAveriados": 10,
+        "centrosEducativos": 80,
+        "centrosComunitarios": 55,
+        "vias": 1
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "76845",
+      "nombre": "Ulloa",
+      "departamento": "76",
+      "valores": {
+        "heridos": 2,
+        "viviendasAveriadas": 276,
+        "viviendasDestruidas": 42,
+        "centrosSalud": 1,
+        "centrosEducativos": 3,
+        "centrosComunitarios": 2,
+        "vias": 5
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "76863",
+      "nombre": "Versalles",
+      "departamento": "76",
+      "valores": {
+        "familias": 1224,
+        "personas": 3,
+        "heridos": 18,
+        "viviendasAveriadas": 626,
+        "viviendasDestruidas": 521,
+        "centrosSalud": 1,
+        "centrosEducativos": 7,
+        "centrosComunitarios": 47,
+        "vias": 1
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": ["PERSONAS_MENOR_QUE_FAMILIAS"]
+    },
+    {
+      "codigo": "76869",
+      "nombre": "Vijes",
+      "departamento": "76",
+      "valores": {
+        "familias": 726,
+        "heridos": 12,
+        "viviendasAveriadas": 220,
+        "viviendasDestruidas": 31,
+        "edificiosAveriados": 8,
+        "centrosEducativos": 2,
+        "centrosComunitarios": 25,
+        "vias": 2
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "76890",
+      "nombre": "Yotoco",
+      "departamento": "76",
+      "valores": {
+        "personas": 3,
+        "heridos": 14,
+        "viviendasAveriadas": 505,
+        "viviendasDestruidas": 399,
+        "centrosSalud": 3,
+        "centrosEducativos": 23,
+        "centrosComunitarios": 45,
+        "vias": 4
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "76892",
+      "nombre": "Yumbo",
+      "departamento": "76",
+      "valores": {
+        "familias": 100,
+        "fallecidos": 6,
+        "heridos": 28,
+        "viviendasAveriadas": 650,
+        "viviendasDestruidas": 54,
+        "edificiosAveriados": 10,
+        "centrosEducativos": 44,
+        "centrosComunitarios": 18
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": []
+    },
+    {
+      "codigo": "76895",
+      "nombre": "Zarzal",
+      "departamento": "76",
+      "valores": {
+        "familias": 100,
+        "personas": 3,
+        "fallecidos": 2,
+        "heridos": 75,
+        "viviendasAveriadas": 1,
+        "viviendasDestruidas": 143,
+        "centrosSalud": 2,
+        "centrosEducativos": 12,
+        "centrosComunitarios": 57,
+        "vias": 1
+      },
+      "fechaReporte": "2026-08-22",
+      "alertas": ["PERSONAS_MENOR_QUE_FAMILIAS"]
+    }
+  ]
+}

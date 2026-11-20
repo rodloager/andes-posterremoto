@@ -1,0 +1,593 @@
+{
+  "meta": {
+    "descripcion": "Catálogo de indicadores nacionales con su serie de valores oficiales por fecha de corte. Una serie vacía significa que no se localizó una cifra oficial.",
+    "actualizadoEn": "2026-11-11"
+  },
+  "indicadores": [
+    {
+      "codigo": "personas_afectadas",
+      "nombre": "Personas afectadas",
+      "descripcion": "Personas inscritas en el Registro Único de Damnificados. La UNGRD advierte que la cifra es preliminar.",
+      "unidad": "personas",
+      "esAcumulado": true,
+      "serie": [{ "fechaCorte": "2026-10-10", "valor": 489862, "fuente": "ungrd-balance-2026-10-10" }]
+    },
+    {
+      "codigo": "familias_afectadas",
+      "nombre": "Familias afectadas",
+      "descripcion": "Familias inscritas en el Registro Único de Damnificados. Cifra preliminar.",
+      "unidad": "familias",
+      "esAcumulado": true,
+      "serie": [{ "fechaCorte": "2026-10-10", "valor": 305791, "fuente": "ungrd-balance-2026-10-10" }]
+    },
+    {
+      "codigo": "personas_desplazadas",
+      "nombre": "Personas desplazadas",
+      "descripcion": "Personas que tuvieron que dejar su vivienda por el sismo.",
+      "unidad": "personas",
+      "esAcumulado": false,
+      "serie": []
+    },
+    {
+      "codigo": "fallecidos",
+      "nombre": "Personas fallecidas",
+      "descripcion": "Personas fallecidas confirmadas por la UNGRD.",
+      "unidad": "personas",
+      "esAcumulado": true,
+      "serie": [
+        {
+          "fechaCorte": "2026-08-15",
+          "valor": 289,
+          "fuente": "ungrd-balance-2026-08-15",
+          "nota": "El balance anterior registraba 294. La UNGRD lo corrigió al depurar registros repetidos."
+        },
+        { "fechaCorte": "2026-10-10", "valor": 335, "fuente": "ungrd-balance-2026-10-10" }
+      ]
+    },
+    {
+      "codigo": "heridos",
+      "nombre": "Personas heridas",
+      "descripcion": "Personas heridas reportadas por la UNGRD.",
+      "unidad": "personas",
+      "esAcumulado": true,
+      "serie": [{ "fechaCorte": "2026-10-10", "valor": 4516, "fuente": "ungrd-balance-2026-10-10" }]
+    },
+    {
+      "codigo": "desaparecidos",
+      "nombre": "Personas desaparecidas",
+      "descripcion": "Personas que seguían desaparecidas en la fecha de corte.",
+      "unidad": "personas",
+      "esAcumulado": false,
+      "serie": [{ "fechaCorte": "2026-10-10", "valor": 103, "fuente": "ungrd-balance-2026-10-10" }]
+    },
+    {
+      "codigo": "rescatados",
+      "nombre": "Personas rescatadas",
+      "descripcion": "Personas rescatadas con vida.",
+      "unidad": "personas",
+      "esAcumulado": true,
+      "serie": [{ "fechaCorte": "2026-10-10", "valor": 364, "fuente": "ungrd-balance-2026-10-10" }]
+    },
+    {
+      "codigo": "municipios_afectados",
+      "nombre": "Municipios afectados",
+      "descripcion": "Municipios con afectación reportada, en 16 departamentos.",
+      "unidad": "municipios",
+      "esAcumulado": true,
+      "serie": [{ "fechaCorte": "2026-10-10", "valor": 500, "fuente": "ungrd-balance-2026-10-10" }]
+    },
+    {
+      "codigo": "viviendas_afectadas",
+      "nombre": "Viviendas afectadas",
+      "descripcion": "Suma de las viviendas destruidas y las averiadas que reporta la UNGRD.",
+      "unidad": "viviendas",
+      "esAcumulado": true,
+      "esDerivado": true,
+      "serie": [
+        { "fechaCorte": "2026-08-15", "valor": 96241, "fuente": "ungrd-balance-2026-08-15" },
+        { "fechaCorte": "2026-10-10", "valor": 244367, "fuente": "ungrd-balance-2026-10-10" }
+      ]
+    },
+    {
+      "codigo": "viviendas_destruidas",
+      "nombre": "Viviendas destruidas",
+      "descripcion": "Viviendas con destrucción total reportadas por la UNGRD.",
+      "unidad": "viviendas",
+      "esAcumulado": true,
+      "serie": [
+        { "fechaCorte": "2026-08-15", "valor": 14705, "fuente": "ungrd-balance-2026-08-15" },
+        { "fechaCorte": "2026-10-10", "valor": 36478, "fuente": "ungrd-balance-2026-10-10" }
+      ]
+    },
+    {
+      "codigo": "viviendas_averiadas",
+      "nombre": "Viviendas averiadas",
+      "descripcion": "Viviendas con daños que no llegan a la destrucción total.",
+      "unidad": "viviendas",
+      "esAcumulado": true,
+      "serie": [
+        { "fechaCorte": "2026-08-15", "valor": 81536, "fuente": "ungrd-balance-2026-08-15" },
+        { "fechaCorte": "2026-10-10", "valor": 207889, "fuente": "ungrd-balance-2026-10-10" }
+      ]
+    },
+    {
+      "codigo": "viviendas_aseguradas",
+      "nombre": "Viviendas aseguradas",
+      "descripcion": "Viviendas afectadas que tenían una póliza vigente.",
+      "unidad": "viviendas",
+      "esAcumulado": false,
+      "motivoSinDato": "Ninguna fuente publica cuántas viviendas afectadas tenían seguro. Fasecolda informa reclamaciones, no viviendas.",
+      "serie": []
+    },
+    {
+      "codigo": "viviendas_no_aseguradas",
+      "nombre": "Viviendas no aseguradas",
+      "descripcion": "Viviendas afectadas sin póliza vigente.",
+      "unidad": "viviendas",
+      "esAcumulado": false,
+      "motivoSinDato": "Ninguna fuente publica cuántas viviendas afectadas carecían de seguro.",
+      "serie": []
+    },
+    {
+      "codigo": "viviendas_propias_afectadas",
+      "nombre": "Viviendas propias afectadas",
+      "descripcion": "Viviendas afectadas ocupadas por su propietario.",
+      "unidad": "viviendas",
+      "esAcumulado": false,
+      "serie": []
+    },
+    {
+      "codigo": "viviendas_arrendadas_afectadas",
+      "nombre": "Viviendas arrendadas afectadas",
+      "descripcion": "Viviendas afectadas que estaban en arriendo.",
+      "unidad": "viviendas",
+      "esAcumulado": false,
+      "serie": []
+    },
+    {
+      "codigo": "valor_viviendas_destruidas",
+      "nombre": "Valor de las viviendas destruidas",
+      "descripcion": "Valor económico estimado de las viviendas con destrucción total.",
+      "unidad": "COP",
+      "esAcumulado": false,
+      "serie": []
+    },
+    {
+      "codigo": "viviendas_reconstruidas",
+      "nombre": "Viviendas reconstruidas",
+      "descripcion": "Viviendas reconstruidas, según el Ministerio de Vivienda.",
+      "unidad": "viviendas",
+      "esAcumulado": true,
+      "serie": [
+        {
+          "fechaCorte": "2026-10-23",
+          "valor": 4700,
+          "calificador": "más de",
+          "fuente": "minvivienda-2026-10-23"
+        }
+      ]
+    },
+    {
+      "codigo": "reclamaciones_seguros",
+      "nombre": "Reclamaciones de seguros",
+      "descripcion": "Reclamaciones recibidas por las aseguradoras en todos los ramos.",
+      "unidad": "reclamaciones",
+      "esAcumulado": true,
+      "serie": [{ "fechaCorte": "2026-09-07", "valor": 68270, "fuente": "fasecolda-reporte-4" }]
+    },
+    {
+      "codigo": "valor_siniestros_asegurados",
+      "nombre": "Valor asegurado de los siniestros",
+      "descripcion": "Valor asegurado asociado a los siniestros reportados a las aseguradoras.",
+      "unidad": "COP",
+      "esAcumulado": true,
+      "serie": [{ "fechaCorte": "2026-09-07", "valor": 3700000000000, "fuente": "fasecolda-reporte-4" }]
+    },
+    {
+      "codigo": "indemnizaciones_pagadas",
+      "nombre": "Indemnizaciones pagadas",
+      "descripcion": "Dinero que las aseguradoras ya entregaron a los asegurados.",
+      "unidad": "COP",
+      "esAcumulado": true,
+      "serie": [{ "fechaCorte": "2026-09-07", "valor": 95076000000, "fuente": "fasecolda-reporte-4" }]
+    },
+    {
+      "codigo": "reclamaciones_pendientes",
+      "nombre": "Viviendas aseguradas con reclamación pendiente",
+      "descripcion": "Viviendas aseguradas cuya reclamación no se ha resuelto.",
+      "unidad": "viviendas",
+      "esAcumulado": false,
+      "serie": []
+    },
+    {
+      "codigo": "infraestructura_afectada",
+      "nombre": "Infraestructura afectada",
+      "descripcion": "Suma de centros de salud, educativos y comunitarios, vías, acueductos, puentes y aeropuertos reportados por municipio.",
+      "unidad": "estructuras",
+      "esAcumulado": true,
+      "esDerivado": true,
+      "serie": [
+        {
+          "fechaCorte": "2026-08-22",
+          "valor": 8944,
+          "fuente": "dane-afectaciones",
+          "nota": "Los reportes municipales están fechados entre el 11 y el 22 de agosto de 2026."
+        }
+      ]
+    },
+    {
+      "codigo": "centros_salud_afectados",
+      "nombre": "Centros de salud afectados",
+      "descripcion": "Centros de salud con afectación reportada por municipio.",
+      "unidad": "centros",
+      "esAcumulado": true,
+      "serie": [
+        {
+          "fechaCorte": "2026-08-22",
+          "valor": 372,
+          "fuente": "dane-afectaciones",
+          "nota": "Los reportes municipales están fechados entre el 11 y el 22 de agosto de 2026."
+        }
+      ]
+    },
+    {
+      "codigo": "centros_educativos_afectados",
+      "nombre": "Centros educativos afectados",
+      "descripcion": "Centros educativos con afectación reportada por municipio.",
+      "unidad": "centros",
+      "esAcumulado": true,
+      "serie": [
+        {
+          "fechaCorte": "2026-08-22",
+          "valor": 3726,
+          "fuente": "dane-afectaciones",
+          "nota": "Los reportes municipales están fechados entre el 11 y el 22 de agosto de 2026."
+        }
+      ]
+    },
+    {
+      "codigo": "infraestructura_recuperada",
+      "nombre": "Infraestructura recuperada",
+      "descripcion": "Porcentaje de la infraestructura afectada que volvió a funcionar.",
+      "unidad": "%",
+      "esAcumulado": false,
+      "serie": []
+    },
+    {
+      "codigo": "perdidas_economicas",
+      "nombre": "Pérdidas económicas estimadas",
+      "descripcion": "Valor de los daños y de la actividad económica perdida.",
+      "unidad": "COP",
+      "esAcumulado": false,
+      "motivoSinDato": "No se localizó una estimación oficial de pérdidas. Sí existe el costo estimado de la reconstrucción.",
+      "serie": []
+    },
+    {
+      "codigo": "costo_reconstruccion",
+      "nombre": "Costo estimado de la reconstrucción",
+      "descripcion": "Estimación del Ministerio de Vivienda. El Gobierno advierte que seguirá ajustándose.",
+      "unidad": "COP",
+      "esAcumulado": false,
+      "serie": [{ "fechaCorte": "2026-10-23", "valor": 54000000000000, "fuente": "minvivienda-2026-10-23" }]
+    },
+    {
+      "codigo": "costo_reconstruccion_vivienda",
+      "nombre": "Costo de reconstruir la vivienda",
+      "descripcion": "Parte del costo de reconstrucción que corresponde al sector vivienda.",
+      "unidad": "COP",
+      "esAcumulado": false,
+      "serie": [{ "fechaCorte": "2026-10-23", "valor": 19700000000000, "fuente": "minvivienda-2026-10-23" }]
+    },
+    {
+      "codigo": "costo_recuperacion_plan",
+      "nombre": "Costo de la recuperación según el Plan de Acción Específico",
+      "descripcion": "Costo total de la recuperación previsto en el plan del Gobierno.",
+      "unidad": "COP",
+      "esAcumulado": false,
+      "serie": [{ "fechaCorte": "2026-11-08", "valor": 58290000000000, "fuente": "pae-2026-11-08" }]
+    },
+    {
+      "codigo": "brecha_financiacion",
+      "nombre": "Brecha de financiación",
+      "descripcion": "Parte del costo de la recuperación que aún no tiene recursos definidos.",
+      "unidad": "COP",
+      "esAcumulado": false,
+      "serie": [{ "fechaCorte": "2026-11-08", "valor": 50080000000000, "fuente": "pae-2026-11-08" }]
+    },
+    {
+      "codigo": "presupuesto_recuperacion",
+      "nombre": "Presupuesto de recuperación",
+      "descripcion": "Recursos públicos que el Gobierno informa haber movilizado para la reconstrucción.",
+      "unidad": "COP",
+      "esAcumulado": true,
+      "serie": [
+        {
+          "fechaCorte": "2026-11-08",
+          "valor": 1000000000000,
+          "calificador": "cerca de",
+          "fuente": "presidencia-fondo-milagro"
+        }
+      ]
+    },
+    {
+      "codigo": "primer_desembolso_fondo",
+      "nombre": "Primer desembolso del Fondo Milagro",
+      "descripcion": "Primer desembolso del fondo de reconstrucción, proveniente de un crédito.",
+      "unidad": "COP",
+      "esAcumulado": false,
+      "serie": [{ "fechaCorte": "2026-11-08", "valor": 624656000000, "fuente": "presidencia-fondo-milagro" }]
+    },
+    {
+      "codigo": "recursos_privados",
+      "nombre": "Recursos privados comprometidos",
+      "descripcion": "Aportes que el sector privado ha comprometido, según el Gobierno.",
+      "unidad": "COP",
+      "esAcumulado": true,
+      "serie": [
+        {
+          "fechaCorte": "2026-11-08",
+          "valor": 1000000000000,
+          "calificador": "más de",
+          "fuente": "presidencia-fondo-milagro"
+        }
+      ]
+    },
+    {
+      "codigo": "recursos_pendientes_desembolso",
+      "nombre": "Recursos pendientes de desembolso",
+      "descripcion": "Recursos asignados que todavía no se han entregado.",
+      "unidad": "COP",
+      "esAcumulado": false,
+      "serie": []
+    },
+    {
+      "codigo": "avance_recuperacion",
+      "nombre": "Avance de la recuperación",
+      "descripcion": "Porcentaje de avance general de la recuperación.",
+      "unidad": "%",
+      "esAcumulado": false,
+      "motivoSinDato": "No se localizó un porcentaje oficial de avance.",
+      "serie": []
+    },
+    {
+      "codigo": "danos_materiales",
+      "nombre": "Daños materiales",
+      "descripcion": "Valor de los bienes destruidos o averiados.",
+      "unidad": "COP",
+      "esAcumulado": false,
+      "serie": []
+    },
+    {
+      "codigo": "perdidas_comerciales",
+      "nombre": "Pérdidas comerciales",
+      "descripcion": "Ventas e inventarios perdidos por el comercio.",
+      "unidad": "COP",
+      "esAcumulado": false,
+      "serie": []
+    },
+    {
+      "codigo": "perdidas_agricolas",
+      "nombre": "Pérdidas agrícolas",
+      "descripcion": "Cultivos y producción agropecuaria perdidos.",
+      "unidad": "COP",
+      "esAcumulado": false,
+      "serie": []
+    },
+    {
+      "codigo": "perdidas_industriales",
+      "nombre": "Pérdidas industriales",
+      "descripcion": "Producción e instalaciones industriales perdidas.",
+      "unidad": "COP",
+      "esAcumulado": false,
+      "serie": []
+    },
+    {
+      "codigo": "empleos_afectados",
+      "nombre": "Empleos afectados",
+      "descripcion": "Puestos de trabajo perdidos o suspendidos.",
+      "unidad": "empleos",
+      "esAcumulado": false,
+      "serie": []
+    },
+    {
+      "codigo": "personas_hospitalizadas",
+      "nombre": "Personas hospitalizadas",
+      "descripcion": "Personas que permanecen hospitalizadas por lesiones del sismo.",
+      "unidad": "personas",
+      "esAcumulado": false,
+      "serie": []
+    },
+    {
+      "codigo": "personas_atendidas",
+      "nombre": "Personas atendidas en salud",
+      "descripcion": "Personas que recibieron atención médica por el sismo.",
+      "unidad": "personas",
+      "esAcumulado": true,
+      "serie": []
+    },
+    {
+      "codigo": "hospitales_operativos",
+      "nombre": "Hospitales operativos",
+      "descripcion": "Hospitales de la zona afectada que prestan servicio con normalidad.",
+      "unidad": "hospitales",
+      "esAcumulado": false,
+      "serie": []
+    },
+    {
+      "codigo": "hospitales_fuera_servicio",
+      "nombre": "Hospitales fuera de servicio",
+      "descripcion": "Hospitales de la zona afectada que no pueden prestar servicio.",
+      "unidad": "hospitales",
+      "esAcumulado": false,
+      "serie": []
+    },
+    {
+      "codigo": "capacidad_hospitalaria_afectada",
+      "nombre": "Capacidad hospitalaria afectada",
+      "descripcion": "Porcentaje de camas que dejaron de estar disponibles.",
+      "unidad": "%",
+      "esAcumulado": false,
+      "serie": []
+    },
+    {
+      "codigo": "disponibilidad_medicamentos",
+      "nombre": "Disponibilidad de medicamentos",
+      "descripcion": "Porcentaje de medicamentos esenciales disponibles en la zona afectada.",
+      "unidad": "%",
+      "esAcumulado": false,
+      "serie": []
+    },
+    {
+      "codigo": "atencion_psicologica",
+      "nombre": "Personas que requieren atención psicológica",
+      "descripcion": "Personas identificadas con necesidad de apoyo psicológico.",
+      "unidad": "personas",
+      "esAcumulado": false,
+      "serie": []
+    },
+    {
+      "codigo": "personal_medico_disponible",
+      "nombre": "Personal médico disponible",
+      "descripcion": "Profesionales de la salud disponibles en la zona afectada.",
+      "unidad": "profesionales",
+      "esAcumulado": false,
+      "serie": []
+    },
+    {
+      "codigo": "estudiantes_afectados",
+      "nombre": "Estudiantes afectados",
+      "descripcion": "Estudiantes afectados por daños en sedes, según el primer balance del Ministerio de Educación.",
+      "unidad": "estudiantes",
+      "esAcumulado": true,
+      "serie": [{ "fechaCorte": "2026-08-16", "valor": 114855, "fuente": "mineducacion-2026-08-16" }]
+    },
+    {
+      "codigo": "sedes_dano_grave",
+      "nombre": "Sedes con daño estructural grave",
+      "descripcion": "Sedes educativas con daños estructurales graves.",
+      "unidad": "sedes",
+      "esAcumulado": true,
+      "serie": [{ "fechaCorte": "2026-08-16", "valor": 54, "fuente": "mineducacion-2026-08-16" }]
+    },
+    {
+      "codigo": "instituciones_suspendidas",
+      "nombre": "Instituciones con actividades suspendidas",
+      "descripcion": "Instituciones que suspendieron temporalmente sus actividades.",
+      "unidad": "instituciones",
+      "esAcumulado": false,
+      "serie": [{ "fechaCorte": "2026-08-16", "valor": 91, "fuente": "mineducacion-2026-08-16" }]
+    },
+    {
+      "codigo": "instituciones_destruidas",
+      "nombre": "Instituciones educativas destruidas",
+      "descripcion": "Instituciones educativas con destrucción total.",
+      "unidad": "instituciones",
+      "esAcumulado": false,
+      "serie": []
+    },
+    {
+      "codigo": "docentes_afectados",
+      "nombre": "Docentes afectados",
+      "descripcion": "Docentes de las instituciones afectadas.",
+      "unidad": "docentes",
+      "esAcumulado": false,
+      "serie": []
+    },
+    {
+      "codigo": "estudiantes_desplazados",
+      "nombre": "Estudiantes desplazados",
+      "descripcion": "Estudiantes que tuvieron que cambiar de sede o de municipio.",
+      "unidad": "estudiantes",
+      "esAcumulado": false,
+      "serie": []
+    },
+    {
+      "codigo": "recursos_educacion",
+      "nombre": "Recursos para reconstrucción educativa",
+      "descripcion": "Recursos redirigidos desde un programa de espacios educativos, según el Ministerio de Educación.",
+      "unidad": "USD",
+      "esAcumulado": false,
+      "serie": [{ "fechaCorte": "2026-08-16", "valor": 48000000, "fuente": "mineducacion-2026-08-16" }]
+    },
+    {
+      "codigo": "alimentos_distribuidos",
+      "nombre": "Alimentos distribuidos",
+      "descripcion": "Kits alimentarios entregados a la población.",
+      "unidad": "kits",
+      "esAcumulado": true,
+      "serie": []
+    },
+    {
+      "codigo": "agua_suministrada",
+      "nombre": "Agua potable suministrada",
+      "descripcion": "Agua potable entregada a la población.",
+      "unidad": "litros",
+      "esAcumulado": true,
+      "serie": []
+    },
+    {
+      "codigo": "medicamentos_entregados",
+      "nombre": "Medicamentos entregados",
+      "descripcion": "Unidades de medicamentos entregadas.",
+      "unidad": "unidades",
+      "esAcumulado": true,
+      "serie": []
+    },
+    {
+      "codigo": "kits_emergencia",
+      "nombre": "Kits de emergencia entregados",
+      "descripcion": "Kits de aseo, cocina y abrigo entregados.",
+      "unidad": "kits",
+      "esAcumulado": true,
+      "serie": []
+    },
+    {
+      "codigo": "albergues_disponibles",
+      "nombre": "Albergues disponibles",
+      "descripcion": "Albergues habilitados para la población afectada.",
+      "unidad": "albergues",
+      "esAcumulado": false,
+      "serie": []
+    },
+    {
+      "codigo": "capacidad_alojamiento",
+      "nombre": "Capacidad de alojamiento",
+      "descripcion": "Cupos totales en los albergues habilitados.",
+      "unidad": "cupos",
+      "esAcumulado": false,
+      "serie": []
+    },
+    {
+      "codigo": "personas_alojadas",
+      "nombre": "Personas alojadas",
+      "descripcion": "Personas que permanecen en albergues.",
+      "unidad": "personas",
+      "esAcumulado": false,
+      "serie": []
+    },
+    {
+      "codigo": "centros_distribucion",
+      "nombre": "Centros de distribución",
+      "descripcion": "Puntos desde los que se despacha la ayuda.",
+      "unidad": "centros",
+      "esAcumulado": false,
+      "serie": []
+    },
+    {
+      "codigo": "transporte_humanitario",
+      "nombre": "Operaciones de transporte humanitario",
+      "descripcion": "Viajes terrestres, aéreos y fluviales con ayuda humanitaria.",
+      "unidad": "viajes",
+      "esAcumulado": true,
+      "serie": []
+    },
+    {
+      "codigo": "recursos_pendientes_entrega",
+      "nombre": "Suministros pendientes de entrega",
+      "descripcion": "Parte de la demanda de suministros que aún no se ha cubierto.",
+      "unidad": "%",
+      "esAcumulado": false,
+      "serie": []
+    }
+  ]
+}

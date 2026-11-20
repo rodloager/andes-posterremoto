@@ -1,0 +1,94 @@
+{
+  "meta": {
+    "origen": "SIMULADO",
+    "nivel": "S",
+    "fuente": "generador-andes",
+    "semilla": 20260810,
+    "advertencia": "Datos simulados por el proyecto para demostrar el funcionamiento de la plataforma. No son cifras oficiales ni estimaciones."
+  },
+  "hospitales": [
+    {
+      "estado": "Operativos",
+      "cantidad": 30
+    },
+    {
+      "estado": "Con operación parcial",
+      "cantidad": 13
+    },
+    {
+      "estado": "Fuera de servicio",
+      "cantidad": 8
+    }
+  ],
+  "camasInstaladas": 5881,
+  "camasNoDisponibles": 903,
+  "capacidadAfectada": 15.354531542254717,
+  "evolucion": {
+    "fechas": [
+      "2026-08-10",
+      "2026-08-17",
+      "2026-08-24",
+      "2026-08-31",
+      "2026-09-07",
+      "2026-09-14",
+      "2026-09-21",
+      "2026-09-28",
+      "2026-10-05",
+      "2026-10-12",
+      "2026-10-19",
+      "2026-10-26",
+      "2026-11-02"
+    ],
+    "atendidas": [
+      13611,
+      23898,
+      31672,
+      37548,
+      41989,
+      45345,
+      47882,
+      49799,
+      51248,
+      52343,
+      53171,
+      53797,
+      54269
+    ],
+    "hospitalizadas": [
+      1945,
+      1634,
+      1410,
+      1136,
+      867,
+      722,
+      600,
+      543,
+      455,
+      368,
+      322,
+      279,
+      257
+    ]
+  },
+  "disponibilidadMedicamentos": 70.1949649336189,
+  "atencionPsicologica": 15308,
+  "personalMedico": 4013,
+  "necesidades": [
+    {
+      "nombre": "Agua segura",
+      "personas": 25411
+    },
+    {
+      "nombre": "Saneamiento básico",
+      "personas": 15279
+    },
+    {
+      "nombre": "Salud mental",
+      "personas": 11157
+    },
+    {
+      "nombre": "Control de vectores",
+      "personas": 6968
+    }
+  ]
+}

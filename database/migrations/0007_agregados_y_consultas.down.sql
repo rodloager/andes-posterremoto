@@ -1,0 +1,9 @@
+DROP VIEW analitica.registros_semanales;
+DROP VIEW analitica.viviendas_por_aseguramiento;
+DROP VIEW analitica.viviendas_vigentes;
+DROP VIEW analitica.poblacion_vulnerable;
+DROP VIEW analitica.poblacion_por_condicion;
+DROP VIEW analitica.poblacion_por_grupo_de_edad;
+DROP VIEW analitica.personas_vigentes;
+DROP VIEW analitica.municipios;
+DROP TABLE analitica.agregados;

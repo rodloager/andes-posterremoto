@@ -1,0 +1,56 @@
+permisos:
+  - id: 1
+    codigo: datos:consultar
+    descripcion: Consultar registros, conjuntos de datos, historial de cambios y reportes de calidad.
+  - id: 2
+    codigo: datos:importar
+    descripcion: Importar archivos y gestionar las fuentes de información.
+  - id: 3
+    codigo: datos:editar
+    descripcion: Editar registros y resolver duplicados.
+  - id: 4
+    codigo: priorizacion:usar
+    descripcion: Usar el laboratorio de priorización.
+  - id: 5
+    codigo: sistema:ver
+    descripcion: Ver el panel de ingeniería y los procesos de carga.
+  - id: 6
+    codigo: auditoria:ver
+    descripcion: Consultar la auditoría completa y el registro de accesos.
+  - id: 7
+    codigo: usuarios:administrar
+    descripcion: Administrar usuarios y roles.
+
+roles:
+  - id: 1
+    codigo: analista
+    nombre: Analista
+    permisos:
+      - datos:consultar
+      - priorizacion:usar
+  - id: 2
+    codigo: administrador_datos
+    nombre: Administrador de datos
+    permisos:
+      - datos:consultar
+      - datos:importar
+      - datos:editar
+      - priorizacion:usar
+  - id: 3
+    codigo: ingeniero
+    nombre: Ingeniero
+    permisos:
+      - datos:consultar
+      - sistema:ver
+      - auditoria:ver
+  - id: 4
+    codigo: superadministrador
+    nombre: Superadministrador
+    permisos:
+      - datos:consultar
+      - datos:importar
+      - datos:editar
+      - priorizacion:usar
+      - sistema:ver
+      - auditoria:ver
+      - usuarios:administrar

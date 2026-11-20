@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "origen": "SIMULADO",
+    "nivel": "S",
+    "fuente": "generador-andes",
+    "semilla": 20260810,
+    "advertencia": "Datos simulados por el proyecto para demostrar el funcionamiento de la plataforma. No son cifras oficiales ni estimaciones."
+  },
+  "indicadores": {
+    "danos_materiales": {
+      "valor": 1265044150948,
+      "muestra": "Muestra simulada de 50.000 viviendas"
+    },
+    "perdidas_comerciales": {
+      "valor": 273644120026,
+      "muestra": "Muestra simulada de 50.000 viviendas"
+    },
+    "perdidas_agricolas": {
+      "valor": 91106713056,
+      "muestra": "Muestra simulada de 50.000 viviendas"
+    },
+    "perdidas_industriales": {
+      "valor": 171458489652,
+      "muestra": "Muestra simulada de 50.000 viviendas"
+    },
+    "perdidas_economicas": {
+      "valor": 2025317699897,
+      "muestra": "Muestra simulada de 50.000 viviendas"
+    },
+    "recursos_pendientes_desembolso": {
+      "valor": 952506914262,
+      "muestra": "Muestra simulada de 50.000 viviendas"
+    },
+    "empleos_afectados": {
+      "valor": 13286,
+      "muestra": "Muestra simulada de 50.000 viviendas"
+    },
+    "infraestructura_recuperada": {
+      "valor": 32.65569538560826,
+      "muestra": "Valores simulados"
+    },
+    "avance_recuperacion": {
+      "valor": 58.14332388328032,
+      "muestra": "Valores simulados"
+    },
+    "personas_hospitalizadas": {
+      "valor": 257,
+      "muestra": "Valores simulados"
+    },
+    "personas_atendidas": {
+      "valor": 54269,
+      "muestra": "Valores simulados"
+    },
+    "hospitales_operativos": {
+      "valor": 30,
+      "muestra": "Valores simulados"
+    },
+    "hospitales_fuera_servicio": {
+      "valor": 8,
+      "muestra": "Valores simulados"
+    },
+    "capacidad_hospitalaria_afectada": {
+      "valor": 15.354531542254717,
+      "muestra": "Valores simulados"
+    },
+    "disponibilidad_medicamentos": {
+      "valor": 70.1949649336189,
+      "muestra": "Valores simulados"
+    },
+    "atencion_psicologica": {
+      "valor": 15308,
+      "muestra": "Valores simulados"
+    },
+    "personal_medico_disponible": {
+      "valor": 4013,
+      "muestra": "Valores simulados"
+    },
+    "instituciones_destruidas": {
+      "valor": 71,
+      "muestra": "Valores simulados"
+    },
+    "docentes_afectados": {
+      "valor": 6025,
+      "muestra": "Valores simulados"
+    },
+    "estudiantes_desplazados": {
+      "valor": 19098,
+      "muestra": "Valores simulados"
+    },
+    "alimentos_distribuidos": {
+      "valor": 271056,
+      "muestra": "Valores simulados"
+    },
+    "agua_suministrada": {
+      "valor": 5966654,
+      "muestra": "Valores simulados"
+    },
+    "medicamentos_entregados": {
+      "valor": 212226,
+      "muestra": "Valores simulados"
+    },
+    "kits_emergencia": {
+      "valor": 118191,
+      "muestra": "Valores simulados"
+    },
+    "albergues_disponibles": {
+      "valor": 237,
+      "muestra": "Valores simulados"
+    },
+    "capacidad_alojamiento": {
+      "valor": 8691,
+      "muestra": "Valores simulados"
+    },
+    "personas_alojadas": {
+      "valor": 1223,
+      "muestra": "Valores simulados"
+    },
+    "centros_distribucion": {
+      "valor": 46,
+      "muestra": "Valores simulados"
+    },
+    "transporte_humanitario": {
+      "valor": 3411,
+      "muestra": "Valores simulados"
+    },
+    "recursos_pendientes_entrega": {
+      "valor": 35.2407960706242,
+      "muestra": "Valores simulados"
+    }
+  }
+}

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 594" width="960" height="594" role="img" aria-label="Planes de consulta con un millón de personas: la opción elegida frente a la alternativa" font-family="Inter, 'Segoe UI', system-ui, sans-serif">
+<title>Planes de consulta con un millón de personas: la opción elegida frente a la alternativa</title>
+<rect width="960" height="594" fill="#ffffff"/>
+<text x="24.0" y="34.0" font-size="17" fill="#2b2f36" text-anchor="start" font-weight="600">Planes de consulta con un millón de personas: la opción elegida frente a la alternativa</text>
+<text x="24.0" y="52.0" font-size="11" fill="#5b6472" text-anchor="start" font-weight="400">Mediana del tiempo de ejecución de EXPLAIN ANALYZE en cinco repeticiones. Escala logarítmica.</text>
+<text x="24.0" y="87.0" font-size="12" fill="#2b2f36" text-anchor="start" font-weight="600">Candidatos de un bloque de duplicados</text>
+<text x="320.0" y="112.0" font-size="11" fill="#2b2f36" text-anchor="end" font-weight="400">Índice personas_bloque</text>
+<rect x="330" y="101" width="156.4" height="15" rx="3" fill="#1f5fa8"/>
+<text x="492.4" y="112.0" font-size="11" fill="#5b6472" text-anchor="start" font-weight="400">0,008 ms</text>
+<text x="320.0" y="138.0" font-size="11" fill="#2b2f36" text-anchor="end" font-weight="400">Recorrido secuencial</text>
+<rect x="330" y="127" width="451.2" height="15" rx="3" fill="#c2410c"/>
+<text x="787.2" y="138.0" font-size="11" fill="#5b6472" text-anchor="start" font-weight="400">30,864 ms</text>
+<text x="24.0" y="165.0" font-size="12" fill="#2b2f36" text-anchor="start" font-weight="600">Duplicado exacto por seudónimo</text>
+<text x="320.0" y="190.0" font-size="11" fill="#2b2f36" text-anchor="end" font-weight="400">Índice único personas_identificador_unico</text>
+<rect x="330" y="179" width="151.6" height="15" rx="3" fill="#1f5fa8"/>
+<text x="487.6" y="190.0" font-size="11" fill="#5b6472" text-anchor="start" font-weight="400">0,007 ms</text>
+<text x="320.0" y="216.0" font-size="11" fill="#2b2f36" text-anchor="end" font-weight="400">Recorrido secuencial</text>
+<rect x="330" y="205" width="454.0" height="15" rx="3" fill="#c2410c"/>
+<text x="790.0" y="216.0" font-size="11" fill="#5b6472" text-anchor="start" font-weight="400">33,422 ms</text>
+<text x="24.0" y="243.0" font-size="12" fill="#2b2f36" text-anchor="start" font-weight="600">Personas vigentes de un municipio</text>
+<text x="320.0" y="268.0" font-size="11" fill="#2b2f36" text-anchor="end" font-weight="400">Índice parcial personas_vigentes</text>
+<rect x="330" y="257" width="246.2" height="15" rx="3" fill="#1f5fa8"/>
+<text x="582.2" y="268.0" font-size="11" fill="#5b6472" text-anchor="start" font-weight="400">0,099 ms</text>
+<text x="320.0" y="294.0" font-size="11" fill="#2b2f36" text-anchor="end" font-weight="400">Recorrido secuencial</text>
+<rect x="330" y="283" width="444.2" height="15" rx="3" fill="#c2410c"/>
+<text x="780.2" y="294.0" font-size="11" fill="#5b6472" text-anchor="start" font-weight="400">25,383 ms</text>
+<text x="24.0" y="321.0" font-size="12" fill="#2b2f36" text-anchor="start" font-weight="600">Personas vigentes por municipio</text>
+<text x="320.0" y="346.0" font-size="11" fill="#2b2f36" text-anchor="end" font-weight="400">Agregación por hash</text>
+<rect x="330" y="335" width="460.6" height="15" rx="3" fill="#1f5fa8"/>
+<text x="796.6" y="346.0" font-size="11" fill="#5b6472" text-anchor="start" font-weight="400">40,188 ms</text>
+<text x="320.0" y="372.0" font-size="11" fill="#2b2f36" text-anchor="end" font-weight="400">Agregación por ordenamiento</text>
+<rect x="330" y="361" width="490.9" height="15" rx="3" fill="#c2410c"/>
+<text x="826.9" y="372.0" font-size="11" fill="#5b6472" text-anchor="start" font-weight="400">94,017 ms</text>
+<text x="24.0" y="399.0" font-size="12" fill="#2b2f36" text-anchor="start" font-weight="600">Página de 50 registros cerca del final</text>
+<text x="320.0" y="424.0" font-size="11" fill="#2b2f36" text-anchor="end" font-weight="400">Paginación por clave</text>
+<rect x="330" y="413" width="167.8" height="15" rx="3" fill="#1f5fa8"/>
+<text x="503.8" y="424.0" font-size="11" fill="#5b6472" text-anchor="start" font-weight="400">0,011 ms</text>
+<text x="320.0" y="450.0" font-size="11" fill="#2b2f36" text-anchor="end" font-weight="400">Paginación por desplazamiento</text>
+<rect x="330" y="439" width="459.0" height="15" rx="3" fill="#c2410c"/>
+<text x="795.0" y="450.0" font-size="11" fill="#5b6472" text-anchor="start" font-weight="400">38,419 ms</text>
+<text x="24.0" y="477.0" font-size="12" fill="#2b2f36" text-anchor="start" font-weight="600">Agregados publicables de población</text>
+<text x="320.0" y="502.0" font-size="11" fill="#2b2f36" text-anchor="end" font-weight="400">Índice agregados_dimension</text>
+<rect x="330" y="491" width="288.5" height="15" rx="3" fill="#1f5fa8"/>
+<text x="624.5" y="502.0" font-size="11" fill="#5b6472" text-anchor="start" font-weight="400">0,324 ms</text>
+<text x="320.0" y="528.0" font-size="11" fill="#2b2f36" text-anchor="end" font-weight="400">Recorrido secuencial</text>
+<rect x="330" y="517" width="374.6" height="15" rx="3" fill="#c2410c"/>
+<text x="710.6" y="528.0" font-size="11" fill="#5b6472" text-anchor="start" font-weight="400">3,617 ms</text>
+<text x="24.0" y="578.0" font-size="10" fill="#5b6472" text-anchor="start" font-weight="400">Azul: la opción que usa ANDES. Naranja: la alternativa. Fuente: analytics/benchmarks/resultados/consultas.json.</text>
+</svg>

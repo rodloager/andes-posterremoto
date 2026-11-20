@@ -1,0 +1,200 @@
+version: 1
+kpi:
+  - codigo: proporcion_viviendas_destruidas
+    nombre: Viviendas destruidas por cada 100 afectadas
+    descripcion: Viviendas destruidas sobre viviendas afectadas en el mismo balance nacional.
+    modulo: vivienda
+    unidad: porcentaje
+    sentido: neutral
+    origen: OFICIAL
+    numerador:
+      indicador: viviendas_destruidas
+    denominador:
+      indicador: viviendas_afectadas
+
+  - codigo: avance_reconstruccion_vivienda
+    nombre: Avance de la reconstrucción de vivienda
+    descripcion: Viviendas reconstruidas sobre viviendas destruidas. Las dos cifras vienen de entidades y fechas distintas.
+    modulo: vivienda
+    unidad: porcentaje
+    sentido: mayor_es_mejor
+    origen: OFICIAL
+    numerador:
+      indicador: viviendas_reconstruidas
+    denominador:
+      indicador: viviendas_destruidas
+
+  - codigo: tasa_pago_seguros
+    nombre: Indemnizaciones pagadas frente al valor de los siniestros
+    descripcion: Valor pagado por las aseguradoras sobre el valor estimado de los siniestros reportados, según Fasecolda.
+    modulo: vivienda
+    unidad: porcentaje
+    sentido: mayor_es_mejor
+    origen: OFICIAL
+    numerador:
+      indicador: indemnizaciones_pagadas
+    denominador:
+      indicador: valor_siniestros_asegurados
+
+  - codigo: brecha_plan_recuperacion
+    nombre: Parte del plan de recuperación sin financiar
+    descripcion: Brecha de financiación sobre el costo total del Plan de Acción Específico, según el mismo plan.
+    modulo: economia
+    unidad: porcentaje
+    sentido: menor_es_mejor
+    origen: OFICIAL
+    numerador:
+      indicador: brecha_financiacion
+    denominador:
+      indicador: costo_recuperacion_plan
+
+  - codigo: desembolso_recursos_publicos
+    nombre: Desembolso de los recursos públicos movilizados
+    descripcion: Primer desembolso del Fondo Milagro sobre los recursos públicos que anunció la Presidencia.
+    modulo: economia
+    unidad: porcentaje
+    sentido: mayor_es_mejor
+    origen: OFICIAL
+    numerador:
+      indicador: primer_desembolso_fondo
+    denominador:
+      indicador: presupuesto_recuperacion
+
+  - codigo: fallecidos_por_cien_mil_afectados
+    nombre: Fallecidos por cada 100 mil personas afectadas
+    descripcion: Personas fallecidas sobre personas afectadas en el mismo balance nacional.
+    modulo: poblacion
+    unidad: por_cien_mil
+    sentido: neutral
+    origen: OFICIAL
+    numerador:
+      indicador: fallecidos
+    denominador:
+      indicador: personas_afectadas
+
+  - codigo: concentracion_territorial
+    nombre: Personas afectadas en los diez municipios con más reportes
+    descripcion: Personas afectadas en los diez municipios con más personas afectadas, sobre el total de los reportes municipales.
+    modulo: territorio
+    unidad: porcentaje
+    sentido: neutral
+    origen: OFICIAL
+    numerador:
+      territorial:
+        variables: [personas]
+        mayores: 10
+    denominador:
+      territorial:
+        variables: [personas]
+
+  - codigo: infraestructura_critica
+    nombre: Infraestructura crítica entre la infraestructura afectada
+    descripcion: Centros de salud, centros educativos y acueductos afectados sobre todas las estructuras afectadas en los reportes municipales.
+    modulo: infraestructura
+    unidad: porcentaje
+    sentido: neutral
+    origen: OFICIAL
+    numerador:
+      territorial:
+        variables: [centrosSalud, centrosEducativos, acueductos]
+    denominador:
+      territorial:
+        variables:
+          - edificiosAveriados
+          - edificiosColapsados
+          - centrosSalud
+          - centrosEducativos
+          - centrosComunitarios
+          - vias
+          - aeropuertos
+          - acueductos
+          - puentesVehiculares
+          - puentesPeatonales
+
+  - codigo: cobertura_aseguramiento
+    nombre: Viviendas registradas con seguro
+    descripcion: Viviendas aseguradas sobre todas las viviendas registradas. Es la cobertura mínima, porque no cuenta las pólizas pendientes de verificación.
+    modulo: vivienda
+    unidad: porcentaje
+    sentido: mayor_es_mejor
+    origen: SIMULADO
+    numerador:
+      agregado:
+        destino: viviendas
+        dimension: aseguramiento
+        categorias: [ASEGURADA]
+    denominador:
+      agregado:
+        destino: viviendas
+        dimension: total
+        categorias: [TOTAL]
+
+  - codigo: destruidas_con_poliza
+    nombre: Viviendas destruidas que tenían póliza
+    descripcion: Viviendas destruidas y aseguradas sobre todas las viviendas destruidas.
+    modulo: vivienda
+    unidad: porcentaje
+    sentido: mayor_es_mejor
+    origen: SIMULADO
+    numerador:
+      cruce:
+        estado_fisico: [DESTRUCCION_TOTAL]
+        aseguramiento: [ASEGURADA]
+    denominador:
+      agregado:
+        destino: viviendas
+        dimension: estado_fisico
+        categorias: [DESTRUCCION_TOTAL]
+
+  - codigo: aprobacion_reclamaciones
+    nombre: Reclamaciones aprobadas entre las resueltas
+    descripcion: Reclamaciones aprobadas o pagadas sobre las reclamaciones que ya tienen una respuesta.
+    modulo: vivienda
+    unidad: porcentaje
+    sentido: mayor_es_mejor
+    origen: SIMULADO
+    numerador:
+      agregado:
+        destino: viviendas
+        dimension: reclamacion
+        categorias: [APROBADA, PAGADA]
+    denominador:
+      agregado:
+        destino: viviendas
+        dimension: reclamacion
+        categorias: [APROBADA, PAGADA, RECHAZADA]
+
+  - codigo: financiadas_sin_seguro
+    nombre: Viviendas hipotecadas o en leasing sin seguro
+    descripcion: Viviendas con hipoteca o leasing que figuran como no aseguradas, sobre todas las viviendas con hipoteca o leasing.
+    modulo: vivienda
+    unidad: porcentaje
+    sentido: menor_es_mejor
+    origen: SIMULADO
+    numerador:
+      cruce:
+        aseguramiento: [NO_ASEGURADA]
+        financiacion: [HIPOTECA, LEASING]
+    denominador:
+      agregado:
+        destino: viviendas
+        dimension: financiacion
+        categorias: [HIPOTECA, LEASING]
+
+  - codigo: poblacion_vulnerable
+    nombre: Personas registradas con alguna vulnerabilidad
+    descripcion: Personas con al menos una condición de vulnerabilidad, incluidas las menores de 18 años y las de 60 o más, sobre todas las personas registradas.
+    modulo: poblacion
+    unidad: porcentaje
+    sentido: neutral
+    origen: SIMULADO
+    numerador:
+      agregado:
+        destino: personas
+        dimension: vulnerable
+        categorias: [SI]
+    denominador:
+      agregado:
+        destino: personas
+        dimension: total
+        categorias: [TOTAL]

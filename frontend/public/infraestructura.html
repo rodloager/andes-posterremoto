@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es-CO">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Infraestructura · ANDES</title>
+    <meta
+      name="description"
+      content="Infraestructura afectada por el sismo del 10 de agosto de 2026, por tipo, ubicación y nivel de daño."
+    />
+    <link rel="icon" href="/assets/icono.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/vendor/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/tokens.css" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/componentes.css" />
+    <script defer src="/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script type="module" src="/js/paginas/infraestructura.js"></script>
+  </head>
+  <body>
+    <andes-marco pagina="infraestructura">
+      <header class="pagina-titulo">
+        <h1>Infraestructura</h1>
+        <p>Qué estructuras se dañaron, dónde están y cuánto se ha recuperado.</p>
+      </header>
+      <div id="contenido" aria-live="polite">
+        <p class="estado-carga">Cargando los datos…</p>
+      </div>
+    </andes-marco>
+    <noscript>
+      <p class="estado-error">Este portal necesita JavaScript para mostrar los indicadores.</p>
+    </noscript>
+  </body>
+</html>

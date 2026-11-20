@@ -1,0 +1,102 @@
+id: viviendas-simuladas
+nombre: Viviendas afectadas, registros simulados
+descripcion: >-
+  Registros individuales de viviendas con su estado físico, financiación, aseguramiento y reclamación, producidos por
+  el generador del proyecto. No son datos reales: el origen es SIMULADO.
+fuente: generador-andes
+origen: SIMULADO
+destino: viviendas
+evento: sismo-2026-08-10
+version_esquema: 1
+formatos: [csv, json, jsonl]
+tamano_lote: 5000
+campos:
+  - nombre: predio
+    tipo: texto
+    obligatorio: true
+    patron: '^[A-Za-z0-9-]{4,20}$'
+    seudonimizar: true
+  - nombre: direccion
+    tipo: texto
+    obligatorio: true
+    longitud_maxima: 200
+  - nombre: municipio
+    tipo: municipio
+    obligatorio: true
+  - nombre: zona
+    tipo: categoria
+    obligatorio: true
+    valores: [URBANA, RURAL]
+  - nombre: estrato
+    tipo: entero
+    minimo: 1
+    maximo: 6
+  - nombre: ocupacion
+    tipo: categoria
+    valores: [PROPIA, ARRENDADA, TERCEROS, DESOCUPADA, OTRA]
+  - nombre: avaluo
+    tipo: entero
+    minimo: 0
+  - nombre: estado_fisico
+    tipo: categoria
+    obligatorio: true
+    valores:
+      - SIN_AFECTACION
+      - AFECTACION_LEVE
+      - AFECTACION_MODERADA
+      - AFECTACION_GRAVE
+      - DESTRUCCION_TOTAL
+      - PENDIENTE_EVALUACION
+  - nombre: fecha_evaluacion
+    tipo: fecha
+    desde: evento
+    hasta: hoy
+  - nombre: costo_estimado
+    tipo: entero
+    minimo: 0
+  - nombre: financiacion
+    tipo: categoria
+    obligatorio: true
+    valores: [HIPOTECA, LEASING, SIN_FINANCIACION, PENDIENTE_VERIFICACION]
+  - nombre: saldo
+    tipo: entero
+    minimo: 0
+  - nombre: aseguramiento
+    tipo: categoria
+    obligatorio: true
+    valores: [ASEGURADA, NO_ASEGURADA, PENDIENTE_VERIFICACION]
+  - nombre: valor_asegurado
+    tipo: entero
+    minimo: 0
+  - nombre: reclamacion
+    tipo: categoria
+    valores: [NINGUNA, EN_ESTUDIO, RECHAZADA, APROBADA, PAGADA]
+  - nombre: valor_reclamado
+    tipo: entero
+    minimo: 0
+  - nombre: valor_aprobado
+    tipo: entero
+    minimo: 0
+  - nombre: fecha_registro
+    tipo: fecha
+    obligatorio: true
+    desde: evento
+    hasta: hoy
+reglas:
+  - codigo: RECLAMACION_SIN_POLIZA
+    efecto: rechazo
+  - codigo: VALOR_APROBADO_INCOHERENTE
+    efecto: rechazo
+  - codigo: HIPOTECA_SIN_SEGURO
+    efecto: alerta
+  - codigo: COSTO_SUPERIOR_AL_AVALUO
+    efecto: alerta
+  - codigo: EVALUACION_SIN_FECHA
+    efecto: alerta
+duplicados:
+  umbral_duplicado: 0.97
+  umbral_revision: 0.9
+  pesos:
+    numeros: 0.5
+    texto: 0.4
+    zona: 0.1

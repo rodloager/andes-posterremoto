@@ -1,0 +1,10 @@
+DROP FUNCTION seguridad.verificar_auditoria();
+DROP FUNCTION seguridad.registrar_auditoria(integer, text, text, text, jsonb, jsonb);
+DROP FUNCTION seguridad.calcular_hash_auditoria(text, integer, text, text, text, jsonb, jsonb, timestamptz);
+DROP TABLE seguridad.auditoria;
+DROP TABLE seguridad.registro_accesos;
+DROP TABLE seguridad.sesiones;
+DROP TABLE seguridad.usuarios;
+DROP TABLE seguridad.roles_permisos;
+DROP TABLE seguridad.permisos;
+DROP TABLE seguridad.roles;

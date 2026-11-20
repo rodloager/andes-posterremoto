@@ -1,0 +1,74 @@
+id: personas-simuladas
+nombre: Personas afectadas, registros simulados
+descripcion: >-
+  Registros individuales de personas afectadas que produce el generador del proyecto para ejercitar el ETL y los
+  algoritmos. No son datos reales: el origen es SIMULADO y el portal nunca los suma con cifras oficiales.
+fuente: generador-andes
+origen: SIMULADO
+destino: personas
+evento: sismo-2026-08-10
+version_esquema: 1
+formatos: [csv, json, jsonl]
+tamano_lote: 5000
+campos:
+  - nombre: documento
+    tipo: texto
+    obligatorio: true
+    patron: '^[0-9]{5,12}$'
+    seudonimizar: true
+  - nombre: nombre_completo
+    tipo: texto
+    obligatorio: true
+    longitud_maxima: 120
+  - nombre: sexo
+    tipo: categoria
+    valores: [F, M]
+  - nombre: edad
+    tipo: entero
+    obligatorio: true
+    minimo: 0
+    maximo: 120
+  - nombre: municipio
+    tipo: municipio
+    obligatorio: true
+  - nombre: condicion_institucional
+    tipo: categoria
+    obligatorio: true
+    valores: [CIVIL, MILITAR, RECLUSION, OTRA_MODALIDAD]
+  - nombre: tenencia
+    tipo: categoria
+    valores: [PROPIETARIO, ARRENDATARIO, OCUPANTE_CON_PERMISO, OTRA]
+  - nombre: situacion
+    tipo: categoria
+    obligatorio: true
+    valores: [DAMNIFICADA, AFECTADA]
+  - nombre: condicion_salud
+    tipo: categoria
+    obligatorio: true
+    valores: [ILESA, HERIDA, FALLECIDA, DESAPARECIDA]
+  - nombre: vulnerabilidades
+    tipo: lista
+    separador: '|'
+    valores:
+      - DISCAPACIDAD
+      - NECESIDADES_ESPECIALES
+      - MOVILIDAD_REDUCIDA
+      - EMBARAZO
+      - VULNERABILIDAD_SOCIOECONOMICA
+      - COMUNIDAD_ATENCION_PRIORITARIA
+  - nombre: fecha_registro
+    tipo: fecha
+    obligatorio: true
+    desde: evento
+    hasta: hoy
+reglas:
+  - codigo: EMBARAZO_SEXO_MASCULINO
+    efecto: alerta
+  - codigo: EMBARAZO_EDAD_IMPROBABLE
+    efecto: alerta
+duplicados:
+  umbral_duplicado: 0.92
+  umbral_revision: 0.8
+  pesos:
+    nombre: 0.8
+    sexo: 0.2

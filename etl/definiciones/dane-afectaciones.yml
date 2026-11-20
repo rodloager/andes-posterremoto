@@ -1,0 +1,113 @@
+id: dane-afectaciones
+nombre: Afectación por municipio
+descripcion: Reporte de afectación del sismo por municipio publicado en el servicio geográfico del DANE.
+fuente: dane-afectaciones
+origen: OFICIAL
+destino: reportes
+evento: sismo-2026-08-10
+version_esquema: 1
+formatos: [json]
+tamano_lote: 5000
+campos:
+  - nombre: municipio
+    origen: mpio_cdpmp
+    tipo: municipio
+    obligatorio: true
+  - nombre: bitacora
+    origen: Bitacora
+    tipo: texto
+  - nombre: familias
+    origen: Familias
+    tipo: entero
+    minimo: 0
+    si_invalido: anular
+  - nombre: personas
+    origen: Personas
+    tipo: entero
+    minimo: 0
+    si_invalido: anular
+  - nombre: fallecidos
+    origen: Fallecidos
+    tipo: entero
+    minimo: 0
+    si_invalido: anular
+  - nombre: heridos
+    origen: Heridos
+    tipo: entero
+    minimo: 0
+    si_invalido: anular
+  - nombre: desaparecidos
+    origen: Desapareci
+    tipo: entero
+    minimo: 0
+    si_invalido: anular
+  - nombre: rescatados
+    origen: Rescatados
+    tipo: entero
+    minimo: 0
+    si_invalido: anular
+  - nombre: viviendasAveriadas
+    origen: Viviendas
+    tipo: entero
+    minimo: 0
+    si_invalido: anular
+  - nombre: viviendasDestruidas
+    origen: Viviendas_
+    tipo: entero
+    minimo: 0
+    si_invalido: anular
+  - nombre: edificiosAveriados
+    origen: Edificios
+    tipo: entero
+    minimo: 0
+    si_invalido: anular
+  - nombre: edificiosColapsados
+    origen: Edificios_
+    tipo: entero
+    minimo: 0
+    si_invalido: anular
+  - nombre: centrosSalud
+    origen: Centros_de
+    tipo: entero
+    minimo: 0
+    si_invalido: anular
+  - nombre: centrosEducativos
+    origen: Centros_Ed
+    tipo: entero
+    minimo: 0
+    si_invalido: anular
+  - nombre: centrosComunitarios
+    origen: Centros_Co
+    tipo: entero
+    minimo: 0
+    si_invalido: anular
+  - nombre: vias
+    origen: Vías
+    tipo: entero
+    minimo: 0
+    si_invalido: anular
+  - nombre: aeropuertos
+    origen: Aeropuerto
+    tipo: entero
+    minimo: 0
+    si_invalido: anular
+  - nombre: acueductos
+    origen: Acueductos
+    tipo: entero
+    minimo: 0
+    si_invalido: anular
+  - nombre: puentesVehiculares
+    origen: Puente_veh
+    tipo: entero
+    minimo: 0
+    si_invalido: anular
+  - nombre: puentesPeatonales
+    origen: Puente_pea
+    tipo: entero
+    minimo: 0
+    si_invalido: anular
+reglas:
+  - codigo: PERSONAS_MENOR_QUE_FAMILIAS
+    efecto: alerta
+  - codigo: FECHA_REPORTE_INVALIDA
+    efecto: alerta

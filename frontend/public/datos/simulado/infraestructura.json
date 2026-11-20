@@ -1,0 +1,163 @@
+{
+  "meta": {
+    "origen": "SIMULADO",
+    "nivel": "S",
+    "fuente": "generador-andes",
+    "semilla": 20260810,
+    "advertencia": "Datos simulados por el proyecto para demostrar el funcionamiento de la plataforma. No son cifras oficiales ni estimaciones."
+  },
+  "niveles": [
+    "Leve",
+    "Moderado",
+    "Grave",
+    "Destrucción"
+  ],
+  "tipos": [
+    {
+      "nombre": "Vías nacionales",
+      "afectadas": 42,
+      "porNivel": [
+        20,
+        12,
+        7,
+        3
+      ],
+      "recuperadas": 19
+    },
+    {
+      "nombre": "Carreteras departamentales",
+      "afectadas": 128,
+      "porNivel": [
+        55,
+        38,
+        24,
+        11
+      ],
+      "recuperadas": 58
+    },
+    {
+      "nombre": "Puentes",
+      "afectadas": 81,
+      "porNivel": [
+        35,
+        24,
+        15,
+        7
+      ],
+      "recuperadas": 33
+    },
+    {
+      "nombre": "Edificaciones públicas",
+      "afectadas": 267,
+      "porNivel": [
+        113,
+        80,
+        50,
+        24
+      ],
+      "recuperadas": 65
+    },
+    {
+      "nombre": "Hospitales",
+      "afectadas": 39,
+      "porNivel": [
+        18,
+        11,
+        7,
+        3
+      ],
+      "recuperadas": 16
+    },
+    {
+      "nombre": "Centros de salud",
+      "afectadas": 218,
+      "porNivel": [
+        93,
+        65,
+        41,
+        19
+      ],
+      "recuperadas": 91
+    },
+    {
+      "nombre": "Instituciones educativas",
+      "afectadas": 1084,
+      "porNivel": [
+        457,
+        325,
+        205,
+        97
+      ],
+      "recuperadas": 289
+    },
+    {
+      "nombre": "Redes eléctricas",
+      "afectadas": 84,
+      "porNivel": [
+        37,
+        25,
+        15,
+        7
+      ],
+      "recuperadas": 35
+    },
+    {
+      "nombre": "Redes de acueducto",
+      "afectadas": 113,
+      "porNivel": [
+        49,
+        33,
+        21,
+        10
+      ],
+      "recuperadas": 35
+    },
+    {
+      "nombre": "Redes de alcantarillado",
+      "afectadas": 66,
+      "porNivel": [
+        30,
+        19,
+        12,
+        5
+      ],
+      "recuperadas": 26
+    },
+    {
+      "nombre": "Telecomunicaciones",
+      "afectadas": 59,
+      "porNivel": [
+        26,
+        17,
+        11,
+        5
+      ],
+      "recuperadas": 25
+    },
+    {
+      "nombre": "Infraestructura comercial",
+      "afectadas": 763,
+      "porNivel": [
+        323,
+        228,
+        144,
+        68
+      ],
+      "recuperadas": 285
+    },
+    {
+      "nombre": "Infraestructura industrial",
+      "afectadas": 155,
+      "porNivel": [
+        67,
+        46,
+        29,
+        13
+      ],
+      "recuperadas": 35
+    }
+  ],
+  "afectadas": 3099,
+  "recuperadas": 1012,
+  "porcentajeRecuperado": 32.65569538560826
+}

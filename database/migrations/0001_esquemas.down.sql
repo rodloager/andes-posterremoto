@@ -1,0 +1,11 @@
+DROP SCHEMA analitica;
+DROP SCHEMA nucleo;
+DROP SCHEMA seguridad;
+
+GRANT USAGE ON SCHEMA public TO PUBLIC;
+
+DO $$
+BEGIN
+  EXECUTE format('GRANT CONNECT, TEMPORARY ON DATABASE %I TO PUBLIC', current_database());
+END
+$$;

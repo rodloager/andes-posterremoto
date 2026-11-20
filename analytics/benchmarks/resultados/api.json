@@ -1,0 +1,232 @@
+{
+  "medidoEn": "2026-11-20T02:53:41.436Z",
+  "baseDeDatos": "andes_medicion_api",
+  "registros": {
+    "personas": 984939,
+    "viviendas": 50000
+  },
+  "carga": {
+    "solicitudesPorRuta": 500,
+    "concurrencia": 8,
+    "calentamientoPorRuta": 30
+  },
+  "criterio": {
+    "p95MaximoMs": 300,
+    "medida": "p95 del servidor, el mismo cálculo del panel de ingeniería"
+  },
+  "rutas": [
+    {
+      "ruta": "/api/v1/estado",
+      "solicitudes": 500,
+      "errores": 0,
+      "bytes": 52,
+      "cliente": {
+        "p50Ms": 1.5,
+        "p95Ms": 2.7,
+        "p99Ms": 8.2,
+        "maximoMs": 9.7
+      },
+      "servidor": {
+        "patron": "GET /api/v1/estado",
+        "p95Ms": 1.6
+      },
+      "cumple": true
+    },
+    {
+      "ruta": "/api/v1/fuentes",
+      "solicitudes": 500,
+      "errores": 0,
+      "bytes": 13001,
+      "cliente": {
+        "p50Ms": 1.5,
+        "p95Ms": 3.2,
+        "p99Ms": 4.6,
+        "maximoMs": 4.9
+      },
+      "servidor": {
+        "patron": "GET /api/v1/fuentes",
+        "p95Ms": 2.1
+      },
+      "cumple": true
+    },
+    {
+      "ruta": "/api/v1/eventos/sismo-2026-08-10",
+      "solicitudes": 500,
+      "errores": 0,
+      "bytes": 1260,
+      "cliente": {
+        "p50Ms": 1.8,
+        "p95Ms": 2.9,
+        "p99Ms": 3.6,
+        "maximoMs": 9.6
+      },
+      "servidor": {
+        "patron": "GET /api/v1/eventos/:evento",
+        "p95Ms": 2.6
+      },
+      "cumple": true
+    },
+    {
+      "ruta": "/api/v1/eventos/sismo-2026-08-10/indicadores",
+      "solicitudes": 500,
+      "errores": 0,
+      "bytes": 26296,
+      "cliente": {
+        "p50Ms": 3.6,
+        "p95Ms": 6,
+        "p99Ms": 7,
+        "maximoMs": 7.8
+      },
+      "servidor": {
+        "patron": "GET /api/v1/eventos/:evento/indicadores",
+        "p95Ms": 4.2
+      },
+      "cumple": true
+    },
+    {
+      "ruta": "/api/v1/eventos/sismo-2026-08-10/territorio",
+      "solicitudes": 500,
+      "errores": 0,
+      "bytes": 108315,
+      "cliente": {
+        "p50Ms": 23.4,
+        "p95Ms": 30.1,
+        "p99Ms": 33.4,
+        "maximoMs": 34.9
+      },
+      "servidor": {
+        "patron": "GET /api/v1/eventos/:evento/territorio",
+        "p95Ms": 29
+      },
+      "cumple": true
+    },
+    {
+      "ruta": "/api/v1/eventos/sismo-2026-08-10/territorio/departamentos/27",
+      "solicitudes": 500,
+      "errores": 0,
+      "bytes": 9729,
+      "cliente": {
+        "p50Ms": 16.2,
+        "p95Ms": 21.1,
+        "p99Ms": 24.6,
+        "maximoMs": 26.4
+      },
+      "servidor": {
+        "patron": "GET /api/v1/eventos/:evento/territorio/departamentos/:departamento",
+        "p95Ms": 20.6
+      },
+      "cumple": true
+    },
+    {
+      "ruta": "/api/v1/eventos/sismo-2026-08-10/seguros",
+      "solicitudes": 500,
+      "errores": 0,
+      "bytes": 1048,
+      "cliente": {
+        "p50Ms": 1.7,
+        "p95Ms": 3,
+        "p99Ms": 3.6,
+        "maximoMs": 4.4
+      },
+      "servidor": {
+        "patron": "GET /api/v1/eventos/:evento/seguros",
+        "p95Ms": 2.5
+      },
+      "cumple": true
+    },
+    {
+      "ruta": "/api/v1/eventos/sismo-2026-08-10/economia",
+      "solicitudes": 500,
+      "errores": 0,
+      "bytes": 2297,
+      "cliente": {
+        "p50Ms": 1.8,
+        "p95Ms": 4.1,
+        "p99Ms": 5.6,
+        "maximoMs": 6.6
+      },
+      "servidor": {
+        "patron": "GET /api/v1/eventos/:evento/economia",
+        "p95Ms": 3.2
+      },
+      "cumple": true
+    },
+    {
+      "ruta": "/api/v1/eventos/sismo-2026-08-10/kpi",
+      "solicitudes": 500,
+      "errores": 0,
+      "bytes": 12490,
+      "cliente": {
+        "p50Ms": 23,
+        "p95Ms": 32.4,
+        "p99Ms": 42,
+        "maximoMs": 47.9
+      },
+      "servidor": {
+        "patron": "GET /api/v1/eventos/:evento/kpi",
+        "p95Ms": 30.7
+      },
+      "cumple": true
+    },
+    {
+      "ruta": "/api/v1/eventos/sismo-2026-08-10/registros/poblacion",
+      "solicitudes": 500,
+      "errores": 0,
+      "bytes": 3985,
+      "cliente": {
+        "p50Ms": 21.1,
+        "p95Ms": 26.6,
+        "p99Ms": 29.3,
+        "maximoMs": 33.5
+      },
+      "servidor": {
+        "patron": "GET /api/v1/eventos/:evento/registros/poblacion",
+        "p95Ms": 21.8
+      },
+      "cumple": true
+    },
+    {
+      "ruta": "/api/v1/eventos/sismo-2026-08-10/registros/viviendas",
+      "solicitudes": 500,
+      "errores": 0,
+      "bytes": 3920,
+      "cliente": {
+        "p50Ms": 54.5,
+        "p95Ms": 72.6,
+        "p99Ms": 87.5,
+        "maximoMs": 109.1
+      },
+      "servidor": {
+        "patron": "GET /api/v1/eventos/:evento/registros/viviendas",
+        "p95Ms": 63.8
+      },
+      "cumple": true
+    },
+    {
+      "ruta": "/api/v1/municipios?prefijo=san",
+      "solicitudes": 500,
+      "errores": 0,
+      "bytes": 1060,
+      "cliente": {
+        "p50Ms": 0.6,
+        "p95Ms": 0.9,
+        "p99Ms": 3.7,
+        "maximoMs": 3.8
+      },
+      "servidor": {
+        "patron": "GET /api/v1/municipios",
+        "p95Ms": 0
+      },
+      "cumple": true
+    }
+  ],
+  "cumple": true,
+  "equipo": {
+    "node": "v24.15.0",
+    "postgres": "18.7 (Debian 18.7-1.pgdg13+2)",
+    "sistema": "Darwin 24.6.0",
+    "procesador": "Apple M4",
+    "nucleos": 10,
+    "memoriaGb": 16
+  }
+}

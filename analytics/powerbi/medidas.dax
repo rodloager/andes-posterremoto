@@ -1,0 +1,293 @@
+Personas Registradas =
+SUM ( hecho_personas_afectadas[personas] )
+
+Personas Registradas Publicables =
+VAR Personas = [Personas Registradas]
+RETURN
+    IF ( Personas >= 10, Personas )
+
+Participación de Personas =
+DIVIDE (
+    [Personas Registradas],
+    CALCULATE ( [Personas Registradas], ALLSELECTED ( dim_poblacion ) )
+)
+
+Personas con Vulnerabilidad =
+CALCULATE ( [Personas Registradas], dim_poblacion[con_vulnerabilidad] = "SI" )
+
+Personas Registradas con Alguna Vulnerabilidad =
+DIVIDE ( [Personas con Vulnerabilidad], [Personas Registradas] )
+
+Condiciones de Vulnerabilidad =
+SUM ( hecho_vulnerabilidad[personas] )
+
+Viviendas Registradas =
+SUM ( hecho_viviendas_afectadas[viviendas] )
+
+Viviendas Registradas Publicables =
+VAR Viviendas = [Viviendas Registradas]
+RETURN
+    IF ( Viviendas >= 10, Viviendas )
+
+Viviendas Aseguradas =
+CALCULATE ( [Viviendas Registradas], dim_aseguramiento[condicion] = "ASEGURADA" )
+
+Viviendas no Aseguradas =
+CALCULATE ( [Viviendas Registradas], dim_aseguramiento[condicion] = "NO_ASEGURADA" )
+
+Viviendas con Póliza por Verificar =
+CALCULATE ( [Viviendas Registradas], dim_aseguramiento[condicion] = "PENDIENTE_VERIFICACION" )
+
+Viviendas Registradas con Seguro =
+DIVIDE ( [Viviendas Aseguradas], [Viviendas Registradas] )
+
+Cobertura Máxima de Aseguramiento =
+DIVIDE ( [Viviendas Aseguradas] + [Viviendas con Póliza por Verificar], [Viviendas Registradas] )
+
+Viviendas Destruidas que tenían Póliza =
+DIVIDE (
+    CALCULATE ( [Viviendas Aseguradas], dim_vivienda[estado_fisico] = "DESTRUCCION_TOTAL" ),
+    CALCULATE ( [Viviendas Registradas], dim_vivienda[estado_fisico] = "DESTRUCCION_TOTAL" )
+)
+
+Reclamaciones Aprobadas entre las Resueltas =
+DIVIDE (
+    CALCULATE ( [Viviendas Registradas], dim_aseguramiento[reclamacion] IN { "APROBADA", "PAGADA" } ),
+    CALCULATE (
+        [Viviendas Registradas],
+        dim_aseguramiento[reclamacion] IN { "APROBADA", "PAGADA", "RECHAZADA" }
+    )
+)
+
+Viviendas Hipotecadas o en Leasing sin Seguro =
+DIVIDE (
+    CALCULATE (
+        [Viviendas Registradas],
+        dim_aseguramiento[condicion] = "NO_ASEGURADA",
+        dim_vivienda[financiacion_exige_seguro] = "Sí"
+    ),
+    CALCULATE ( [Viviendas Registradas], dim_vivienda[financiacion_exige_seguro] = "Sí" )
+)
+
+Daño sin Seguro COP =
+CALCULATE (
+    SUM ( hecho_viviendas_afectadas[valor_dano_cop] ),
+    dim_aseguramiento[condicion] = "NO_ASEGURADA"
+)
+
+Pagado sobre Aprobado =
+DIVIDE (
+    SUM ( hecho_viviendas_afectadas[valor_pagado_cop] ),
+    SUM ( hecho_viviendas_afectadas[valor_aprobado_cop] )
+)
+
+Personas Afectadas Reportadas =
+SUM ( hecho_afectacion_municipal[personas] )
+
+Viviendas Destruidas Reportadas =
+SUM ( hecho_afectacion_municipal[viviendas_destruidas] )
+
+Participación Territorial =
+DIVIDE (
+    [Personas Afectadas Reportadas],
+    CALCULATE (
+        [Personas Afectadas Reportadas],
+        REMOVEFILTERS ( dim_geografia ),
+        REMOVEFILTERS ( dim_departamento )
+    )
+)
+
+Personas Afectadas en los Diez Municipios con más Reportes =
+VAR Municipios =
+    CALCULATETABLE (
+        ADDCOLUMNS (
+            VALUES ( dim_geografia[codigo_municipio] ),
+            "@Personas", [Personas Afectadas Reportadas]
+        ),
+        REMOVEFILTERS ( dim_geografia ),
+        REMOVEFILTERS ( dim_departamento )
+    )
+VAR Diez =
+    TOPN ( 10, Municipios, [@Personas], DESC, dim_geografia[codigo_municipio], ASC )
+RETURN
+    DIVIDE ( SUMX ( Diez, [@Personas] ), SUMX ( Municipios, [@Personas] ) )
+
+Estructuras Afectadas =
+SUM ( hecho_infraestructura[estructuras_afectadas] )
+
+Infraestructura Crítica entre la Infraestructura Afectada =
+DIVIDE (
+    CALCULATE (
+        [Estructuras Afectadas],
+        REMOVEFILTERS ( dim_infraestructura ),
+        dim_infraestructura[critica] = "Sí"
+    ),
+    CALCULATE ( [Estructuras Afectadas], REMOVEFILTERS ( dim_infraestructura ) )
+)
+
+Valor Económico COP =
+IF (
+    HASONEVALUE ( dim_economia[concepto_clave] ),
+    SUM ( hecho_danos_economicos[valor_cop] )
+)
+
+Calificador del Valor Económico =
+IF (
+    HASONEVALUE ( dim_economia[concepto_clave] ),
+    SELECTEDVALUE ( hecho_danos_economicos[calificador] )
+)
+
+Siniestros Reportados =
+SUM ( hecho_reclamaciones_seguros[siniestros] )
+
+Pagos sobre Valor Estimado de Siniestros =
+DIVIDE (
+    SUM ( hecho_reclamaciones_seguros[pagos_cop] ),
+    SUM ( hecho_reclamaciones_seguros[valor_estimado_cop] )
+)
+
+Último Corte =
+MAX ( hecho_indicadores[numero_corte] )
+
+Valor del Último Corte =
+VAR Corte = [Último Corte]
+VAR Valor =
+    CALCULATE (
+        MAX ( hecho_indicadores[valor] ),
+        hecho_indicadores[numero_corte] = Corte,
+        REMOVEFILTERS ( dim_tiempo )
+    )
+RETURN
+    IF ( HASONEVALUE ( hecho_indicadores[indicador] ), Valor )
+
+Fecha del Último Corte =
+VAR Corte = [Último Corte]
+VAR Fecha =
+    CALCULATE (
+        MAX ( hecho_indicadores[fecha] ),
+        hecho_indicadores[numero_corte] = Corte,
+        REMOVEFILTERS ( dim_tiempo )
+    )
+RETURN
+    IF ( HASONEVALUE ( hecho_indicadores[indicador] ), Fecha )
+
+Calificador del Último Corte =
+VAR Corte = [Último Corte]
+VAR Calificador =
+    CALCULATE (
+        SELECTEDVALUE ( hecho_indicadores[calificador] ),
+        hecho_indicadores[numero_corte] = Corte,
+        REMOVEFILTERS ( dim_tiempo )
+    )
+RETURN
+    IF ( HASONEVALUE ( hecho_indicadores[indicador] ), Calificador )
+
+Variación frente al Corte Anterior =
+VAR Corte = [Último Corte]
+VAR Actual =
+    CALCULATE (
+        MAX ( hecho_indicadores[valor] ),
+        hecho_indicadores[numero_corte] = Corte,
+        REMOVEFILTERS ( dim_tiempo )
+    )
+VAR Anterior =
+    CALCULATE (
+        MAX ( hecho_indicadores[valor] ),
+        hecho_indicadores[numero_corte] = Corte - 1,
+        REMOVEFILTERS ( dim_tiempo )
+    )
+RETURN
+    IF (
+        HASONEVALUE ( hecho_indicadores[indicador] ) && Corte > 1,
+        DIVIDE ( Actual - Anterior, Anterior )
+    )
+
+Valor Vigente del Indicador =
+IF (
+    HASONEVALUE ( hecho_indicadores[indicador] ),
+    LASTNONBLANKVALUE ( hecho_indicadores[fecha], MAX ( hecho_indicadores[valor] ) )
+)
+
+Viviendas Destruidas por cada 100 Afectadas =
+DIVIDE (
+    CALCULATE (
+        [Valor Vigente del Indicador],
+        REMOVEFILTERS ( dim_indicador ),
+        hecho_indicadores[indicador] = "viviendas_destruidas"
+    ),
+    CALCULATE (
+        [Valor Vigente del Indicador],
+        REMOVEFILTERS ( dim_indicador ),
+        hecho_indicadores[indicador] = "viviendas_afectadas"
+    )
+)
+
+Avance de la Reconstrucción de Vivienda =
+DIVIDE (
+    CALCULATE (
+        [Valor Vigente del Indicador],
+        REMOVEFILTERS ( dim_indicador ),
+        hecho_indicadores[indicador] = "viviendas_reconstruidas"
+    ),
+    CALCULATE (
+        [Valor Vigente del Indicador],
+        REMOVEFILTERS ( dim_indicador ),
+        hecho_indicadores[indicador] = "viviendas_destruidas"
+    )
+)
+
+Indemnizaciones Pagadas frente al Valor de los Siniestros =
+DIVIDE (
+    CALCULATE (
+        [Valor Vigente del Indicador],
+        REMOVEFILTERS ( dim_indicador ),
+        hecho_indicadores[indicador] = "indemnizaciones_pagadas"
+    ),
+    CALCULATE (
+        [Valor Vigente del Indicador],
+        REMOVEFILTERS ( dim_indicador ),
+        hecho_indicadores[indicador] = "valor_siniestros_asegurados"
+    )
+)
+
+Parte del Plan de Recuperación sin Financiar =
+DIVIDE (
+    CALCULATE (
+        [Valor Vigente del Indicador],
+        REMOVEFILTERS ( dim_indicador ),
+        hecho_indicadores[indicador] = "brecha_financiacion"
+    ),
+    CALCULATE (
+        [Valor Vigente del Indicador],
+        REMOVEFILTERS ( dim_indicador ),
+        hecho_indicadores[indicador] = "costo_recuperacion_plan"
+    )
+)
+
+Desembolso de los Recursos Públicos Movilizados =
+DIVIDE (
+    CALCULATE (
+        [Valor Vigente del Indicador],
+        REMOVEFILTERS ( dim_indicador ),
+        hecho_indicadores[indicador] = "primer_desembolso_fondo"
+    ),
+    CALCULATE (
+        [Valor Vigente del Indicador],
+        REMOVEFILTERS ( dim_indicador ),
+        hecho_indicadores[indicador] = "presupuesto_recuperacion"
+    )
+)
+
+Fallecidos por cada 100 Mil Personas Afectadas =
+DIVIDE (
+    CALCULATE (
+        [Valor Vigente del Indicador],
+        REMOVEFILTERS ( dim_indicador ),
+        hecho_indicadores[indicador] = "fallecidos"
+    ),
+    CALCULATE (
+        [Valor Vigente del Indicador],
+        REMOVEFILTERS ( dim_indicador ),
+        hecho_indicadores[indicador] = "personas_afectadas"
+    )
+) * 100000

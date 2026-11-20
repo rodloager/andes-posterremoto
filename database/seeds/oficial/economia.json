@@ -1,0 +1,94 @@
+{
+  "meta": {
+    "actualizadoEn": "2026-11-11",
+    "nota": "Las cifras provienen de entidades y fechas distintas. No se suman entre sí."
+  },
+  "costos": [
+    {
+      "concepto": "Costo estimado de la reconstrucción",
+      "valor": 54000000000000,
+      "fechaCorte": "2026-10-23",
+      "fuente": "minvivienda-2026-10-23"
+    },
+    {
+      "concepto": "Costo de la recuperación según el Plan de Acción Específico",
+      "valor": 58290000000000,
+      "fechaCorte": "2026-11-08",
+      "fuente": "pae-2026-11-08"
+    },
+    {
+      "concepto": "Brecha de financiación del plan",
+      "valor": 50080000000000,
+      "fechaCorte": "2026-11-08",
+      "fuente": "pae-2026-11-08"
+    },
+    {
+      "concepto": "Costo de reconstruir la vivienda",
+      "valor": 19700000000000,
+      "fechaCorte": "2026-10-23",
+      "fuente": "minvivienda-2026-10-23"
+    }
+  ],
+  "recursos": [
+    {
+      "concepto": "Aporte inicial de la Nación para vivienda",
+      "valor": 1700000000000,
+      "fechaCorte": "2026-10-23",
+      "fuente": "minvivienda-2026-10-23"
+    },
+    {
+      "concepto": "Recursos públicos movilizados",
+      "valor": 1000000000000,
+      "calificador": "cerca de",
+      "fechaCorte": "2026-11-08",
+      "fuente": "presidencia-fondo-milagro"
+    },
+    {
+      "concepto": "Recursos privados comprometidos",
+      "valor": 1000000000000,
+      "calificador": "más de",
+      "fechaCorte": "2026-11-08",
+      "fuente": "presidencia-fondo-milagro"
+    },
+    {
+      "concepto": "Primer desembolso del Fondo Milagro",
+      "valor": 624656000000,
+      "fechaCorte": "2026-11-08",
+      "fuente": "presidencia-fondo-milagro"
+    },
+    {
+      "concepto": "Indemnizaciones pagadas por aseguradoras",
+      "valor": 95076000000,
+      "fechaCorte": "2026-09-07",
+      "fuente": "fasecolda-reporte-4"
+    }
+  ],
+  "destinoFondo": {
+    "fechaCorte": "2026-11-08",
+    "fuente": "presidencia-fondo-milagro",
+    "total": 386600000000,
+    "rubros": [
+      { "concepto": "Vivienda: 7.385 viviendas", "valor": 332000000000, "calificador": "más de" },
+      { "concepto": "Demoliciones", "valor": 50000000000 },
+      { "concepto": "Apoyo a 920 comerciantes", "valor": 4600000000 }
+    ]
+  },
+  "contratacion": [
+    {
+      "concepto": "Contratos de SECOP II cuyo objeto menciona el sismo",
+      "contratos": 463,
+      "valor": 122830606663,
+      "contratacionDirecta": 436,
+      "periodo": "Del 10 de agosto al 9 de noviembre de 2026",
+      "fuente": "secop-ii"
+    },
+    {
+      "concepto": "Contratos vinculados al sismo en SECOP I y II",
+      "contratos": 768,
+      "valor": 201800000000,
+      "contratacionDirecta": 630,
+      "periodo": "Del 11 de agosto al 12 de octubre de 2026",
+      "fuente": "transparencia-por-colombia"
+    }
+  ]
+}

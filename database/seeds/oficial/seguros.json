@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "origen": "OFICIAL",
+    "fuente": "fasecolda-reporte-4",
+    "fechaCorte": "2026-09-07",
+    "nota": "Fasecolda informa reclamaciones de todos los ramos. No informa cuántas viviendas afectadas tenían seguro."
+  },
+  "porDepartamento": [
+    {
+      "codigo": "76",
+      "nombre": "Valle del Cauca",
+      "siniestros": 28201,
+      "pagos": 46220000000,
+      "valorEstimado": 1350000000000
+    },
+    {
+      "codigo": "66",
+      "nombre": "Risaralda",
+      "siniestros": 14755,
+      "pagos": 26337000000,
+      "valorEstimado": 1300000000000
+    },
+    {
+      "codigo": "63",
+      "nombre": "Quindío",
+      "siniestros": 8158,
+      "pagos": 12446000000,
+      "valorEstimado": 256000000000
+    },
+    {
+      "codigo": "05",
+      "nombre": "Antioquia",
+      "siniestros": 5847,
+      "pagos": 660000000,
+      "valorEstimado": 106000000000
+    },
+    {
+      "codigo": "17",
+      "nombre": "Caldas",
+      "siniestros": 3998,
+      "pagos": 4677000000,
+      "valorEstimado": 220000000000
+    }
+  ],
+  "porRamo": [
+    { "nombre": "Terremoto, que incluye hogar e incendio", "reclamaciones": 63786, "reserva": 3340000000000 },
+    { "nombre": "Automóviles", "reclamaciones": 1219, "reserva": 22900000000 },
+    { "nombre": "Riesgos laborales", "reclamaciones": 1113, "reserva": 16600000000 },
+    { "nombre": "Lucro cesante", "reclamaciones": 5, "reserva": 33900000000 }
+  ]
+}

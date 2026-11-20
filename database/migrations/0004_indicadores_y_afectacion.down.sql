@@ -1,0 +1,10 @@
+DROP TABLE nucleo.mediciones_contratacion;
+DROP TABLE nucleo.partidas_economicas;
+DROP TABLE nucleo.reclamaciones_ramo;
+DROP TABLE nucleo.reclamaciones_departamento;
+DROP TABLE nucleo.valores_reporte_municipal;
+DROP TABLE nucleo.reportes_municipales;
+DROP TABLE nucleo.variables_territoriales;
+DROP TABLE nucleo.valores_indicador;
+DROP TABLE nucleo.indicadores;
+DROP FUNCTION nucleo.rechazar_fuente_simulada();

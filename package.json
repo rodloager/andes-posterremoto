@@ -1,0 +1,84 @@
+{
+  "name": "andes-posterremoto",
+  "version": "0.6.0",
+  "description": "Plataforma de Big Data e Inteligencia de Negocios para la gestión de información posterremoto en Colombia",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env --watch backend/server.js",
+    "start": "node --env-file-if-exists=.env backend/server.js",
+    "postinstall": "node scripts/copiar-vendor.js",
+    "vendor": "node scripts/copiar-vendor.js",
+    "datos:limites": "node etl/tareas/descargar-limites.js",
+    "datos:afectaciones": "node etl/tareas/descargar-afectaciones.js",
+    "datos:simular": "node data/generador/generar-demostracion.js",
+    "db:migrate": "node --env-file-if-exists=.env database/comandos/migrar.js subir",
+    "db:rollback": "node --env-file-if-exists=.env database/comandos/migrar.js bajar",
+    "db:seed": "node --env-file-if-exists=.env database/comandos/sembrar.js",
+    "db:reset": "node --env-file-if-exists=.env database/comandos/migrar.js bajar-todo && npm run db:migrate && npm run db:seed",
+    "usuarios:crear": "node --env-file-if-exists=.env database/comandos/crear-usuario.js",
+    "bi:cuenta": "node --env-file-if-exists=.env database/comandos/cuenta-powerbi.js",
+    "bi:exportar": "node --env-file-if-exists=.env analytics/powerbi/exportar.js",
+    "lint": "eslint . && node scripts/verificar-comentarios.js",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:unitarias": "vitest run --project unitarias --project interfaz",
+    "test:integracion": "vitest run --project integracion",
+    "test:cobertura": "vitest run --coverage",
+    "datos:registros": "node data/generador/generar-registros.js",
+    "datos:demostracion": "npm run datos:registros -- --tipo ambos --cantidad 50000 --semilla 20261111 --sin-defectos && npm run etl -- cargar --conjunto personas-simuladas --archivo data/raw/generador-andes/personas-50000-s20261111.csv && npm run etl -- cargar --conjunto viviendas-simuladas --archivo data/raw/generador-andes/viviendas-50000-s20261111.csv",
+    "etl": "node --max-old-space-size=96 --env-file-if-exists=.env etl/cli.js",
+    "medir:algoritmos": "node --expose-gc --max-old-space-size=4096 analytics/benchmarks/algoritmos.js",
+    "medir:etl": "node --env-file-if-exists=.env analytics/benchmarks/etl.js",
+    "medir:api": "node --env-file-if-exists=.env analytics/benchmarks/api.js",
+    "medir:consultas": "node --env-file-if-exists=.env analytics/benchmarks/consultas.js",
+    "medir:graficas": "node analytics/benchmarks/graficas.js"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "5.3.0",
+    "argon2": "0.45.2",
+    "bootstrap": "5.3.8",
+    "connect-pg-simple": "10.0.0",
+    "csv-parse": "7.0.3",
+    "echarts": "6.1.0",
+    "express": "5.3.0",
+    "express-rate-limit": "8.7.4",
+    "express-session": "1.19.0",
+    "helmet": "8.3.0",
+    "leaflet": "1.9.4",
+    "multer": "2.5.0",
+    "node-pg-migrate": "9.0.0",
+    "pg": "8.23.1",
+    "pg-copy-streams": "7.0.0",
+    "pino": "10.4.0",
+    "pino-http": "11.0.0",
+    "yaml": "2.9.1",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@vitest/coverage-v8": "5.1.0",
+    "eslint": "10.14.0",
+    "fast-check": "4.10.2",
+    "globals": "17.14.0",
+    "happy-dom": "21.0.4",
+    "prettier": "3.9.10",
+    "supertest": "7.3.2",
+    "vitest": "5.1.0"
+  },
+  "overrides": {
+    "node-pg-migrate": {
+      "glob": "14.0.6"
+    },
+    "eslint": {
+      "minimatch": "11.0.9"
+    },
+    "@eslint/config-array": {
+      "minimatch": "11.0.9"
+    }
+  }
+}

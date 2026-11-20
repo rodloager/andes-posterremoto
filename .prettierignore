@@ -1,0 +1,10 @@
+node_modules/
+coverage/
+frontend/public/vendor/
+frontend/public/datos/
+data/raw/
+data/processed/
+docs/
+package-lock.json
+*.md
+analytics/benchmarks/resultados/

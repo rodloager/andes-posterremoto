@@ -1,0 +1,54 @@
+{
+  "medidoEn": "2026-11-19T17:42:38.439Z",
+  "conjunto": "personas-simuladas",
+  "formato": "csv",
+  "archivo": {
+    "ruta": "data/raw/generador-andes/personas-1000000-s20260810.csv",
+    "bytes": 111148424,
+    "huella": "cf377dd035e5b554616afde15a1d5aebab1b3066a1283aed7595ec83058d7d31"
+  },
+  "limiteDelMontonMb": 96,
+  "ejecucion": {
+    "id": 2,
+    "estado": "TERMINADA",
+    "duracionMs": 68608,
+    "segundosDelProceso": 68.9,
+    "filasPorSegundo": 14576,
+    "memoriaMaximaMb": 259.6,
+    "filasLeidas": 1000000,
+    "filasValidas": 989978,
+    "filasRechazadas": 10022,
+    "duplicadosExactos": 5039,
+    "enRevision": 5530
+  },
+  "registros": {
+    "total": 984939,
+    "vigentes": 979409,
+    "en_revision": 5530
+  },
+  "esperado": {
+    "filas": 1000000,
+    "validas": 989978,
+    "rechazadas": 10022,
+    "duplicadosExactos": 5039,
+    "duplicadosProbablesInyectados": 4991,
+    "insertadas": 984939
+  },
+  "criterios": {
+    "filasPorSegundoMinimas": 10000,
+    "memoriaMaximaMb": 300
+  },
+  "equipo": {
+    "node": "v24.15.0",
+    "postgres": "18.7 (Debian 18.7-1.pgdg13+2)",
+    "sistema": "Darwin 24.6.0",
+    "procesador": "Apple M4",
+    "nucleos": 10,
+    "memoriaGb": 16
+  },
+  "cumple": {
+    "conteos": true,
+    "ritmo": true,
+    "memoria": true
+  }
+}

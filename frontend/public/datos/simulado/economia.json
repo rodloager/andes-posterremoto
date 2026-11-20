@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "origen": "SIMULADO",
+    "nivel": "S",
+    "fuente": "generador-andes",
+    "semilla": 20260810,
+    "advertencia": "Datos simulados por el proyecto para demostrar el funcionamiento de la plataforma. No son cifras oficiales ni estimaciones."
+  },
+  "perdidasPorSector": [
+    {
+      "nombre": "Daños materiales",
+      "indicador": "danos_materiales",
+      "valor": 1265044150948
+    },
+    {
+      "nombre": "Comercio",
+      "indicador": "perdidas_comerciales",
+      "valor": 273644120026
+    },
+    {
+      "nombre": "Sector empresarial",
+      "indicador": null,
+      "valor": 224064226215
+    },
+    {
+      "nombre": "Agricultura",
+      "indicador": "perdidas_agricolas",
+      "valor": 91106713056
+    },
+    {
+      "nombre": "Industria",
+      "indicador": "perdidas_industriales",
+      "valor": 171458489652
+    }
+  ],
+  "perdidasTotales": 2025317699897,
+  "recursos": [
+    {
+      "nombre": "Recursos públicos",
+      "asignado": 1113924734943,
+      "comprometido": 690633335665,
+      "ejecutado": 423291399278
+    },
+    {
+      "nombre": "Recursos privados",
+      "asignado": 243038123988,
+      "comprometido": 170126686792,
+      "ejecutado": 106936774555
+    },
+    {
+      "nombre": "Aseguradoras",
+      "asignado": 182278592991,
+      "comprometido": 105721583935,
+      "ejecutado": 56506363827
+    }
+  ],
+  "recursosAsignados": 1539241451922,
+  "recursosEjecutados": 586734537660,
+  "pendientesDesembolso": 952506914262,
+  "empleosAfectados": 13286
+}

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es-CO">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Logística · ANDES</title>
+    <meta
+      name="description"
+      content="Suministros, albergues y transporte humanitario tras el sismo del 10 de agosto de 2026."
+    />
+    <link rel="icon" href="/assets/icono.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/vendor/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/tokens.css" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/componentes.css" />
+    <script defer src="/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script type="module" src="/js/paginas/logistica.js"></script>
+  </head>
+  <body>
+    <andes-marco pagina="logistica">
+      <header class="pagina-titulo">
+        <h1>Logística y suministro</h1>
+        <p>Qué se ha entregado, qué hay en inventario, qué falta y cómo están los albergues.</p>
+      </header>
+      <div id="contenido" aria-live="polite">
+        <p class="estado-carga">Cargando los datos…</p>
+      </div>
+    </andes-marco>
+    <noscript>
+      <p class="estado-error">Este portal necesita JavaScript para mostrar los indicadores.</p>
+    </noscript>
+  </body>
+</html>

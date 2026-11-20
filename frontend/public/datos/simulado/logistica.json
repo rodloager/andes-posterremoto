@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "origen": "SIMULADO",
+    "nivel": "S",
+    "fuente": "generador-andes",
+    "semilla": 20260810,
+    "advertencia": "Datos simulados por el proyecto para demostrar el funcionamiento de la plataforma. No son cifras oficiales ni estimaciones."
+  },
+  "suministros": [
+    {
+      "nombre": "Alimentos",
+      "unidad": "kits",
+      "indicador": "alimentos_distribuidos",
+      "requerido": 420000,
+      "entregado": 271056,
+      "inventario": 63407
+    },
+    {
+      "nombre": "Agua potable",
+      "unidad": "litros",
+      "indicador": "agua_suministrada",
+      "requerido": 9600000,
+      "entregado": 5966654,
+      "inventario": 1588561
+    },
+    {
+      "nombre": "Medicamentos",
+      "unidad": "unidades",
+      "indicador": "medicamentos_entregados",
+      "requerido": 310000,
+      "entregado": 212226,
+      "inventario": 34509
+    },
+    {
+      "nombre": "Kits de emergencia",
+      "unidad": "kits",
+      "indicador": "kits_emergencia",
+      "requerido": 185000,
+      "entregado": 118191,
+      "inventario": 32272
+    }
+  ],
+  "pendienteEntrega": 35.2407960706242,
+  "albergues": {
+    "disponibles": 237,
+    "capacidad": 8691,
+    "alojadas": 1223
+  },
+  "evolucionAlojamiento": {
+    "fechas": [
+      "2026-08-10",
+      "2026-08-17",
+      "2026-08-24",
+      "2026-08-31",
+      "2026-09-07",
+      "2026-09-14",
+      "2026-09-21",
+      "2026-09-28",
+      "2026-10-05",
+      "2026-10-12",
+      "2026-10-19",
+      "2026-10-26",
+      "2026-11-02"
+    ],
+    "alojadas": [
+      4325,
+      6605,
+      5863,
+      5120,
+      4501,
+      3730,
+      3251,
+      2831,
+      2299,
+      2018,
+      1652,
+      1403,
+      1223
+    ],
+    "capacidad": [
+      8691,
+      8691,
+      8691,
+      8691,
+      8691,
+      8691,
+      8691,
+      8691,
+      8691,
+      8691,
+      8691,
+      8691,
+      8691
+    ]
+  },
+  "centrosDistribucion": 46,
+  "transporte": [
+    {
+      "medio": "Terrestre",
+      "viajes": 3005
+    },
+    {
+      "medio": "Aéreo",
+      "viajes": 300
+    },
+    {
+      "medio": "Fluvial",
+      "viajes": 106
+    }
+  ]
+}

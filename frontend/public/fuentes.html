@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es-CO">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Metodología y fuentes · ANDES</title>
+    <meta
+      name="description"
+      content="De dónde sale cada cifra del portal, cómo se clasifica su origen y qué limitaciones tiene."
+    />
+    <link rel="icon" href="/assets/icono.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/vendor/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/tokens.css" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/componentes.css" />
+    <script defer src="/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script type="module" src="/js/paginas/fuentes.js"></script>
+  </head>
+  <body>
+    <andes-marco pagina="fuentes">
+      <header class="pagina-titulo">
+        <h1>Metodología y fuentes</h1>
+        <p>De dónde sale cada cifra, cómo se clasifica y qué limitaciones tiene.</p>
+      </header>
+
+      <section class="seccion">
+        <header class="seccion-cabecera">
+          <h2>Cómo leer una cifra</h2>
+          <p>Toda cifra del portal lleva un sello que indica su origen.</p>
+        </header>
+        <div class="tabla-desplazable">
+          <table class="tabla-datos">
+            <caption>
+              Origen y nivel de confiabilidad de los datos
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Sello</th>
+                <th scope="col">Significado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><andes-sello origen="OFICIAL" nivel="A"></andes-sello></th>
+                <td>La publica una entidad y el proyecto la leyó directamente en su fuente primaria.</td>
+              </tr>
+              <tr>
+                <th scope="row"><andes-sello origen="OFICIAL" nivel="B"></andes-sello></th>
+                <td>La publica una entidad, pero el proyecto la leyó en un medio que la cita.</td>
+              </tr>
+              <tr>
+                <th scope="row"><andes-sello origen="ESTIMADO" nivel="C"></andes-sello></th>
+                <td>Es un cálculo del proyecto o de un tercero. No proviene de una entidad oficial.</td>
+              </tr>
+              <tr>
+                <th scope="row"><andes-sello origen="SIMULADO" nivel="S"></andes-sello></th>
+                <td>
+                  La generó el proyecto para mostrar el diseño. Solo aparece en el modo de demostración y no
+                  es una cifra oficial.
+                </td>
+              </tr>
+              <tr>
+                <th scope="row"><andes-sello origen="SIN_DATO"></andes-sello></th>
+                <td>No se localizó una cifra oficial. El portal lo dice en lugar de mostrar un cero.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="seccion">
+        <header class="seccion-cabecera">
+          <h2>Reglas del portal</h2>
+        </header>
+        <ul class="panel mb-0 lista-reglas">
+          <li>Ninguna cifra se publica sin su fuente y su fecha de corte.</li>
+          <li>Las cifras de entidades distintas no se suman ni se promedian entre sí.</li>
+          <li>Los datos simulados nunca se mezclan con datos oficiales en un mismo indicador.</li>
+          <li>
+            El portal solo muestra cifras agregadas. No publica datos de personas ni de viviendas
+            individuales.
+          </li>
+          <li>
+            Cuando una entidad corrige una cifra, se conserva el valor anterior y se registra la revisión.
+          </li>
+        </ul>
+      </section>
+
+      <section class="seccion">
+        <header class="seccion-cabecera">
+          <h2>Glosario</h2>
+        </header>
+        <dl class="panel mb-0 glosario">
+          <dt>Fecha de corte</dt>
+          <dd>Fecha hasta la cual una entidad contó los casos que reporta.</dd>
+          <dt>Registro Único de Damnificados</dt>
+          <dd>
+            Registro que elabora cada municipio y consolida la UNGRD con las personas y hogares damnificados.
+          </dd>
+          <dt>Vivienda averiada</dt>
+          <dd>Vivienda con daños que no llegan a la destrucción total, según el reporte de la entidad.</dd>
+          <dt>Billón</dt>
+          <dd>En pesos colombianos, un millón de millones.</dd>
+          <dt>DIVIPOLA</dt>
+          <dd>Codificación oficial del DANE para departamentos y municipios.</dd>
+          <dt>Modo de demostración</dt>
+          <dd>Vista que agrega datos simulados para mostrar los desgloses que ninguna fuente publica.</dd>
+          <dt>Indicador clave</dt>
+          <dd>
+            Proporción que calcula ANDES al dividir dos cifras publicadas, como las viviendas destruidas por
+            cada 100 afectadas. No es una cifra que publique una entidad.
+          </dd>
+          <dt>Calificador</dt>
+          <dd>
+            «Más de», «menos de» o «cerca de» delante de una cifra. Dice que la fuente publicó un límite o una
+            aproximación, no un valor exacto.
+          </dd>
+          <dt>Punto porcentual</dt>
+          <dd>Diferencia entre dos porcentajes. Pasar de 15 % a 14 % es bajar un punto porcentual.</dd>
+          <dt>Celda oculta</dt>
+          <dd>
+            Cifra de los registros que reúne menos de 10 personas o viviendas, o que permitiría calcular una
+            así. El portal la muestra como «Sin dato» para proteger la privacidad.
+          </dd>
+        </dl>
+      </section>
+
+      <div id="contenido" aria-live="polite">
+        <p class="estado-carga">Cargando los datos…</p>
+      </div>
+    </andes-marco>
+    <noscript>
+      <p class="estado-error">Este portal necesita JavaScript para mostrar las fuentes.</p>
+    </noscript>
+  </body>
+</html>

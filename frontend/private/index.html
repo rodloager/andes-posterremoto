@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es-CO">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Acceso · ANDES</title>
+    <link rel="icon" href="/assets/icono.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/vendor/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/tokens.css" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/componentes.css" />
+    <link rel="stylesheet" href="/privado/css/privado.css" />
+    <script type="module" src="/privado/js/marco-privado.js"></script>
+    <script type="module" src="/privado/js/acceso.js"></script>
+  </head>
+  <body>
+    <andes-marco-privado>
+      <div class="acceso">
+        <form class="panel acceso-tarjeta" id="formulario-acceso" novalidate>
+          <h1>Acceso para personal autorizado</h1>
+          <p class="text-secondary mb-0">
+            Administradores de datos, analistas e ingenieros entran con su cuenta. El portal ciudadano no
+            requiere registro.
+          </p>
+          <label class="form-label d-block" for="correo">Correo institucional</label>
+          <input
+            class="form-control"
+            id="correo"
+            name="correo"
+            type="email"
+            autocomplete="username"
+            required
+          />
+          <label class="form-label d-block" for="clave">Contraseña</label>
+          <input
+            class="form-control"
+            id="clave"
+            name="clave"
+            type="password"
+            autocomplete="current-password"
+            required
+          />
+          <p class="nota nota--alerta" id="mensaje-acceso" role="alert" hidden></p>
+          <div class="acciones">
+            <button class="btn btn-primary" type="submit">Entrar</button>
+            <a class="btn btn-outline-secondary" href="/">Volver al portal público</a>
+          </div>
+        </form>
+      </div>
+    </andes-marco-privado>
+    <noscript>
+      <p class="estado-error">El acceso necesita JavaScript.</p>
+    </noscript>
+  </body>
+</html>

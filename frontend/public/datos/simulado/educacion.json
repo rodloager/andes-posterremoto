@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "origen": "SIMULADO",
+    "nivel": "S",
+    "fuente": "generador-andes",
+    "semilla": 20260810,
+    "advertencia": "Datos simulados por el proyecto para demostrar el funcionamiento de la plataforma. No son cifras oficiales ni estimaciones."
+  },
+  "sedesAfectadas": 1152,
+  "destruidas": 71,
+  "cerradasAlInicio": 672,
+  "evolucion": {
+    "fechas": [
+      "2026-08-10",
+      "2026-08-17",
+      "2026-08-24",
+      "2026-08-31",
+      "2026-09-07",
+      "2026-09-14",
+      "2026-09-21",
+      "2026-09-28",
+      "2026-10-05",
+      "2026-10-12",
+      "2026-10-19",
+      "2026-10-26",
+      "2026-11-02"
+    ],
+    "cerradas": [
+      672,
+      578,
+      497,
+      427,
+      368,
+      316,
+      272,
+      234,
+      201,
+      173,
+      149,
+      128,
+      110
+    ],
+    "reabiertas": [
+      0,
+      94,
+      175,
+      245,
+      304,
+      356,
+      400,
+      438,
+      471,
+      499,
+      523,
+      544,
+      562
+    ]
+  },
+  "estudiantesDesplazados": 19098,
+  "docentesAfectados": 6025,
+  "porcentajeReabierto": 83.63095238095238
+}

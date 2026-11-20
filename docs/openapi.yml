@@ -1,0 +1,1208 @@
+openapi: 3.1.0
+info:
+  title: API de ANDES
+  version: 0.6.0
+  summary: Analítica Nacional de Datos para Emergencias Sísmicas
+  description: >-
+    Contrato de la API REST de ANDES. Las rutas públicas publican cifras oficiales con su fuente y registros
+    simulados agregados, sin celdas de menos de 10 registros. Las rutas de sesión, administración e ingeniería
+    exigen una sesión con cookie y un permiso. Los errores siguen el formato application/problem+json. La
+    explicación de cada campo está en docs/API.md.
+  license:
+    name: Proyecto académico
+servers:
+  - url: http://localhost:3000/api/v1
+    description: Servidor de desarrollo
+tags:
+  - name: Públicas
+    description: Sin sesión. Cifras oficiales, indicadores clave y registros agregados.
+  - name: Sesión
+    description: Inicio, consulta y cierre de la sesión.
+  - name: Administración
+    description: Cargas, calidad, duplicados, estadísticas y priorización.
+  - name: Ingeniería
+    description: Estado del sistema, auditoría y registro de accesos.
+paths:
+  /estado:
+    get:
+      tags: [Públicas]
+      operationId: consultarEstado
+      summary: Estado del servicio y de la base de datos
+      responses:
+        '200':
+          description: El servicio y la base de datos están disponibles.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Estado' }
+        '503':
+          description: La base de datos no responde.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Estado' }
+  /fuentes:
+    get:
+      tags: [Públicas]
+      operationId: listarFuentes
+      summary: Catálogo de fuentes con su nivel de confiabilidad
+      responses:
+        '200':
+          description: Las fuentes en su orden de presentación.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [meta, fuentes]
+                properties:
+                  meta:
+                    type: object
+                    properties:
+                      descripcion: { type: string }
+                      niveles: { type: object, additionalProperties: { type: string } }
+                  fuentes:
+                    type: array
+                    items: { $ref: '#/components/schemas/Fuente' }
+  /municipios:
+    get:
+      tags: [Públicas]
+      operationId: buscarMunicipios
+      summary: Autocompletado de municipios por prefijo
+      parameters:
+        - name: prefijo
+          in: query
+          required: true
+          schema: { type: string, minLength: 1, maxLength: 60 }
+        - name: limite
+          in: query
+          schema: { type: integer, minimum: 1, maximum: 20, default: 10 }
+      responses:
+        '200':
+          description: Municipios que empiezan por el prefijo y, después, los que lo contienen como palabra.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [prefijo, municipios]
+                properties:
+                  prefijo: { type: string }
+                  municipios:
+                    type: array
+                    items: { $ref: '#/components/schemas/Municipio' }
+        '400': { $ref: '#/components/responses/Validacion' }
+  /eventos:
+    get:
+      tags: [Públicas]
+      operationId: listarEventos
+      summary: Eventos sísmicos registrados
+      responses:
+        '200':
+          description: Eventos del más reciente al más antiguo.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [eventos]
+                properties:
+                  eventos:
+                    type: array
+                    items:
+                      type: object
+                      required: [codigo, nombre, fecha]
+                      properties:
+                        codigo: { $ref: '#/components/schemas/CodigoEvento' }
+                        nombre: { type: string }
+                        fecha: { type: string, format: date }
+  /eventos/{evento}:
+    get:
+      tags: [Públicas]
+      operationId: consultarEvento
+      summary: Evento con sus parámetros por fuente y sus normas
+      parameters:
+        - $ref: '#/components/parameters/Evento'
+      responses:
+        '200':
+          description: El evento.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Evento' }
+        '400': { $ref: '#/components/responses/Validacion' }
+        '404': { $ref: '#/components/responses/NoEncontrado' }
+  /eventos/{evento}/indicadores:
+    get:
+      tags: [Públicas]
+      operationId: listarIndicadores
+      summary: Indicadores nacionales con su serie por fecha de corte y su tendencia
+      parameters:
+        - $ref: '#/components/parameters/Evento'
+      responses:
+        '200':
+          description: Los indicadores del catálogo. Una serie vacía significa que no hay cifra oficial.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [meta, indicadores]
+                properties:
+                  meta:
+                    type: object
+                    properties:
+                      descripcion: { type: string }
+                  indicadores:
+                    type: array
+                    items: { $ref: '#/components/schemas/Indicador' }
+        '400': { $ref: '#/components/responses/Validacion' }
+        '404': { $ref: '#/components/responses/NoEncontrado' }
+  /eventos/{evento}/indicadores/{codigo}:
+    get:
+      tags: [Públicas]
+      operationId: consultarIndicador
+      summary: Un indicador con su serie ordenada
+      parameters:
+        - $ref: '#/components/parameters/Evento'
+        - name: codigo
+          in: path
+          required: true
+          schema: { type: string, pattern: '^[a-z_]{1,60}$' }
+      responses:
+        '200':
+          description: El indicador.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Indicador' }
+        '400': { $ref: '#/components/responses/Validacion' }
+        '404': { $ref: '#/components/responses/NoEncontrado' }
+  /eventos/{evento}/territorio:
+    get:
+      tags: [Públicas]
+      operationId: consultarTerritorio
+      summary: Afectación de los municipios con reporte, por departamento y nacional
+      parameters:
+        - $ref: '#/components/parameters/Evento'
+      responses:
+        '200':
+          description: Reportes municipales oficiales de la carga vigente.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Territorio' }
+        '400': { $ref: '#/components/responses/Validacion' }
+        '404': { $ref: '#/components/responses/NoEncontrado' }
+  /eventos/{evento}/territorio/departamentos/{departamento}:
+    get:
+      tags: [Públicas]
+      operationId: consultarDepartamento
+      summary: Un departamento con sus municipios
+      parameters:
+        - $ref: '#/components/parameters/Evento'
+        - name: departamento
+          in: path
+          required: true
+          schema: { type: string, pattern: '^[0-9]{2}$' }
+      responses:
+        '200':
+          description: El departamento y sus municipios con reporte.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [meta, variables, departamento, municipios]
+                properties:
+                  meta: { type: object }
+                  variables:
+                    type: array
+                    items: { $ref: '#/components/schemas/VariableTerritorial' }
+                  departamento: { $ref: '#/components/schemas/TerritorioConValores' }
+                  municipios:
+                    type: array
+                    items: { $ref: '#/components/schemas/MunicipioConReporte' }
+        '400': { $ref: '#/components/responses/Validacion' }
+        '404': { $ref: '#/components/responses/NoEncontrado' }
+  /eventos/{evento}/seguros:
+    get:
+      tags: [Públicas]
+      operationId: consultarSeguros
+      summary: Reclamaciones de seguros por departamento y por ramo, según Fasecolda
+      parameters:
+        - $ref: '#/components/parameters/Evento'
+      responses:
+        '200':
+          description: Reclamaciones reportadas.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [meta, porDepartamento, porRamo]
+                properties:
+                  meta: { type: object }
+                  porDepartamento: { type: array, items: { type: object } }
+                  porRamo: { type: array, items: { type: object } }
+        '400': { $ref: '#/components/responses/Validacion' }
+        '404': { $ref: '#/components/responses/NoEncontrado' }
+  /eventos/{evento}/economia:
+    get:
+      tags: [Públicas]
+      operationId: consultarEconomia
+      summary: Costos, recursos, destino del fondo y contratación
+      parameters:
+        - $ref: '#/components/parameters/Evento'
+      responses:
+        '200':
+          description: Partidas económicas con su fuente y su fecha.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [meta, costos, recursos, destinoFondo, contratacion]
+                properties:
+                  meta: { type: object }
+                  costos: { type: array, items: { type: object } }
+                  recursos: { type: array, items: { type: object } }
+                  destinoFondo:
+                    type: object
+                    required: [fechaCorte, fuente, total, rubros]
+                    properties:
+                      fechaCorte: { type: [string, 'null'], format: date }
+                      fuente: { type: [string, 'null'] }
+                      total: { type: number }
+                      rubros:
+                        type: array
+                        items:
+                          type: object
+                          properties:
+                            concepto: { type: string }
+                            valor: { type: number }
+                            calificador: { $ref: '#/components/schemas/Calificador' }
+                  contratacion: { type: array, items: { type: object } }
+        '400': { $ref: '#/components/responses/Validacion' }
+        '404': { $ref: '#/components/responses/NoEncontrado' }
+  /eventos/{evento}/kpi:
+    get:
+      tags: [Públicas]
+      operationId: calcularIndicadoresClave
+      summary: Los indicadores clave de config/kpi.yml
+      parameters:
+        - $ref: '#/components/parameters/Evento'
+      responses:
+        '200':
+          description: Cada indicador clave con su valor o con el motivo por el que no se publica.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [meta, kpi]
+                properties:
+                  meta:
+                    type: object
+                    required: [descripcion, umbralDePublicacion]
+                    properties:
+                      descripcion: { type: string }
+                      umbralDePublicacion: { type: integer, const: 10 }
+                  kpi:
+                    type: array
+                    items: { $ref: '#/components/schemas/IndicadorClave' }
+        '400': { $ref: '#/components/responses/Validacion' }
+        '404': { $ref: '#/components/responses/NoEncontrado' }
+  /eventos/{evento}/registros/poblacion:
+    get:
+      tags: [Públicas]
+      operationId: consultarRegistrosDePoblacion
+      summary: Distribuciones de las personas registradas, sin celdas de menos de 10
+      parameters:
+        - $ref: '#/components/parameters/Evento'
+      responses:
+        '200':
+          description: Agregados nacionales y departamentales de los registros simulados.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/RegistrosDePoblacion' }
+        '400': { $ref: '#/components/responses/Validacion' }
+        '404': { $ref: '#/components/responses/NoEncontrado' }
+  /eventos/{evento}/registros/viviendas:
+    get:
+      tags: [Públicas]
+      operationId: consultarRegistrosDeViviendas
+      summary: Distribuciones y cruces de las viviendas registradas, sin celdas de menos de 10
+      parameters:
+        - $ref: '#/components/parameters/Evento'
+      responses:
+        '200':
+          description: Agregados y cruces de los registros simulados de vivienda.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/RegistrosDeViviendas' }
+        '400': { $ref: '#/components/responses/Validacion' }
+        '404': { $ref: '#/components/responses/NoEncontrado' }
+  /sesion:
+    post:
+      tags: [Sesión]
+      operationId: iniciarSesion
+      summary: Inicia la sesión y entrega la cookie andes.sid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+              required: [correo, clave]
+              properties:
+                correo: { type: string, format: email, maxLength: 254 }
+                clave: { type: string, minLength: 1, maxLength: 200 }
+      responses:
+        '200':
+          description: Sesión iniciada.
+          headers:
+            Set-Cookie:
+              schema: { type: string }
+              description: Cookie andes.sid con HttpOnly y SameSite=Strict.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/RespuestaDeSesion' }
+        '400': { $ref: '#/components/responses/Validacion' }
+        '401': { $ref: '#/components/responses/NoAutenticado' }
+        '403': { $ref: '#/components/responses/OrigenNoPermitido' }
+        '429': { $ref: '#/components/responses/DemasiadasSolicitudes' }
+    get:
+      tags: [Sesión]
+      operationId: consultarSesion
+      summary: Usuario de la sesión actual
+      security:
+        - sesion: []
+      responses:
+        '200':
+          description: La sesión está activa.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/RespuestaDeSesion' }
+        '401': { $ref: '#/components/responses/NoAutenticado' }
+    delete:
+      tags: [Sesión]
+      operationId: cerrarSesion
+      summary: Cierra la sesión y borra la cookie
+      responses:
+        '204':
+          description: Sesión cerrada.
+        '403': { $ref: '#/components/responses/OrigenNoPermitido' }
+  /admin/conjuntos:
+    get:
+      tags: [Administración]
+      operationId: listarConjuntos
+      summary: 'Conjuntos de datos y su última carga. Permiso: datos:consultar.'
+      security:
+        - sesion: []
+      responses:
+        '200': { $ref: '#/components/responses/Objeto' }
+        '401': { $ref: '#/components/responses/NoAutenticado' }
+        '403': { $ref: '#/components/responses/SinPermiso' }
+  /admin/ejecuciones:
+    get:
+      tags: [Administración]
+      operationId: listarEjecuciones
+      summary: 'Cargas ejecutadas, paginadas por clave. Permiso: datos:consultar.'
+      security:
+        - sesion: []
+      parameters:
+        - $ref: '#/components/parameters/Despues'
+        - $ref: '#/components/parameters/Limite'
+      responses:
+        '200': { $ref: '#/components/responses/Pagina' }
+        '400': { $ref: '#/components/responses/Validacion' }
+        '401': { $ref: '#/components/responses/NoAutenticado' }
+        '403': { $ref: '#/components/responses/SinPermiso' }
+  /admin/registros:
+    get:
+      tags: [Administración]
+      operationId: listarReportesMunicipales
+      summary: 'Reportes municipales de la carga vigente. Permiso: datos:consultar.'
+      security:
+        - sesion: []
+      parameters:
+        - name: despues
+          in: query
+          schema: { type: string, pattern: '^[0-9]{5}$' }
+        - $ref: '#/components/parameters/Limite'
+        - name: departamento
+          in: query
+          schema: { type: string, pattern: '^[0-9]{2}$' }
+        - name: alerta
+          in: query
+          schema: { type: string, enum: [PERSONAS_MENOR_QUE_FAMILIAS, FECHA_REPORTE_INVALIDA] }
+      responses:
+        '200': { $ref: '#/components/responses/Pagina' }
+        '400': { $ref: '#/components/responses/Validacion' }
+        '401': { $ref: '#/components/responses/NoAutenticado' }
+        '403': { $ref: '#/components/responses/SinPermiso' }
+  /admin/calidad:
+    get:
+      tags: [Administración]
+      operationId: consultarCalidad
+      summary: 'Reglas de calidad de los reportes municipales. Permiso: datos:consultar.'
+      security:
+        - sesion: []
+      responses:
+        '200': { $ref: '#/components/responses/Objeto' }
+        '401': { $ref: '#/components/responses/NoAutenticado' }
+        '403': { $ref: '#/components/responses/SinPermiso' }
+  /admin/calidad/registros:
+    get:
+      tags: [Administración]
+      operationId: resumirRegistros
+      summary: 'Resumen de calidad de personas y viviendas. Permiso: datos:consultar.'
+      security:
+        - sesion: []
+      responses:
+        '200': { $ref: '#/components/responses/Objeto' }
+        '401': { $ref: '#/components/responses/NoAutenticado' }
+        '403': { $ref: '#/components/responses/SinPermiso' }
+  /admin/historial:
+    get:
+      tags: [Administración]
+      operationId: consultarHistorial
+      summary: 'Historial auditado de cambios a las fuentes. Permiso: datos:consultar.'
+      security:
+        - sesion: []
+      parameters:
+        - $ref: '#/components/parameters/Despues'
+        - $ref: '#/components/parameters/Limite'
+      responses:
+        '200': { $ref: '#/components/responses/Pagina' }
+        '400': { $ref: '#/components/responses/Validacion' }
+        '401': { $ref: '#/components/responses/NoAutenticado' }
+        '403': { $ref: '#/components/responses/SinPermiso' }
+  /admin/fuentes/{id}:
+    patch:
+      tags: [Administración]
+      operationId: actualizarFuente
+      summary: 'Edita la ficha de una fuente y lo deja en la auditoría. Permiso: datos:importar.'
+      security:
+        - sesion: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string, pattern: '^[a-z0-9-]{1,60}$' }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+              minProperties: 1
+              properties:
+                fechaConsulta: { type: string, format: date }
+                cobertura: { type: string, minLength: 1, maxLength: 500 }
+                variables: { type: string, minLength: 1, maxLength: 1000 }
+                limitaciones: { type: string, minLength: 1, maxLength: 2000 }
+      responses:
+        '200':
+          description: La fuente actualizada.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Fuente' }
+        '400': { $ref: '#/components/responses/Validacion' }
+        '401': { $ref: '#/components/responses/NoAutenticado' }
+        '403': { $ref: '#/components/responses/SinPermiso' }
+        '404': { $ref: '#/components/responses/NoEncontrado' }
+  /admin/importables:
+    get:
+      tags: [Administración]
+      operationId: listarImportables
+      summary: 'Conjuntos que se pueden importar y sus formatos. Permiso: datos:consultar.'
+      security:
+        - sesion: []
+      responses:
+        '200': { $ref: '#/components/responses/Objeto' }
+        '401': { $ref: '#/components/responses/NoAutenticado' }
+        '403': { $ref: '#/components/responses/SinPermiso' }
+  /admin/cargas:
+    post:
+      tags: [Administración]
+      operationId: registrarCarga
+      summary: 'Sube un archivo CSV, JSON o JSON Lines y lo pone en la cola del ETL. Permiso: datos:importar.'
+      security:
+        - sesion: []
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required: [conjunto, archivo]
+              properties:
+                conjunto: { type: string, pattern: '^[a-z0-9-]{1,60}$' }
+                archivo: { type: string, contentMediaType: application/octet-stream, description: Hasta 250 MB. }
+      responses:
+        '202':
+          description: La carga quedó en cola.
+          content:
+            application/json:
+              schema: { type: object }
+        '400': { $ref: '#/components/responses/Validacion' }
+        '401': { $ref: '#/components/responses/NoAutenticado' }
+        '403': { $ref: '#/components/responses/SinPermiso' }
+        '409': { $ref: '#/components/responses/Conflicto' }
+        '413': { $ref: '#/components/responses/DemasiadoGrande' }
+  /admin/cargas/{id}:
+    get:
+      tags: [Administración]
+      operationId: consultarCarga
+      summary: 'Estado y conteos de una carga. Permiso: datos:consultar.'
+      security:
+        - sesion: []
+      parameters:
+        - $ref: '#/components/parameters/IdNumerico'
+      responses:
+        '200': { $ref: '#/components/responses/Objeto' }
+        '400': { $ref: '#/components/responses/Validacion' }
+        '401': { $ref: '#/components/responses/NoAutenticado' }
+        '403': { $ref: '#/components/responses/SinPermiso' }
+        '404': { $ref: '#/components/responses/NoEncontrado' }
+  /admin/cargas/{id}/rechazos:
+    get:
+      tags: [Administración]
+      operationId: listarRechazos
+      summary: 'Filas rechazadas de una carga, con los identificadores ocultos. Permiso: datos:consultar.'
+      security:
+        - sesion: []
+      parameters:
+        - $ref: '#/components/parameters/IdNumerico'
+        - $ref: '#/components/parameters/Despues'
+        - $ref: '#/components/parameters/Limite'
+      responses:
+        '200': { $ref: '#/components/responses/Pagina' }
+        '400': { $ref: '#/components/responses/Validacion' }
+        '401': { $ref: '#/components/responses/NoAutenticado' }
+        '403': { $ref: '#/components/responses/SinPermiso' }
+        '404': { $ref: '#/components/responses/NoEncontrado' }
+  /admin/estadisticas/poblacion:
+    get:
+      tags: [Administración]
+      operationId: consultarEstadisticasDePoblacion
+      summary: 'Distribuciones de población de un territorio. Permiso: datos:consultar.'
+      security:
+        - sesion: []
+      parameters:
+        - $ref: '#/components/parameters/EventoEnConsulta'
+        - $ref: '#/components/parameters/Territorio'
+        - $ref: '#/components/parameters/Origen'
+      responses:
+        '200': { $ref: '#/components/responses/Objeto' }
+        '400': { $ref: '#/components/responses/Validacion' }
+        '401': { $ref: '#/components/responses/NoAutenticado' }
+        '403': { $ref: '#/components/responses/SinPermiso' }
+        '404': { $ref: '#/components/responses/NoEncontrado' }
+  /admin/estadisticas/aseguramiento:
+    get:
+      tags: [Administración]
+      operationId: consultarEstadisticasDeAseguramiento
+      summary: 'Cubo de aseguramiento de un territorio con el algoritmo 7. Permiso: datos:consultar.'
+      security:
+        - sesion: []
+      parameters:
+        - $ref: '#/components/parameters/EventoEnConsulta'
+        - $ref: '#/components/parameters/Territorio'
+        - $ref: '#/components/parameters/Origen'
+      responses:
+        '200': { $ref: '#/components/responses/Objeto' }
+        '400': { $ref: '#/components/responses/Validacion' }
+        '401': { $ref: '#/components/responses/NoAutenticado' }
+        '403': { $ref: '#/components/responses/SinPermiso' }
+        '404': { $ref: '#/components/responses/NoEncontrado' }
+  /admin/priorizacion:
+    get:
+      tags: [Administración]
+      operationId: priorizarZonas
+      summary: 'Las k zonas de mayor puntaje, con pesos configurados o propios. Permiso: priorizacion:usar.'
+      security:
+        - sesion: []
+      parameters:
+        - $ref: '#/components/parameters/EventoEnConsulta'
+        - name: k
+          in: query
+          schema: { type: integer, minimum: 1, maximum: 100 }
+        - name: pesos
+          in: query
+          description: Lista criterio:valor separada por comas. Cada valor va de 0 a 100.
+          schema: { type: string, maxLength: 500, pattern: '^[a-z_]{1,40}:\d{1,3}(\.\d{1,4})?(\s*,\s*[a-z_]{1,40}:\d{1,3}(\.\d{1,4})?)*$' }
+      responses:
+        '200':
+          description: Zonas ordenadas con el aviso académico, los pesos efectivos y el aporte de cada criterio.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Priorizacion' }
+        '400': { $ref: '#/components/responses/Validacion' }
+        '401': { $ref: '#/components/responses/NoAutenticado' }
+        '403': { $ref: '#/components/responses/SinPermiso' }
+        '404': { $ref: '#/components/responses/NoEncontrado' }
+  /admin/duplicados:
+    get:
+      tags: [Administración]
+      operationId: listarDuplicados
+      summary: 'Pares de la cola de revisión de duplicados. Permiso: datos:editar.'
+      security:
+        - sesion: []
+      parameters:
+        - name: destino
+          in: query
+          required: true
+          schema: { type: string, enum: [personas, viviendas] }
+        - name: estado
+          in: query
+          schema: { type: string, enum: [PENDIENTE, FUSIONADO, DISTINTO, RESUELTO], default: PENDIENTE }
+        - $ref: '#/components/parameters/Despues'
+        - $ref: '#/components/parameters/Limite'
+      responses:
+        '200': { $ref: '#/components/responses/Pagina' }
+        '400': { $ref: '#/components/responses/Validacion' }
+        '401': { $ref: '#/components/responses/NoAutenticado' }
+        '403': { $ref: '#/components/responses/SinPermiso' }
+  /admin/duplicados/{id}/decision:
+    post:
+      tags: [Administración]
+      operationId: decidirDuplicado
+      summary: 'Decide si un par es el mismo registro y lo deja en la auditoría. Permiso: datos:editar.'
+      security:
+        - sesion: []
+      parameters:
+        - $ref: '#/components/parameters/IdNumerico'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              additionalProperties: false
+              required: [decision]
+              properties:
+                decision: { type: string, enum: [MISMO, DISTINTO] }
+      responses:
+        '200': { $ref: '#/components/responses/Objeto' }
+        '400': { $ref: '#/components/responses/Validacion' }
+        '401': { $ref: '#/components/responses/NoAutenticado' }
+        '403': { $ref: '#/components/responses/SinPermiso' }
+        '404': { $ref: '#/components/responses/NoEncontrado' }
+        '409': { $ref: '#/components/responses/Conflicto' }
+  /ingenieria/estado:
+    get:
+      tags: [Ingeniería]
+      operationId: consultarEstadoDelSistema
+      summary: 'Métricas por ruta, base de datos, conteos y errores recientes. Permiso: sistema:ver.'
+      security:
+        - sesion: []
+      responses:
+        '200': { $ref: '#/components/responses/Objeto' }
+        '401': { $ref: '#/components/responses/NoAutenticado' }
+        '403': { $ref: '#/components/responses/SinPermiso' }
+  /ingenieria/auditoria:
+    get:
+      tags: [Ingeniería]
+      operationId: listarAuditoria
+      summary: 'Bitácora de auditoría encadenada. Permiso: auditoria:ver.'
+      security:
+        - sesion: []
+      parameters:
+        - $ref: '#/components/parameters/Despues'
+        - $ref: '#/components/parameters/Limite'
+      responses:
+        '200': { $ref: '#/components/responses/Pagina' }
+        '400': { $ref: '#/components/responses/Validacion' }
+        '401': { $ref: '#/components/responses/NoAutenticado' }
+        '403': { $ref: '#/components/responses/SinPermiso' }
+  /ingenieria/auditoria/verificacion:
+    get:
+      tags: [Ingeniería]
+      operationId: verificarAuditoria
+      summary: 'Recalcula la cadena de hashes de la auditoría. Permiso: auditoria:ver.'
+      security:
+        - sesion: []
+      responses:
+        '200': { $ref: '#/components/responses/Objeto' }
+        '401': { $ref: '#/components/responses/NoAutenticado' }
+        '403': { $ref: '#/components/responses/SinPermiso' }
+  /ingenieria/accesos:
+    get:
+      tags: [Ingeniería]
+      operationId: listarAccesos
+      summary: 'Registro de intentos de acceso. Permiso: auditoria:ver.'
+      security:
+        - sesion: []
+      parameters:
+        - $ref: '#/components/parameters/Despues'
+        - $ref: '#/components/parameters/Limite'
+      responses:
+        '200': { $ref: '#/components/responses/Pagina' }
+        '400': { $ref: '#/components/responses/Validacion' }
+        '401': { $ref: '#/components/responses/NoAutenticado' }
+        '403': { $ref: '#/components/responses/SinPermiso' }
+components:
+  securitySchemes:
+    sesion:
+      type: apiKey
+      in: cookie
+      name: andes.sid
+  parameters:
+    Evento:
+      name: evento
+      in: path
+      required: true
+      schema: { $ref: '#/components/schemas/CodigoEvento' }
+    EventoEnConsulta:
+      name: evento
+      in: query
+      schema:
+        type: string
+        pattern: '^[a-z0-9-]{1,60}$'
+        default: sismo-2026-08-10
+    Territorio:
+      name: territorio
+      in: query
+      description: 00 para el país, dos dígitos para un departamento o cinco para un municipio.
+      schema: { type: string, pattern: '^[0-9]{2}([0-9]{3})?$', default: '00' }
+    Origen:
+      name: origen
+      in: query
+      schema: { type: string, enum: [OFICIAL, ESTIMADO, SIMULADO], default: SIMULADO }
+    Despues:
+      name: despues
+      in: query
+      description: Clave de la última fila de la página anterior.
+      schema: { type: integer, minimum: 1 }
+    Limite:
+      name: limite
+      in: query
+      schema: { type: integer, minimum: 1, maximum: 200, default: 50 }
+    IdNumerico:
+      name: id
+      in: path
+      required: true
+      schema: { type: integer, minimum: 1 }
+  responses:
+    Objeto:
+      description: Documento JSON descrito en docs/API.md.
+      content:
+        application/json:
+          schema: { type: object }
+    Pagina:
+      description: Una página de resultados con la clave para pedir la siguiente.
+      content:
+        application/json:
+          schema:
+            type: object
+            required: [elementos, siguiente]
+            properties:
+              elementos: { type: array, items: { type: object } }
+              siguiente:
+                description: Valor para el parámetro despues de la página siguiente. Es null en la última página.
+                type: [integer, string, 'null']
+    Validacion:
+      description: Un parámetro o el cuerpo no cumplen el formato esperado.
+      content:
+        application/problem+json:
+          schema: { $ref: '#/components/schemas/Problema' }
+    NoAutenticado:
+      description: Falta una sesión válida.
+      content:
+        application/problem+json:
+          schema: { $ref: '#/components/schemas/Problema' }
+    SinPermiso:
+      description: El rol de la sesión no tiene el permiso de la ruta.
+      content:
+        application/problem+json:
+          schema: { $ref: '#/components/schemas/Problema' }
+    OrigenNoPermitido:
+      description: La solicitud que modifica datos viene de otro sitio.
+      content:
+        application/problem+json:
+          schema: { $ref: '#/components/schemas/Problema' }
+    NoEncontrado:
+      description: El recurso no existe.
+      content:
+        application/problem+json:
+          schema: { $ref: '#/components/schemas/Problema' }
+    Conflicto:
+      description: El archivo ya se cargó o el par ya se decidió.
+      content:
+        application/problem+json:
+          schema: { $ref: '#/components/schemas/Problema' }
+    DemasiadoGrande:
+      description: El archivo supera el tamaño permitido.
+      content:
+        application/problem+json:
+          schema: { $ref: '#/components/schemas/Problema' }
+    DemasiadasSolicitudes:
+      description: Se superó el límite de solicitudes o de intentos de sesión.
+      content:
+        application/problem+json:
+          schema: { $ref: '#/components/schemas/Problema' }
+  schemas:
+    CodigoEvento:
+      type: string
+      pattern: '^[a-z0-9-]{1,60}$'
+      examples: [sismo-2026-08-10]
+    Origen:
+      type: string
+      enum: [OFICIAL, ESTIMADO, SIMULADO]
+    Calificador:
+      type: [string, 'null']
+      enum: [más de, menos de, cerca de, null]
+    Problema:
+      type: object
+      required: [type, title, status, codigo]
+      properties:
+        type: { type: string, const: about:blank }
+        title: { type: string }
+        status: { type: integer }
+        detail: { type: string }
+        instance: { type: string }
+        codigo:
+          type: string
+          examples: [VALIDACION, NO_AUTENTICADO, SIN_PERMISO, NO_ENCONTRADO, ORIGEN_NO_PERMITIDO]
+        errores:
+          type: array
+          items:
+            type: object
+            properties:
+              ubicacion: { type: string }
+              campo: { type: [string, 'null'] }
+              mensaje: { type: string }
+    Estado:
+      type: object
+      required: [servicio, baseDeDatos]
+      properties:
+        servicio: { type: string, const: disponible }
+        baseDeDatos: { type: string, enum: [disponible, no disponible] }
+    Fuente:
+      type: object
+      required: [id, entidad, nombre, origen, nivel]
+      properties:
+        id: { type: string }
+        entidad: { type: string }
+        sigla: { type: [string, 'null'] }
+        nombre: { type: string }
+        origen: { $ref: '#/components/schemas/Origen' }
+        nivel: { type: string, enum: [A, B, C, S] }
+        tipoAcceso: { type: [string, 'null'] }
+        enlace: { type: [string, 'null'], format: uri }
+        leidoEn: { type: [string, 'null'] }
+        fechaPublicacion: { type: [string, 'null'], format: date }
+        fechaConsulta: { type: [string, 'null'], format: date }
+        cobertura: { type: [string, 'null'] }
+        variables: { type: [string, 'null'] }
+        limitaciones: { type: [string, 'null'] }
+        uso: { type: [string, 'null'] }
+    Municipio:
+      type: object
+      required: [codigo, nombre, departamento]
+      properties:
+        codigo: { type: string, pattern: '^[0-9]{5}$' }
+        nombre: { type: string }
+        departamento:
+          type: object
+          properties:
+            codigo: { type: string, pattern: '^[0-9]{2}$' }
+            nombre: { type: string }
+    Evento:
+      type: object
+      required: [codigo, nombre, fecha, epicentro, parametros, coordenadas, normas]
+      properties:
+        codigo: { $ref: '#/components/schemas/CodigoEvento' }
+        nombre: { type: string }
+        fecha: { type: string, format: date }
+        epicentro: { type: object }
+        parametros:
+          type: array
+          items:
+            type: object
+            properties:
+              nombre: { type: string }
+              valores:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    fuente: { type: string }
+                    valor: { type: string }
+        coordenadas: { type: object }
+        normas: { type: array, items: { type: object } }
+    PuntoDeSerie:
+      type: object
+      required: [fechaCorte, valor, fuente]
+      properties:
+        fechaCorte: { type: string, format: date }
+        valor: { type: number }
+        calificador: { $ref: '#/components/schemas/Calificador' }
+        nota: { type: [string, 'null'] }
+        fuente: { type: string }
+    Indicador:
+      type: object
+      required: [codigo, nombre, unidad, serie, tendencia]
+      properties:
+        codigo: { type: string }
+        nombre: { type: string }
+        descripcion: { type: [string, 'null'] }
+        unidad: { type: string }
+        esAcumulado: { type: boolean }
+        esDerivado: { type: boolean }
+        motivoSinDato: { type: [string, 'null'] }
+        serie:
+          type: array
+          items: { $ref: '#/components/schemas/PuntoDeSerie' }
+        tendencia:
+          type: object
+          properties:
+            clasificacion: { type: string, enum: [CRECIENTE, ESTABLE, DECRECIENTE, INSUFICIENTE] }
+            cambioDiario: { type: [number, 'null'] }
+            fechas: { type: integer }
+            revisionesALaBaja: { type: array, items: { type: string, format: date } }
+    VariableTerritorial:
+      type: object
+      required: [codigo, nombre]
+      properties:
+        codigo: { type: string }
+        nombre: { type: string }
+        unidad: { type: [string, 'null'] }
+    TerritorioConValores:
+      type: object
+      required: [codigo, nombre, valores]
+      properties:
+        codigo: { type: string }
+        nombre: { type: string }
+        municipiosConReporte: { type: integer }
+        valores: { type: object, additionalProperties: { type: [number, 'null'] } }
+        ultimoReporte: { type: [string, 'null'], format: date }
+    MunicipioConReporte:
+      type: object
+      required: [codigo, nombre, departamento, valores]
+      properties:
+        codigo: { type: string, pattern: '^[0-9]{5}$' }
+        nombre: { type: string }
+        departamento: { type: string, pattern: '^[0-9]{2}$' }
+        valores: { type: object, additionalProperties: { type: [number, 'null'] } }
+        fechaReporte: { type: [string, 'null'], format: date }
+        alertas: { type: array, items: { type: string } }
+    Territorio:
+      type: object
+      required: [meta, variables, nacional, departamentos, municipios]
+      properties:
+        meta: { type: object }
+        variables:
+          type: array
+          items: { $ref: '#/components/schemas/VariableTerritorial' }
+        nacional: { type: object, additionalProperties: { type: [number, 'null'] } }
+        departamentos:
+          type: array
+          items: { $ref: '#/components/schemas/TerritorioConValores' }
+        municipios:
+          type: array
+          items: { $ref: '#/components/schemas/MunicipioConReporte' }
+    ParteDeIndicadorClave:
+      type: object
+      required: [tipo, definicion, valor]
+      properties:
+        tipo: { type: string, enum: [indicador, territorial, agregado, cruce] }
+        definicion: {}
+        nombre: { type: [string, 'null'] }
+        unidad: { type: [string, 'null'] }
+        valor: { type: number }
+        calificador: { $ref: '#/components/schemas/Calificador' }
+        fechaCorte: { type: [string, 'null'], format: date }
+        fuente: { type: [string, 'null'] }
+    IndicadorClave:
+      type: object
+      required: [codigo, nombre, descripcion, modulo, unidad, sentido, origen, estado]
+      properties:
+        codigo: { type: string }
+        nombre: { type: string }
+        descripcion: { type: string }
+        modulo: { type: string }
+        unidad: { type: string, enum: [porcentaje, por_cien_mil] }
+        sentido: { type: string, enum: [mayor_es_mejor, menor_es_mejor, neutral] }
+        origen: { type: string, enum: [OFICIAL, SIMULADO] }
+        estado: { type: string, enum: [disponible, sin-dato] }
+        motivoSinDato: { type: string }
+        valor: { type: number }
+        calificador: { $ref: '#/components/schemas/Calificador' }
+        fechaCorte: { type: [string, 'null'], format: date }
+        actualizadoEn: { type: [string, 'null'], format: date-time }
+        numerador: { $ref: '#/components/schemas/ParteDeIndicadorClave' }
+        denominador: { $ref: '#/components/schemas/ParteDeIndicadorClave' }
+        serie:
+          type: array
+          items:
+            type: object
+            properties:
+              fechaCorte: { type: string, format: date }
+              valor: { type: number }
+              calificador: { $ref: '#/components/schemas/Calificador' }
+        variacion:
+          type: [object, 'null']
+          properties:
+            absoluta: { type: number }
+            corteAnterior: { type: string, format: date }
+            valoracion: { type: [string, 'null'], enum: [mejora, empeora, sin_cambio, null] }
+    Conteo:
+      description: Número de registros. Es null cuando la celda reúne menos de 10 o se oculta como complemento.
+      type: [integer, 'null']
+      minimum: 0
+    CategoriaConConteo:
+      type: object
+      required: [codigo, nombre]
+      properties:
+        codigo: { type: string }
+        nombre: { type: string }
+        personas: { $ref: '#/components/schemas/Conteo' }
+        viviendas: { $ref: '#/components/schemas/Conteo' }
+    MetaDeRegistros:
+      type: object
+      required: [origen, nivel, fuente, advertencia, umbralDePublicacion]
+      properties:
+        origen: { type: string, const: SIMULADO }
+        nivel: { type: string, const: S }
+        fuente: { type: string }
+        advertencia: { type: string }
+        umbralDePublicacion: { type: integer, const: 10 }
+        actualizadoEn: { type: [string, 'null'], format: date-time }
+    Cruce:
+      type: object
+      required: [filas, columnas, valores]
+      properties:
+        filas: { type: array, items: { type: string } }
+        columnas: { type: array, items: { type: string } }
+        valores:
+          type: array
+          items:
+            type: array
+            items: { $ref: '#/components/schemas/Conteo' }
+    RegistrosDePoblacion:
+      type: object
+      required: [meta, tamanoMuestra, gruposEdad, piramide, evolucion]
+      properties:
+        meta: { $ref: '#/components/schemas/MetaDeRegistros' }
+        tamanoMuestra: { $ref: '#/components/schemas/Conteo' }
+        gruposEdad: { type: array, items: { $ref: '#/components/schemas/CategoriaConConteo' } }
+        piramide:
+          type: object
+          properties:
+            grupos: { type: array, items: { type: string } }
+            hombres: { type: array, items: { $ref: '#/components/schemas/Conteo' } }
+            mujeres: { type: array, items: { $ref: '#/components/schemas/Conteo' } }
+        condicionInstitucional: { type: array, items: { $ref: '#/components/schemas/CategoriaConConteo' } }
+        tenencia: { type: array, items: { $ref: '#/components/schemas/CategoriaConConteo' } }
+        situacion: { type: array, items: { $ref: '#/components/schemas/CategoriaConConteo' } }
+        condicionSalud: { type: array, items: { $ref: '#/components/schemas/CategoriaConConteo' } }
+        vulnerabilidad: { type: array, items: { $ref: '#/components/schemas/CategoriaConConteo' } }
+        porDepartamento: { type: array, items: { $ref: '#/components/schemas/CategoriaConConteo' } }
+        evolucion:
+          type: object
+          properties:
+            fechas: { type: array, items: { type: string, format: date } }
+            registradas: { type: array, items: { $ref: '#/components/schemas/Conteo' } }
+        indicadores: { type: object }
+    RegistrosDeViviendas:
+      type: object
+      required: [meta, tamanoMuestra, estadoFisico, estadoPorAseguramiento, indicadores]
+      properties:
+        meta: { $ref: '#/components/schemas/MetaDeRegistros' }
+        tamanoMuestra: { $ref: '#/components/schemas/Conteo' }
+        afectadas: { $ref: '#/components/schemas/Conteo' }
+        estadoFisico: { type: array, items: { $ref: '#/components/schemas/CategoriaConConteo' } }
+        ocupacion: { type: array, items: { $ref: '#/components/schemas/CategoriaConConteo' } }
+        aseguramiento: { type: array, items: { $ref: '#/components/schemas/CategoriaConConteo' } }
+        financiacion: { type: array, items: { $ref: '#/components/schemas/CategoriaConConteo' } }
+        estadoPorAseguramiento: { $ref: '#/components/schemas/Cruce' }
+        financiacionPorAseguramiento: { $ref: '#/components/schemas/Cruce' }
+        embudoReclamaciones:
+          type: array
+          items:
+            type: object
+            properties:
+              etapa: { type: string }
+              viviendas: { $ref: '#/components/schemas/Conteo' }
+        reclamaciones:
+          type: object
+          properties:
+            enEstudio: { $ref: '#/components/schemas/Conteo' }
+            rechazadas: { $ref: '#/components/schemas/Conteo' }
+            indemnizacionPendiente: { $ref: '#/components/schemas/Conteo' }
+        coberturaDestruidas:
+          type: object
+          properties:
+            destruidas: { $ref: '#/components/schemas/Conteo' }
+            conPoliza: { $ref: '#/components/schemas/Conteo' }
+            porVerificar: { $ref: '#/components/schemas/Conteo' }
+            porcentajeMinimo: { type: [number, 'null'] }
+            porcentajeMaximo: { type: [number, 'null'] }
+        propiasAfectadas: { $ref: '#/components/schemas/Conteo' }
+        arrendadasAfectadas: { $ref: '#/components/schemas/Conteo' }
+        valorDestruidas: { type: [number, 'null'], description: Suma de avalúos en pesos. }
+        sinSeguroPorDepartamento: { type: array, items: { $ref: '#/components/schemas/CategoriaConConteo' } }
+        financiadasSinSeguro: { $ref: '#/components/schemas/Conteo' }
+        indicadores:
+          type: object
+          additionalProperties:
+            type: [object, 'null']
+            properties:
+              valor: { type: number }
+              muestra: { type: string }
+    RespuestaDeSesion:
+      type: object
+      required: [usuario]
+      properties:
+        usuario:
+          type: object
+          required: [correo, nombre, rol, permisos]
+          properties:
+            correo: { type: string, format: email }
+            nombre: { type: string }
+            rol: { type: string }
+            nombreRol: { type: string }
+            permisos: { type: array, items: { type: string } }
+    Priorizacion:
+      type: object
+      required: [aviso, meta, criterios, zonas, salientes]
+      properties:
+        aviso: { type: string }
+        meta:
+          type: object
+          properties:
+            evento: { type: string }
+            zonas: { type: integer }
+            k: { type: integer }
+            notas: { type: array, items: { type: string } }
+            pesosPersonalizados: { type: boolean }
+        criterios:
+          type: array
+          items:
+            type: object
+            properties:
+              codigo: { type: string }
+              nombre: { type: string }
+              origen: { type: [string, 'null'] }
+              pesoConfigurado: { type: number }
+              pesoSolicitado: { type: [number, 'null'] }
+              peso: { type: [number, 'null'] }
+              zonasConDato: { type: integer }
+              incluido: { type: boolean }
+              motivo: { type: [string, 'null'] }
+        zonas:
+          type: array
+          items:
+            type: object
+            properties:
+              posicion: { type: integer }
+              posicionBase: { type: integer }
+              cambio: { type: integer }
+              codigo: { type: string }
+              nombre: { type: string }
+              departamento: { type: object }
+              puntaje: { type: number }
+              aportes: { type: array, items: { type: object } }
+        salientes:
+          type: array
+          items:
+            type: object
+            properties:
+              codigo: { type: string }
+              nombre: { type: string }
+              departamento: { type: object }
+              posicionBase: { type: integer }
+              posicion: { type: integer }

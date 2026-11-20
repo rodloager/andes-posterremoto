@@ -1,0 +1,181 @@
+{
+  "medidoEn": "2026-11-20T02:54:42.909Z",
+  "baseDeDatos": "andes_medicion_api",
+  "personas": 984939,
+  "metodo": {
+    "repeticiones": 5,
+    "estadistico": "mediana del Execution Time de EXPLAIN ANALYZE",
+    "calentamiento": 1
+  },
+  "postgres": "18.7 (Debian 18.7-1.pgdg13+2)",
+  "resultados": [
+    {
+      "nombre": "Candidatos de un bloque de duplicados",
+      "donde": "ETL, algoritmo 3",
+      "variantes": [
+        {
+          "etiqueta": "Índice personas_bloque",
+          "ms": 0.008,
+          "nodo": "Index Scan",
+          "nodos": [
+            "Index Scan"
+          ],
+          "bloques": 4
+        },
+        {
+          "etiqueta": "Recorrido secuencial",
+          "ms": 30.864,
+          "nodo": "Seq Scan",
+          "nodos": [
+            "Gather",
+            "Seq Scan"
+          ],
+          "bloques": 30029
+        }
+      ],
+      "aceleracion": 3858
+    },
+    {
+      "nombre": "Duplicado exacto por seudónimo",
+      "donde": "ETL, algoritmo 3",
+      "variantes": [
+        {
+          "etiqueta": "Índice único personas_identificador_unico",
+          "ms": 0.007,
+          "nodo": "Index Scan",
+          "nodos": [
+            "Index Scan"
+          ],
+          "bloques": 5
+        },
+        {
+          "etiqueta": "Recorrido secuencial",
+          "ms": 33.422,
+          "nodo": "Seq Scan",
+          "nodos": [
+            "Gather",
+            "Seq Scan"
+          ],
+          "bloques": 30029
+        }
+      ],
+      "aceleracion": 4774.6
+    },
+    {
+      "nombre": "Personas vigentes de un municipio",
+      "donde": "Estadísticas por territorio",
+      "variantes": [
+        {
+          "etiqueta": "Índice parcial personas_vigentes",
+          "ms": 0.099,
+          "nodo": "Aggregate",
+          "nodos": [
+            "Aggregate",
+            "Index Only Scan"
+          ],
+          "bloques": 8
+        },
+        {
+          "etiqueta": "Recorrido secuencial",
+          "ms": 25.383,
+          "nodo": "Aggregate",
+          "nodos": [
+            "Aggregate",
+            "Gather",
+            "Seq Scan"
+          ],
+          "bloques": 30029
+        }
+      ],
+      "aceleracion": 256.4
+    },
+    {
+      "nombre": "Personas vigentes por municipio",
+      "donde": "Recálculo de agregados, algoritmo 2",
+      "variantes": [
+        {
+          "etiqueta": "Agregación por hash",
+          "ms": 40.188,
+          "nodo": "Aggregate",
+          "nodos": [
+            "Aggregate",
+            "Gather Merge",
+            "Sort",
+            "Index Only Scan"
+          ],
+          "bloques": 3794
+        },
+        {
+          "etiqueta": "Agregación por ordenamiento",
+          "ms": 94.017,
+          "nodo": "Aggregate",
+          "nodos": [
+            "Aggregate",
+            "Gather Merge",
+            "Sort",
+            "Index Only Scan"
+          ],
+          "bloques": 3854
+        }
+      ],
+      "aceleracion": 2.3
+    },
+    {
+      "nombre": "Página de 50 registros cerca del final",
+      "donde": "Paginación de listas privadas",
+      "variantes": [
+        {
+          "etiqueta": "Paginación por clave",
+          "ms": 0.011,
+          "nodo": "Limit",
+          "nodos": [
+            "Limit",
+            "Index Only Scan"
+          ],
+          "bloques": 4
+        },
+        {
+          "etiqueta": "Paginación por desplazamiento",
+          "ms": 38.419,
+          "nodo": "Limit",
+          "nodos": [
+            "Limit",
+            "Index Only Scan"
+          ],
+          "bloques": 1917
+        }
+      ],
+      "aceleracion": 3492.6
+    },
+    {
+      "nombre": "Agregados publicables de población",
+      "donde": "API pública, registros de población",
+      "variantes": [
+        {
+          "etiqueta": "Índice agregados_dimension",
+          "ms": 0.324,
+          "nodo": "Bitmap Heap Scan",
+          "nodos": [
+            "Hash Join",
+            "Bitmap Heap Scan",
+            "Bitmap Index Scan",
+            "Hash",
+            "Index Scan"
+          ],
+          "bloques": 63
+        },
+        {
+          "etiqueta": "Recorrido secuencial",
+          "ms": 3.617,
+          "nodo": "Seq Scan",
+          "nodos": [
+            "Nested Loop",
+            "Seq Scan"
+          ],
+          "bloques": 1405
+        }
+      ],
+      "aceleracion": 11.2
+    }
+  ]
+}

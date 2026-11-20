@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es-CO">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Administración de datos · ANDES</title>
+    <link rel="icon" href="/assets/icono.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/vendor/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/tokens.css" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/componentes.css" />
+    <link rel="stylesheet" href="/privado/css/privado.css" />
+    <script type="module" src="/privado/js/marco-privado.js"></script>
+    <script type="module" src="/privado/js/paginas/administracion.js"></script>
+  </head>
+  <body>
+    <andes-marco-privado pagina="administracion">
+      <header class="pagina-titulo">
+        <h1>Administración de datos</h1>
+        <p>Conjuntos de datos, fuentes, registros almacenados, cargas ejecutadas e historial de cambios.</p>
+      </header>
+      <div id="contenido" aria-live="polite">
+        <p class="estado-carga">Cargando los datos…</p>
+      </div>
+    </andes-marco-privado>
+  </body>
+</html>

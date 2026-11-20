@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es-CO">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Comparar · ANDES</title>
+    <meta
+      name="description"
+      content="Comparación entre departamentos y entre cortes de los balances del sismo del 10 de agosto de 2026."
+    />
+    <link rel="icon" href="/assets/icono.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/vendor/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/tokens.css" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/componentes.css" />
+    <script defer src="/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+    <script type="module" src="/js/paginas/comparar.js"></script>
+  </head>
+  <body>
+    <andes-marco pagina="comparar">
+      <header class="pagina-titulo">
+        <h1>Comparar territorios y cortes</h1>
+        <p>
+          Pon dos departamentos lado a lado, mira su puesto entre los que reportan cada variable y compara los
+          balances nacionales entre fechas de corte. Todas las cifras de esta página son oficiales.
+        </p>
+      </header>
+      <div id="contenido" aria-live="polite">
+        <p class="estado-carga">Cargando los datos…</p>
+      </div>
+    </andes-marco>
+    <noscript>
+      <p class="estado-error">Este portal necesita JavaScript para mostrar las comparaciones.</p>
+    </noscript>
+  </body>
+</html>
