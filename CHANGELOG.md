@@ -2,6 +2,14 @@
 
 Los cambios de cada entrega se anotan aquí, del más reciente al más antiguo.
 
+## Sin publicar
+
+Cambios posteriores a la fase 6.
+
+### Corregido
+
+- [VERIFICACION.md](docs/VERIFICACION.md) y la [propuesta técnica](docs/PROPUESTA_TECNICA.md) seguían diciendo que no había repositorio Git. La decisión B8 quedó resuelta el 19 de noviembre de 2026 con la carpeta definitiva y el primer commit; falta decidir si habrá un repositorio remoto.
+
 ## 0.6.0 — 2026-11-19
 
 Fase 6: calidad y documentación.

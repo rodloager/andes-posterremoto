@@ -1943,7 +1943,7 @@ Dentro de cada fase se trabaja por recorridos completos. El primero es «viviend
 - Rama `main` estable y ramas cortas por tarea, con prefijos `feat/`, `fix/`, `docs/`, `refactor/` y `test/`.
 - Mensajes con la convención del enunciado, por ejemplo `feat: implement national dashboard` o `test: add algorithm unit tests`.
 - Un commit contiene un solo cambio lógico. El archivo `CHANGELOG.md` resume cada entrega.
-- A la fecha de este documento no existe ningún commit. El repositorio se creará cuando se defina la carpeta definitiva del proyecto.
+- El repositorio Git se creó el 19 de noviembre de 2026, cuando se definió la carpeta definitiva del proyecto. Su primer commit reúne las fases 1 a 6. Todavía no tiene un repositorio remoto.
 
 ## 20. Riesgos y limitaciones técnicas
 
@@ -2030,7 +2030,7 @@ npm run db:seed
 
 ## Anexo B. Decisiones que requieren aprobación
 
-Estado al 12 de noviembre de 2026: la propuesta se aprobó el 11 de noviembre sin cambios, de modo que B1 a B5 quedan resueltas con la recomendación. Siguen pendientes B6, B7 y B8.
+Estado al 19 de noviembre de 2026: la propuesta se aprobó el 11 de noviembre sin cambios, de modo que B1 a B5 quedan resueltas con la recomendación. B8 se resolvió el 19 de noviembre con la carpeta definitiva y un repositorio Git local, todavía sin remoto. Siguen pendientes B6 y B7.
 
 | # | Decisión | Recomendación | Qué cambia con otra elección |
 |---|---|---|---|

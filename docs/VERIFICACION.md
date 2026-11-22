@@ -89,7 +89,8 @@ Pruebas al cierre: 1.126 en 64 archivos, todas en verde. Cobertura del código m
 ## 4. Pendientes y decisiones abiertas
 
 - **B7, Power BI.** Sin un equipo con Windows no hay archivo `.pbix` ni conexión comprobada (RF-38 y RNF-17). Las opciones están en [POWERBI.md](POWERBI.md#11-limitaciones-y-decisiones-pendientes).
-- **B6, calendario, y B8, carpeta definitiva y repositorio.** Siguen abiertas. No hay repositorio Git ni commits.
+- **B6, calendario.** Sigue abierta: hace falta la fecha de entrega y el número de integrantes.
+- **B8, carpeta definitiva y repositorio.** La carpeta y el repositorio Git local quedaron listos el 19 de noviembre de 2026, con el primer commit. Falta decidir si se publica en un repositorio remoto.
 - **RF-32 y RF-33.** Edición manual de registros y pantalla de usuarios, de prioridad media.
 - **RF-24 y RF-39.** Extractor de datos.gov.co y prueba con Spark, de prioridad media y baja.
 - **RNF-14.** Ejecutar la instalación y las pruebas en Windows y en Linux.
