@@ -6,6 +6,10 @@ Los cambios de cada entrega se anotan aquí, del más reciente al más antiguo.
 
 Cambios posteriores a la fase 6.
 
+### Agregado
+
+- Informe final del proyecto en Word, en [`entregables/Informe_final_ANDES.docx`](entregables/Informe_final_ANDES.docx): problema, objetivos, arquitectura, modelo de datos, proceso de carga, algoritmos con su complejidad medida, interfaces, inteligencia de negocios, seguridad, rendimiento, verificación de requisitos, limitaciones y conclusiones, con 31 tablas y 11 figuras. La portada tiene marcadores resaltados para la universidad, el estudiante, el docente y la ciudad.
+
 ### Corregido
 
 - [VERIFICACION.md](docs/VERIFICACION.md) y la [propuesta técnica](docs/PROPUESTA_TECNICA.md) seguían diciendo que no había repositorio Git. La decisión B8 quedó resuelta el 19 de noviembre de 2026 con la carpeta definitiva y el primer commit; falta decidir si habrá un repositorio remoto.

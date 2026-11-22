@@ -211,11 +211,13 @@ Los comandos `datos:afectaciones` y `datos:limites` necesitan internet. El prime
 | `tests/` | Pruebas unitarias y de integración |
 | `scripts/` | Copia de bibliotecas y verificación de comentarios |
 | `docs/` | Documentación del proyecto |
+| `entregables/` | Informe final del proyecto en Word |
 
 ## Documentación
 
 | Documento | Contenido |
 |---|---|
+| [Informe final en Word](entregables/Informe_final_ANDES.docx) | Informe del proyecto para la entrega: problema, objetivos, arquitectura, algoritmos, resultados, verificación y conclusiones |
 | [Propuesta técnica](docs/PROPUESTA_TECNICA.md) | Problema, requerimientos, arquitectura, modelo de datos, algoritmos, fuentes, Power BI, plan y riesgos |
 | [Fuentes verificadas](docs/FUENTES_VERIFICADAS.md) | Cada fuente y cada cifra consultada, con su enlace, su fecha y cómo se verificó |
 | [Interfaz](docs/FRONTEND.md) | Organización del portal, componentes, modos de datos, cómo ampliarlo y verificación |
