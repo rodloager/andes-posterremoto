@@ -1,0 +1,165 @@
+ANDES - CÓMO EJECUTAR LA PÁGINA PASO A PASO
+============================================
+
+ANDES es una plataforma web sobre el sismo del 10 de agosto de 2026 en Colombia.
+Tiene un portal público y un entorno privado con usuarios. Todo corre en tu
+computador: no se necesita ningún servidor en internet.
+
+
+1. QUÉ NECESITAS INSTALAR
+-------------------------
+
+  - Node.js 24 o superior (trae npm):   https://nodejs.org
+  - Docker Desktop 29 o superior:       https://www.docker.com/products/docker-desktop
+  - Git, para descargar el proyecto:    https://git-scm.com
+  - Visual Studio Code (recomendado):   https://code.visualstudio.com
+
+  Internet solo hace falta la primera vez, para descargar el proyecto, las
+  dependencias y la imagen de PostgreSQL. Después la página funciona sin conexión.
+
+  Deben estar libres los puertos 3000 (la página) y 5433 (la base de datos).
+
+
+2. PRIMERA INSTALACIÓN (solo se hace una vez)
+---------------------------------------------
+
+  Abre una terminal (en VS Code: menú Terminal > New Terminal) y escribe:
+
+  Paso 1. Descargar el proyecto y entrar a la carpeta:
+
+      git clone https://github.com/rodloager/andes-posterremoto.git
+      cd andes-posterremoto
+
+  Paso 2. Instalar las dependencias:
+
+      npm install
+
+  Paso 3. Crear el archivo de configuración a partir del ejemplo:
+
+      macOS o Linux:          cp .env.example .env
+      Windows (PowerShell):   Copy-Item .env.example .env
+
+  Paso 4. Abrir el archivo .env y reemplazar CADA valor que empieza por
+          "cambia-". Para generar un valor aleatorio, ejecuta este comando
+          una vez por cada clave y copia el resultado:
+
+      node -e "console.log(require('node:crypto').randomBytes(32).toString('base64url'))"
+
+          Las claves que hay que llenar son:
+            BD_PROPIETARIO_CLAVE, BD_APP_CLAVE, BD_LECTOR_CLAVE,
+            SESION_SECRETO, CLAVE_USUARIOS_DEMO, SEUDONIMO_SECRETO
+            y BD_POWERBI_CLAVE (esta última solo se usa para Power BI).
+
+          IMPORTANTE: CLAVE_USUARIOS_DEMO es la contraseña con la que vas a
+          entrar al entorno privado (mínimo 12 caracteres). Puedes poner una
+          que recuerdes en lugar de una aleatoria.
+
+          IMPORTANTE: llena el .env ANTES del paso 5. La base de datos crea
+          sus cuentas con las claves que encuentra la primera vez.
+
+  Paso 5. Abrir Docker Desktop, esperar a que diga que está en marcha y
+          levantar la base de datos:
+
+      docker compose up -d
+
+  Paso 6. Crear las tablas y cargar las cifras oficiales y los usuarios:
+
+      npm run db:migrate
+      npm run db:seed
+
+  Paso 7. Cargar los datos de demostración (tarda menos de un minuto).
+          Sin este paso, las gráficas del modo "Demostración" salen vacías:
+
+      npm run datos:demostracion
+
+  Paso 8. Iniciar la página:
+
+      npm run dev
+
+  Paso 9. Abrir en el navegador:
+
+      Portal público:     http://localhost:3000
+      Entorno privado:    http://localhost:3000/privado/
+
+
+3. USO DIARIO (cuando ya está instalado)
+----------------------------------------
+
+  1. Abrir Docker Desktop.
+  2. En la carpeta del proyecto:
+
+      docker compose up -d
+      npm run dev
+
+  3. Abrir http://localhost:3000
+  4. Para detener la página: Ctrl + C en la terminal.
+
+
+4. QUÉ HACE FALTA PARA VERLO TODO
+---------------------------------
+
+  Portal público (no pide usuario)
+    - Panorama nacional, población, vivienda, economía, infraestructura,
+      salud, educación, logística, mapa, comparación y metodología.
+    - Arriba a la derecha está el selector "Modo de datos":
+        * Datos oficiales: solo cifras publicadas por entidades. Donde no
+          hay cifra dice "Información no disponible".
+        * Demostración: agrega datos SIMULADOS (marcados con ese sello).
+          Necesita el paso 7 de la instalación.
+
+  Entorno privado (http://localhost:3000/privado/)
+    Hay un usuario por rol. La contraseña de todos es el valor de
+    CLAVE_USUARIOS_DEMO de tu archivo .env.
+
+      analisis@andes.test             Analista: datos, calidad y priorización
+      datos@andes.test                Administrador de datos: además importa archivos
+      ingenieria@andes.test           Ingeniero: panel de ingeniería y auditoría
+      superadministrador@andes.test   Superadministrador: TODO (recomendado para revisar)
+
+  Power BI (opcional)
+    Solo funciona en Windows con Power BI Desktop. La guía está en
+    docs/POWERBI.md. Para activar la cuenta de lectura y exportar el modelo:
+
+      npm run bi:cuenta
+      npm run bi:exportar
+
+
+5. DOCUMENTOS PARA LA REVISIÓN
+------------------------------
+
+  entregables/Informe_final_ANDES.docx   Informe final del proyecto (Word)
+  README.md                               Descripción general y todos los comandos
+  docs/                                   Documentación técnica detallada
+  docs/VERIFICACION.md                    Estado de cada requisito
+
+  Para correr las pruebas automáticas (con la base de datos en marcha):
+
+      npm test
+
+
+6. PROBLEMAS FRECUENTES
+-----------------------
+
+  "La configuración del entorno no es válida"
+      Falta una clave en .env o es muy corta. El mensaje dice cuál.
+
+  La página carga pero sin datos, o dice que la base de datos no está disponible
+      Docker Desktop no está abierto. Ábrelo y ejecuta: docker compose up -d
+
+  "password authentication failed" después de cambiar las claves del .env
+      La base de datos se creó con las claves anteriores. Bórrala y repite
+      los pasos 5, 6 y 7 (se pierden los datos cargados):
+
+      docker compose down --volumes
+
+  "port is already allocated" o el puerto está ocupado
+      Otro programa usa el puerto 5433 o el 3000. Cambia BD_PUERTO o PUERTO
+      en el archivo .env.
+
+  No puedo entrar al entorno privado
+      La contraseña es exactamente el valor de CLAVE_USUARIOS_DEMO del .env.
+      Si la cambiaste después del paso 6, ejecuta otra vez estos dos comandos
+      (el primero vuelve a cargar los datos, así que hay que repetir el segundo):
+
+      npm run db:seed
+      npm run datos:demostracion
